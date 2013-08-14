@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project name="Hand of Omega" basedir="../" default="build">
+    
+	<target name="build">
+        
+		<delete dir="build" />
+		<delete dir="forge/mcp/reobf/minecraft" />
+        
+        <copy todir="forge/mcp/src/minecraft">
+        
+        <fileset dir="Hand_of_Omega/Common/">
+            
+        </fileset>
+        
+        </copy>
+        
+		<mkdir dir="build" />
+        
+		<exec executable="recompile.bat" dir="forge/mcp" resolveexecutable="true" osfamily="windows"></exec>
+        
+		<exec executable="reobfuscate.bat" dir="forge/mcp" resolveexecutable="true" osfamily="windows"></exec>
+        
+		<exec executable="recompile.sh" dir="forge/mcp" resolveexecutable="true" osfamily="unix"></exec>
+        
+		<exec executable="reobfuscate.sh" dir="forge/mcp" resolveexecutable="true" osfamily="unix"></exec>
+    
+        
+		<jar destfile="build/Hand_of_Omega.jar">
+            
+			<fileset dir="forge/mcp/reobf/minecraft" />
+            <fileset dir="Hand_of_Omega/Resources"/>
+            
+		</jar>
+        
+	</target>
+    
+</project>

@@ -1,8 +1,14 @@
 package kakarotvg.omega;
 
+import kakarotvg.omega.blocks.VgFluid;
+import kakarotvg.omega.items.VgBucket;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fluids.FluidContainerRegistry.FluidContainerData;
+import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -26,8 +32,10 @@ public class Omega {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        MinecraftForge.EVENT_BUS.register(new VgBucket(0, 0, null));
         Configuration config = new Configuration(event.getSuggestedConfigurationFile());
         config.load();
+        LiquidHandler.configurefluids(config);
         BlockHandler.configureBlocks(config);
         ItemHandler.configureItems(config);
         ToolHandler.configureTools(config);
@@ -35,9 +43,12 @@ public class Omega {
         CropHandler.configurecrops(config);
         config.save();
 
+        LiquidHandler.registerfluids(new GameRegistry());
+        LiquidHandler.addNames(new LanguageRegistry());
         BlockHandler.registerBlocks(new GameRegistry());
         BlockHandler.setNames(new LanguageRegistry());
         BlockHandler.setHarvestlevel(new MinecraftForge());
+
         ItemHandler.registerItems(new GameRegistry());
         ItemHandler.setNames(new LanguageRegistry());
         CreativetabHandler.setNames(new LanguageRegistry());
@@ -53,14 +64,17 @@ public class Omega {
 
         GameRegistry.registerWorldGenerator(new WorldGen());
 
-    }
-
-    @EventHandler
-    public void Init(FMLInitializationEvent event) {
+        FluidContainerRegistry.registerFluidContainer(LiquidHandler.Darkness, new ItemStack(ItemHandler.darknessbucket, 1, 1), new ItemStack(Item.bucketEmpty));
         // loads the init method of Commonproxy
         proxy.init();
         MinecraftForge.addGrassSeed(new ItemStack(CropHandler.darknessseeds), 10);
         MinecraftForge.addGrassSeed(new ItemStack(CropHandler.lightseeds), 10);
+
+    }
+
+    @EventHandler
+    public void Init(FMLInitializationEvent event) {
+
     }
 
     @EventHandler

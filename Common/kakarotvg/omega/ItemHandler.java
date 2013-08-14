@@ -1,9 +1,11 @@
 package kakarotvg.omega;
 
+import kakarotvg.omega.items.VgBucket;
 import kakarotvg.omega.items.VgItem;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
+import net.minecraftforge.fluids.FluidContainerRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -96,8 +98,11 @@ public class ItemHandler {
     // vielvor
     public static Item vielvor;
     public static Item vielvoringot;
+    // buckets
+    public static Item darknessbucket;
 
     public static void configureItems(Configuration config) {
+
         // urotark
         urotark = new VgItem(config.get("Urotark IDs", "Urotark", 9000).getInt()).setUnlocalizedName("urotark").setCreativeTab(CreativetabHandler.vgtab2);
         urotarkingot = new VgItem(config.get("Urotark IDs", "Urotark Ingot", 9001).getInt()).setUnlocalizedName("urotarkingot").setCreativeTab(CreativetabHandler.vgtab2);
@@ -185,6 +190,8 @@ public class ItemHandler {
         // vielvor
         vielvor = new VgItem(config.get("Vielvor IDs", "Vielvor", 9057).getInt()).setUnlocalizedName("vielvor").setCreativeTab(CreativetabHandler.vgtab2);
         vielvoringot = new VgItem(config.get("Vielvor IDs", "Vielvor Ingot", 9058).getInt()).setUnlocalizedName("vielvoringot").setCreativeTab(CreativetabHandler.vgtab2);
+        // buckets
+        darknessbucket = new VgBucket(config.get("Liquid IDs", "Darkness Bucket", 9059).getInt(), LiquidHandler.Darknessliquid.blockID, "darknessbucket").setCreativeTab(CreativetabHandler.vgtab2).setContainerItem(Item.bucketEmpty);
 
     }
 
@@ -276,7 +283,8 @@ public class ItemHandler {
         // vielvor
         registry.registerItem(vielvor, "vielvor");
         registry.registerItem(vielvoringot, "vielvoringot");
-
+        // buckets
+        registry.registerItem(darknessbucket, "darknessbucket");
     }
 
     public static void setNames(LanguageRegistry registry) {
@@ -367,6 +375,8 @@ public class ItemHandler {
         // vielvor
         registry.addName(vielvor, "Vielvor");
         registry.addName(vielvoringot, "Vielvor Ingot");
+        // buckets
+        registry.addName(darknessbucket, "Darkness bucket");
 
     }
 

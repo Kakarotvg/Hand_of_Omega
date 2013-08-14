@@ -1,7 +1,7 @@
 package kakarotvg.omega;
 
-import kakarotvg.omega.blocks.DarknessFlow;
-import kakarotvg.omega.blocks.DarknessStill;
+import kakarotvg.omega.blocks.VgFluid;
+import kakarotvg.omega.blocks.BlockDarkness;
 import kakarotvg.omega.blocks.Vgblock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -95,12 +95,6 @@ public class BlockHandler {
     // ???
     public static Block unknown;
 
-    // liquids
-    public static Block darkliquidflow;
-    public static Block darkliquidstill;
-    public static Block lightliquidflow;
-    public static Block lightliquidstill;
-
     public static void configureBlocks(Configuration config) {
         // Urotark
         urotarkblock = new Vgblock(config.get("Urotark IDs", "Urotark Block", 2500).getInt(), Material.iron).setUnlocalizedName("urotarkblock").setCreativeTab(CreativetabHandler.vgtab).setStepSound(Block.soundMetalFootstep).setHardness(50.0F).setResistance(2000.0F);
@@ -185,11 +179,6 @@ public class BlockHandler {
         // ???
         unknown = new Vgblock(config.get("??? IDs", "???", 2553).getInt(), Material.iron).setUnlocalizedName("???animated").setCreativeTab(CreativetabHandler.vgtab).setStepSound(Block.soundMetalFootstep).setHardness(5.0F).setResistance(8.0F);
 
-        // Darkness liquid
-        darkliquidflow = new DarknessFlow(config.get("Liquids", "Liquid Darkness(Flowing)", 2600).getInt(), "darkliquidflow");
-        darkliquidstill = new DarknessStill(config.get("Liquids", "Liquid Darkness(Still)", 2601).getInt(), "darkliquidstill");
-        lightliquidflow = new DarknessFlow(config.get("Liquids", "Liquid Light(Flowing)", 2602).getInt(), "lightliquidflow");
-        lightliquidstill = new DarknessStill(config.get("Liquids", "Liquid Light(Still)", 2603).getInt(), "lightliquidstill");
         // tile entity
     }
 
@@ -277,11 +266,6 @@ public class BlockHandler {
         // ???
         registry.registerBlock(unknown, "unknown");
 
-        // liquids
-        registry.registerBlock(darkliquidstill, "darkliquidstill");
-        registry.registerBlock(darkliquidflow, "darkliquidflow");
-        registry.registerBlock(lightliquidstill, "lightliquidstill");
-        registry.registerBlock(lightliquidflow, "lightliquidflow");
         // tileentity
     }
 
@@ -367,12 +351,6 @@ public class BlockHandler {
         registry.addName(omegablock, "Omega Block");
         registry.addName(omegaore, "Omega Ore");
         registry.addName(unknown, "Unknown");
-
-        // liquids
-        registry.addName(darkliquidstill, "Darkness(Still)");
-        registry.addName(darkliquidflow, "Darkness(Flowing)");
-        registry.addName(lightliquidstill, "Light(Still)");
-        registry.addName(lightliquidflow, "Light(Flowing)");
     }
 
     public static void setHarvestlevel(MinecraftForge registry) {
