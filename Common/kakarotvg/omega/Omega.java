@@ -1,7 +1,14 @@
 package kakarotvg.omega;
 
-import kakarotvg.omega.blocks.VgFluid;
+import kakarotvg.omega.armor.ArmorHandler;
+import kakarotvg.omega.blocks.BlockHandler;
+import kakarotvg.omega.crops.CropHandler;
+import kakarotvg.omega.events.VgEventHandler;
+import kakarotvg.omega.fluids.LiquidHandler;
+import kakarotvg.omega.fluids.DarknessFluid;
+import kakarotvg.omega.items.ItemHandler;
 import kakarotvg.omega.items.VgBucket;
+import kakarotvg.omega.tools.ToolHandler;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
@@ -32,43 +39,49 @@ public class Omega {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        MinecraftForge.EVENT_BUS.register(new VgBucket(0, 0, null));
         Configuration config = new Configuration(event.getSuggestedConfigurationFile());
         config.load();
-        LiquidHandler.configurefluids(config);
-        BlockHandler.configureBlocks(config);
-        ItemHandler.configureItems(config);
-        ToolHandler.configureTools(config);
-        ArmorHandler.configreArmor(config);
-        CropHandler.configurecrops(config);
+        IDHandler.createConfiguration(config);
         config.save();
 
-        LiquidHandler.registerfluids(new GameRegistry());
-        LiquidHandler.addNames(new LanguageRegistry());
+        VgEventHandler.Events();
+
+        BlockHandler.configureBlocks(config);
         BlockHandler.registerBlocks(new GameRegistry());
         BlockHandler.setNames(new LanguageRegistry());
         BlockHandler.setHarvestlevel(new MinecraftForge());
 
+        ItemHandler.configureItems(config);
         ItemHandler.registerItems(new GameRegistry());
         ItemHandler.setNames(new LanguageRegistry());
-        CreativetabHandler.setNames(new LanguageRegistry());
+
+        ToolHandler.configureTools(config);
         ToolHandler.registerItem(new GameRegistry());
         ToolHandler.setNames(new LanguageRegistry());
         ToolHandler.setToolClass(new MinecraftForge());
+
+        ArmorHandler.configreArmor(config);
         ArmorHandler.registerArmor(new GameRegistry());
         ArmorHandler.setNames(new LanguageRegistry());
-        CraftingHandler.addCrafting(new GameRegistry());
-        CraftingHandler.addSmelting(new GameRegistry());
+
+        CropHandler.configurecrops(config);
         CropHandler.registercrops(new GameRegistry());
         CropHandler.addnames(new LanguageRegistry());
 
+        CreativetabHandler.setNames(new LanguageRegistry());
+
+        CraftingHandler.addCrafting(new GameRegistry());
+        CraftingHandler.addSmelting(new GameRegistry());
+
+        LiquidHandler.configurefluids(config);
+        LiquidHandler.registerfluids(new GameRegistry());
+        LiquidHandler.addNames(new LanguageRegistry());
+        LiquidHandler.fluidContainerRegistry();
+
         GameRegistry.registerWorldGenerator(new WorldGen());
 
-        FluidContainerRegistry.registerFluidContainer(LiquidHandler.Darkness, new ItemStack(ItemHandler.darknessbucket, 1, 1), new ItemStack(Item.bucketEmpty));
         // loads the init method of Commonproxy
         proxy.init();
-        MinecraftForge.addGrassSeed(new ItemStack(CropHandler.darknessseeds), 10);
-        MinecraftForge.addGrassSeed(new ItemStack(CropHandler.lightseeds), 10);
 
     }
 

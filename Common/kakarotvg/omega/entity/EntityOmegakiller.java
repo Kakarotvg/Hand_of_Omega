@@ -1,7 +1,7 @@
 package kakarotvg.omega.entity;
 
-import kakarotvg.omega.ItemHandler;
 import kakarotvg.omega.Reference;
+import kakarotvg.omega.items.ItemHandler;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EntityLivingData;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;

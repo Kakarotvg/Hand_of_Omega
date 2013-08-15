@@ -1,5 +1,10 @@
 package kakarotvg.omega;
 
+import kakarotvg.omega.armor.ArmorHandler;
+import kakarotvg.omega.blocks.BlockHandler;
+import kakarotvg.omega.crops.CropHandler;
+import kakarotvg.omega.items.ItemHandler;
+import kakarotvg.omega.tools.ToolHandler;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;

@@ -1,8 +1,8 @@
 package kakarotvg.omega.items;
 
-import kakarotvg.omega.ItemHandler;
-import kakarotvg.omega.LiquidHandler;
+import kakarotvg.omega.IDHandler;
 import kakarotvg.omega.Reference;
+import kakarotvg.omega.fluids.LiquidHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -38,28 +38,6 @@ public class VgBucket extends ItemBucket {
         this.itemName = name;
         this.setUnlocalizedName(name);
 
-    }
-
-    @ForgeSubscribe
-    public void onBucketFill(FillBucketEvent event) {
-
-        ItemStack result = fillCustomBucket(event.world, event.target);
-
-        if (result == null) return;
-
-        event.result = result;
-        event.setResult(Result.ALLOW);
-    }
-
-    public ItemStack fillCustomBucket(World world, MovingObjectPosition pos) {
-        int blockID = world.getBlockId(pos.blockX, pos.blockY, pos.blockZ);
-
-        if ((blockID == LiquidHandler.Darknessliquid.blockID) && world.getBlockMetadata(pos.blockX, pos.blockY, pos.blockZ) == 0) {
-            world.setBlock(pos.blockX, pos.blockY, pos.blockZ, 0);
-            return new ItemStack(ItemHandler.darknessbucket);
-        }
-        else
-            return null;
     }
 
 }

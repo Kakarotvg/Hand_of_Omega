@@ -1,6 +1,6 @@
 package kakarotvg.omega.entity;
 
-import kakarotvg.omega.ItemHandler;
+import kakarotvg.omega.items.ItemHandler;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.ai.EntityAIControlledByPlayer;
 import net.minecraft.entity.ai.EntityAIFollowParent;
