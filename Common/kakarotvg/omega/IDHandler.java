@@ -36,6 +36,7 @@ public class IDHandler {
     public static String liquidids = "Liquid IDs";
     public static String unknownids = "??? IDs";
     public static String cropids = "Crop IDs";
+    public static String tileentityids = "Tile Entity IDs";
 
     // BLOCK IDS
     // urotark ids
@@ -515,6 +516,10 @@ public class IDHandler {
     public static int darknessseedsID;
     public static int lightseedsID;
 
+    // TILE ENTITY IDS
+    public static int darknesssolidID;
+    public static int computerID;
+
     public static void createConfiguration(Configuration config) {
         // BLOCK IDS    
         // urotark ids
@@ -993,6 +998,10 @@ public class IDHandler {
         lightcropID = config.get(cropids, "Light Crop", 2801).getInt();
         darknessseedsID = config.get(cropids, "Darkness Seeds", 9800).getInt();
         lightseedsID = config.get(cropids, "Light Seeds", 9801).getInt();
+
+        // TILEENTITY IDS
+        darknesssolidID = config.get(tileentityids, "Darkness Extrapalator", 2850).getInt();
+        computerID = config.get(tileentityids, "Computer", 2851).getInt();
     }
 
 }

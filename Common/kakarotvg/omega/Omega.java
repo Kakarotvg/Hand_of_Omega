@@ -3,19 +3,15 @@ package kakarotvg.omega;
 import kakarotvg.omega.armor.ArmorHandler;
 import kakarotvg.omega.blocks.BlockHandler;
 import kakarotvg.omega.crops.CropHandler;
+import kakarotvg.omega.entity.TileEntityComputerEntity;
+import kakarotvg.omega.entity.TileEntityDarknessSolidEntity;
 import kakarotvg.omega.events.VgEventHandler;
 import kakarotvg.omega.fluids.LiquidHandler;
-import kakarotvg.omega.fluids.DarknessFluid;
 import kakarotvg.omega.items.ItemHandler;
-import kakarotvg.omega.items.VgBucket;
+import kakarotvg.omega.tileentity.TileEntityHandler;
 import kakarotvg.omega.tools.ToolHandler;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.FluidContainerRegistry;
-import net.minecraftforge.fluids.FluidContainerRegistry.FluidContainerData;
-import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -78,7 +74,13 @@ public class Omega {
         LiquidHandler.addNames(new LanguageRegistry());
         LiquidHandler.fluidContainerRegistry();
 
+        TileEntityHandler.configureTileEntitys(config);
+        TileEntityHandler.registerTileEntitys(new GameRegistry());
+        TileEntityHandler.addNames(new LanguageRegistry());
+
         GameRegistry.registerWorldGenerator(new WorldGen());
+        GameRegistry.registerTileEntity(TileEntityDarknessSolidEntity.class, "tileEntityDarknessSolid");
+        GameRegistry.registerTileEntity(TileEntityComputerEntity.class, "tileEntityComputer");
 
         // loads the init method of Commonproxy
         proxy.init();

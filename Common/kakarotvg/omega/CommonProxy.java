@@ -16,6 +16,10 @@ public class CommonProxy {
 
     }
 
+    public void registerRenderThings() {
+
+    }
+
     public void init() {
 
         // Omega Hound
@@ -43,6 +47,7 @@ public class CommonProxy {
         LanguageRegistry.instance().addStringLocalization("entity.Slayer.name", "Slayer");
         CustomEgg.registerCustomEntityEgg(EntitySlayer.class, 0x350085, 0xDDFF61);
         registerRenderInformation();
+        registerRenderThings();
     }
 
     public void registerRenders() {
