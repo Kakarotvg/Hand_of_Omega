@@ -1,4 +1,4 @@
-package kakarotvg.omega;
+package kakarotvg.omega.handlers;
 
 import net.minecraftforge.common.Configuration;
 

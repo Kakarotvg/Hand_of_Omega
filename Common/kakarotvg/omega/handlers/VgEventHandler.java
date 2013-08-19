@@ -1,5 +1,7 @@
-package kakarotvg.omega.events;
+package kakarotvg.omega.handlers;
 
+import kakarotvg.omega.events.DarknessBucketEvent;
+import kakarotvg.omega.events.LightBucketEvent;
 import kakarotvg.omega.items.VgBucket;
 import net.minecraftforge.common.MinecraftForge;
 

@@ -1,15 +1,19 @@
 package kakarotvg.omega;
 
-import kakarotvg.omega.armor.ArmorHandler;
-import kakarotvg.omega.blocks.BlockHandler;
-import kakarotvg.omega.crops.CropHandler;
 import kakarotvg.omega.entity.TileEntityComputerEntity;
 import kakarotvg.omega.entity.TileEntityDarknessSolidEntity;
-import kakarotvg.omega.events.VgEventHandler;
-import kakarotvg.omega.fluids.LiquidHandler;
-import kakarotvg.omega.items.ItemHandler;
-import kakarotvg.omega.tileentity.TileEntityHandler;
-import kakarotvg.omega.tools.ToolHandler;
+import kakarotvg.omega.handlers.ArmorHandler;
+import kakarotvg.omega.handlers.BlockHandler;
+import kakarotvg.omega.handlers.CraftingHandler;
+import kakarotvg.omega.handlers.CreativetabHandler;
+import kakarotvg.omega.handlers.CropHandler;
+import kakarotvg.omega.handlers.IDHandler;
+import kakarotvg.omega.handlers.ItemHandler;
+import kakarotvg.omega.handlers.LiquidHandler;
+import kakarotvg.omega.handlers.TileEntityHandler;
+import kakarotvg.omega.handlers.ToolHandler;
+import kakarotvg.omega.handlers.VgEventHandler;
+import kakarotvg.omega.proxys.CommonProxy;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
@@ -30,7 +34,7 @@ public class Omega {
     @Instance(Reference.MOD_N)
     public static Omega instance;
 
-    @SidedProxy(clientSide = "kakarotvg.omega.client.ClientProxy", serverSide = "kakarotvg.omega.CommonProxy")
+    @SidedProxy(clientSide = "kakarotvg.omega.proxys.ClientProxy", serverSide = "kakarotvg.omega.proxys.CommonProxy")
     public static CommonProxy proxy;
 
     @EventHandler

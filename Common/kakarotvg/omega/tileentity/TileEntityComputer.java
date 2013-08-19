@@ -1,8 +1,8 @@
 package kakarotvg.omega.tileentity;
 
-import kakarotvg.omega.CreativetabHandler;
 import kakarotvg.omega.Reference;
 import kakarotvg.omega.entity.TileEntityComputerEntity;
+import kakarotvg.omega.handlers.CreativetabHandler;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;

@@ -1,7 +1,6 @@
-package kakarotvg.omega.items;
+package kakarotvg.omega.handlers;
 
-import kakarotvg.omega.CreativetabHandler;
-import kakarotvg.omega.IDHandler;
+import kakarotvg.omega.items.VgItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;

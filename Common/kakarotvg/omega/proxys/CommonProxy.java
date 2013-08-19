@@ -1,7 +1,9 @@
-package kakarotvg.omega;
+package kakarotvg.omega.proxys;
 
 import kakarotvg.omega.egg.CustomEgg;
+import kakarotvg.omega.entity.EntityAnnihilator;
 import kakarotvg.omega.entity.EntityEliminator;
+import kakarotvg.omega.entity.EntityJungleAssasin;
 import kakarotvg.omega.entity.EntityOmegaHound;
 import kakarotvg.omega.entity.EntityOmegakiller;
 import kakarotvg.omega.entity.EntitySlayer;
@@ -25,7 +27,7 @@ public class CommonProxy {
         // Omega Hound
         // spawns Omega hound and creates spawn egg
         EntityRegistry.registerGlobalEntityID(EntityOmegaHound.class, "Omega Hound", EntityRegistry.findGlobalUniqueEntityId());
-        EntityRegistry.addSpawn(EntityOmegaHound.class, 3, 2, 4, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.taiga, BiomeGenBase.extremeHills, BiomeGenBase.forest, BiomeGenBase.swampland);
+        EntityRegistry.addSpawn(EntityOmegaHound.class, 7, 2, 4, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.taiga, BiomeGenBase.extremeHills, BiomeGenBase.forest, BiomeGenBase.swampland);
         LanguageRegistry.instance().addStringLocalization("entity.Omega Hound.name", "Omega Hound");
         CustomEgg.registerCustomEntityEgg(EntityOmegaHound.class, 0x0800FF, 0x02FA0B);
 
@@ -46,6 +48,16 @@ public class CommonProxy {
         EntityRegistry.addSpawn(EntitySlayer.class, 6, 2, 4, EnumCreatureType.monster, BiomeGenBase.plains, BiomeGenBase.taiga, BiomeGenBase.extremeHills, BiomeGenBase.forest, BiomeGenBase.swampland);
         LanguageRegistry.instance().addStringLocalization("entity.Slayer.name", "Slayer");
         CustomEgg.registerCustomEntityEgg(EntitySlayer.class, 0x350085, 0xDDFF61);
+        // Annihilator
+        EntityRegistry.registerGlobalEntityID(EntityAnnihilator.class, "Annihilator", EntityRegistry.findGlobalUniqueEntityId());
+        EntityRegistry.addSpawn(EntityAnnihilator.class, 3, 2, 4, EnumCreatureType.monster, BiomeGenBase.plains, BiomeGenBase.taiga, BiomeGenBase.extremeHills, BiomeGenBase.forest, BiomeGenBase.swampland);
+        LanguageRegistry.instance().addStringLocalization("entity.Annihilator.name", "Annihilator");
+        CustomEgg.registerCustomEntityEgg(EntityAnnihilator.class, 0x488594, 0x8849003);
+        // Jungle Assasin
+        EntityRegistry.registerGlobalEntityID(EntityJungleAssasin.class, "Jungle Assasin", EntityRegistry.findGlobalUniqueEntityId());
+        EntityRegistry.addSpawn(EntityJungleAssasin.class, 3, 2, 4, EnumCreatureType.monster, BiomeGenBase.jungle, BiomeGenBase.jungleHills);
+        LanguageRegistry.instance().addStringLocalization("entity.Jungle Assasin.name", "Jungle Assasin");
+        CustomEgg.registerCustomEntityEgg(EntityJungleAssasin.class, 0x98765778, 0x34568997);
         registerRenderInformation();
         registerRenderThings();
     }

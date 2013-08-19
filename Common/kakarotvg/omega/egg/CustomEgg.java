@@ -1,6 +1,6 @@
 package kakarotvg.omega.egg;
 
-import kakarotvg.omega.CreativetabHandler;
+import kakarotvg.omega.handlers.CreativetabHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityEggInfo;
 import net.minecraft.entity.EntityList;

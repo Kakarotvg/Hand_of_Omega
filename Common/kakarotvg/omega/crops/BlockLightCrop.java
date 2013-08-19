@@ -1,6 +1,7 @@
 package kakarotvg.omega.crops;
 
 import kakarotvg.omega.Reference;
+import kakarotvg.omega.handlers.CropHandler;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;

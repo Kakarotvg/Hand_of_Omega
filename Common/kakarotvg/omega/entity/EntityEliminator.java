@@ -1,6 +1,6 @@
 package kakarotvg.omega.entity;
 
-import kakarotvg.omega.items.ItemHandler;
+import kakarotvg.omega.handlers.ItemHandler;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIFollowParent;
@@ -24,12 +24,12 @@ public class EntityEliminator extends EntityMob {
         this.getNavigator().setAvoidsWater(false);
         this.tasks.addTask(0, new EntityAISwimming(this));
         // sets the movement speed
-        this.tasks.addTask(6, new EntityAIWander(this, 0.50D));
+        this.tasks.addTask(6, new EntityAIWander(this, 0.25D));
         this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
         this.tasks.addTask(8, new EntityAILookIdle(this));
         // gets the mob to attack the player
-        this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 0.50D, false));
-        this.tasks.addTask(3, new EntityAIAttackOnCollide(this, EntityVillager.class, 0.50D, true));
+        this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 0.25D, false));
+        this.tasks.addTask(3, new EntityAIAttackOnCollide(this, EntityVillager.class, 0.25D, true));
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityVillager.class, 0, false));

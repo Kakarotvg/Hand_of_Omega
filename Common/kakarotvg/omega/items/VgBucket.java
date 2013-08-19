@@ -1,8 +1,8 @@
 package kakarotvg.omega.items;
 
-import kakarotvg.omega.IDHandler;
 import kakarotvg.omega.Reference;
-import kakarotvg.omega.fluids.LiquidHandler;
+import kakarotvg.omega.handlers.IDHandler;
+import kakarotvg.omega.handlers.LiquidHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;

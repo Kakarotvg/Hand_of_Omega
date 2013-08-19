@@ -1,8 +1,10 @@
-package kakarotvg.omega.armor;
+package kakarotvg.omega.handlers;
 
-import kakarotvg.omega.CreativetabHandler;
-import kakarotvg.omega.IDHandler;
 import kakarotvg.omega.Omega;
+import kakarotvg.omega.armor.DarknessArmor;
+import kakarotvg.omega.armor.LightArmor;
+import kakarotvg.omega.armor.OmegaArmor;
+import kakarotvg.omega.armor.Vgarmor;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.Configuration;

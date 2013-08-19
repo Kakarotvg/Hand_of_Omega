@@ -1,6 +1,7 @@
-package kakarotvg.omega.tileentity;
+package kakarotvg.omega.handlers;
 
-import kakarotvg.omega.IDHandler;
+import kakarotvg.omega.tileentity.TileEntityComputer;
+import kakarotvg.omega.tileentity.TileEntitySolidDarkness;
 import net.minecraft.block.Block;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.registry.GameRegistry;

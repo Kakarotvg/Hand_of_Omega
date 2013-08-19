@@ -1,7 +1,10 @@
-package kakarotvg.omega.tools;
+package kakarotvg.omega.handlers;
 
-import kakarotvg.omega.CreativetabHandler;
-import kakarotvg.omega.IDHandler;
+import kakarotvg.omega.tools.Vgaxe;
+import kakarotvg.omega.tools.Vghoe;
+import kakarotvg.omega.tools.Vgpickaxe;
+import kakarotvg.omega.tools.Vgshovel;
+import kakarotvg.omega.tools.Vgsword;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;

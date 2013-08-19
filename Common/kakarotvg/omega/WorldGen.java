@@ -2,7 +2,7 @@ package kakarotvg.omega;
 
 import java.util.Random;
 
-import kakarotvg.omega.blocks.BlockHandler;
+import kakarotvg.omega.handlers.BlockHandler;
 
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;

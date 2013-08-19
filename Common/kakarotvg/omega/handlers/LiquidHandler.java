@@ -1,7 +1,9 @@
-package kakarotvg.omega.fluids;
+package kakarotvg.omega.handlers;
 
-import kakarotvg.omega.CreativetabHandler;
-import kakarotvg.omega.IDHandler;
+import kakarotvg.omega.fluids.BlockDarkness;
+import kakarotvg.omega.fluids.BlockLight;
+import kakarotvg.omega.fluids.DarknessFluid;
+import kakarotvg.omega.fluids.LightFluid;
 import kakarotvg.omega.items.VgBucket;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
