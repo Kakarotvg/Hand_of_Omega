@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<project name="Hand of Omega" basedir="../" default="build">
+<project name="Hand of Omega" basedir="../" default="releases">
     
-	<target name="build">
+	<target name="releases">
         
-		<delete dir="build" />
+		<delete dir="releases" />
 		<delete dir="forge/mcp/reobf/minecraft" />
         
         <copy todir="forge/mcp/src/minecraft">
@@ -15,7 +15,7 @@
         
         </copy>
         
-		<mkdir dir="build" />
+		<mkdir dir="releases" />
         
 		<exec executable="recompile.bat" dir="forge/mcp" resolveexecutable="true" osfamily="windows"></exec>
         
@@ -25,13 +25,15 @@
         
 		<exec executable="reobfuscate.sh" dir="forge/mcp" resolveexecutable="true" osfamily="unix"></exec>
     
-        
-		<jar destfile="build/Hand_of_Omega.jar">
+        <delete dir="forge/mcp/reobf/minecraft/net"/>
+		<jar destfile="releases/Hand_of_Omega.jar">
             
-			<fileset dir="forge/mcp/reobf/minecraft" />
+			<fileset dir="forge/mcp/reobf/minecraft/" />
             <fileset dir="Hand_of_Omega/Resources"/>
             
 		</jar>
+
+	<delete dir="forge/mcp/src/minecraft/kakarotvg"/>
         
 	</target>
     

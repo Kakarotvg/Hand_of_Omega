@@ -58,21 +58,21 @@ public class EntityOmegakiller extends EntityMob {
     }
 
     protected String getLivingSound() {
-        return "mob.endermen.idle";
+        return Reference.MOD_ID + ":" + "mob.omegakiller.say";
     }
 
     /**
      * Returns the sound this mob makes when it is hurt.
      */
     protected String getHurtSound() {
-        return "mob.endermen.hit";
+        return Reference.MOD_ID + ":" + "mob.omegakiller.hurt";
     }
 
     /**
      * Returns the sound this mob makes on death.
      */
     protected String getDeathSound() {
-        return "mob.endermen.death";
+        return Reference.MOD_ID + ":" + "mob.omegakiller.death";
     }
 
     protected int getDropItemId() {

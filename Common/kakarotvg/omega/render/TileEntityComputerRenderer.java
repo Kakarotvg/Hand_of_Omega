@@ -44,13 +44,6 @@ public class TileEntityComputerRenderer extends TileEntitySpecialRenderer {
 
     //Set the lighting stuff, so it changes it's brightness properly.       
     private void adjustLightFixture(World world, int i, int j, int k, Block block) {
-        Tessellator tess = Tessellator.instance;
-        float brightness = block.getBlockBrightness(world, i, j, k);
-        int skyLight = world.getLightBrightnessForSkyBlocks(i, j, k, 0);
-        int modulousModifier = skyLight % 65536;
-        int divModifier = skyLight / 65536;
-        tess.setColorOpaque_F(brightness, brightness, brightness);
-        OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, (float) modulousModifier, divModifier);
 
         int dir = world.getBlockMetadata(i, j, k);
 

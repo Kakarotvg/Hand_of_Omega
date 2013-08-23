@@ -45,6 +45,7 @@ public class Omega {
         config.save();
 
         VgEventHandler.Events();
+        VgEventHandler.registerSound();
 
         BlockHandler.configureBlocks(config);
         BlockHandler.registerBlocks(new GameRegistry());

@@ -1,5 +1,6 @@
 package kakarotvg.omega.entity;
 
+import kakarotvg.omega.Reference;
 import kakarotvg.omega.handlers.ItemHandler;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
@@ -52,21 +53,21 @@ public class EntitySlayer extends EntityMob {
     }
 
     protected String getLivingSound() {
-        return "mob.endermen.say";
+        return Reference.MOD_ID + ":" + "mob.slayer.say";
     }
 
     /**
      * Returns the sound this mob makes when it is hurt.
      */
     protected String getHurtSound() {
-        return "mob.endermen.hit";
+        return Reference.MOD_ID + ":" + "mob.slayer.say";
     }
 
     /**
      * Returns the sound this mob makes on death.
      */
     protected String getDeathSound() {
-        return "mob.endermen.death";
+        return Reference.MOD_ID + ":" + "mob.slayer.say";
     }
 
     protected int getDropItemId() {
