@@ -1,5 +1,6 @@
 package kakarotvg.omega;
 
+import kakarotvg.omega.computer.VgPacketHandler;
 import kakarotvg.omega.entity.TileEntityComputerEntity;
 import kakarotvg.omega.entity.TileEntityDarknessSolidEntity;
 import kakarotvg.omega.handlers.ArmorHandler;
@@ -7,6 +8,7 @@ import kakarotvg.omega.handlers.BlockHandler;
 import kakarotvg.omega.handlers.CraftingHandler;
 import kakarotvg.omega.handlers.CreativetabHandler;
 import kakarotvg.omega.handlers.CropHandler;
+import kakarotvg.omega.handlers.GuiHandler;
 import kakarotvg.omega.handlers.IDHandler;
 import kakarotvg.omega.handlers.ItemHandler;
 import kakarotvg.omega.handlers.LiquidHandler;
@@ -24,15 +26,17 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_N, version = Reference.MOD_V)
-@NetworkMod(serverSideRequired = false, clientSideRequired = true)
+@NetworkMod(serverSideRequired = false, clientSideRequired = true, channels = "Omega", packetHandler = VgPacketHandler.class)
 public class Omega {
 
-    @Instance(Reference.MOD_N)
+    @Instance(Reference.MOD_ID)
     public static Omega instance;
+    private GuiHandler guihandler = new GuiHandler();
 
     @SidedProxy(clientSide = "kakarotvg.omega.proxys.ClientProxy", serverSide = "kakarotvg.omega.proxys.CommonProxy")
     public static CommonProxy proxy;
@@ -86,6 +90,7 @@ public class Omega {
         GameRegistry.registerWorldGenerator(new WorldGen());
         GameRegistry.registerTileEntity(TileEntityDarknessSolidEntity.class, "tileEntityDarknessSolid");
         GameRegistry.registerTileEntity(TileEntityComputerEntity.class, "tileEntityComputer");
+        NetworkRegistry.instance().registerGuiHandler(this, guihandler);
 
         // loads the init method of Commonproxy
         proxy.init();

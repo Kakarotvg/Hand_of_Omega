@@ -1,5 +1,6 @@
 package kakarotvg.omega.handlers;
 
+import kakarotvg.omega.computer.VgFurnaceRecipes;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -414,6 +415,7 @@ public class CraftingHandler {
         // Vielvor
         register.addSmelting(BlockHandler.vielvorore.blockID, new ItemStack(ItemHandler.vielvor, 1), 28.0F);
         register.addSmelting(BlockHandler.vielvorblock.blockID, new ItemStack(ItemHandler.vielvoringot, 1), 28.0F);
+
     }
 
 }

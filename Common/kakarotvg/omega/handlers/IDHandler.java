@@ -518,7 +518,8 @@ public class IDHandler {
 
     // TILE ENTITY IDS
     public static int darknesssolidID;
-    public static int computerID;
+    public static int computeridleID;
+    public static int computerburnID;
 
     public static void createConfiguration(Configuration config) {
         // BLOCK IDS    
@@ -1001,7 +1002,8 @@ public class IDHandler {
 
         // TILEENTITY IDS
         darknesssolidID = config.get(tileentityids, "Darkness Extrapalator", 2850).getInt();
-        computerID = config.get(tileentityids, "Computer", 2851).getInt();
+        computeridleID = config.get(tileentityids, "Computer", 2851).getInt();
+        computerburnID = config.get(tileentityids, "Computer Burning", 2852).getInt();
     }
 
 }

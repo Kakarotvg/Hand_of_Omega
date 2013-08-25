@@ -11,10 +11,12 @@ public class TileEntityHandler {
 
     public static Block darknesssolid;
     public static Block computer;
+    public static Block computerburn;
 
     public static void configureTileEntitys(Configuration config) {
         darknesssolid = new TileEntitySolidDarkness(IDHandler.darknesssolidID).setUnlocalizedName("soliddarknessicon");
-        computer = new TileEntityComputer(IDHandler.computerID).setUnlocalizedName("computericon");
+        computer = new TileEntityComputer(IDHandler.computeridleID, false).setUnlocalizedName("computericon").setCreativeTab(CreativetabHandler.vgtab);
+        computerburn = new TileEntityComputer(IDHandler.computerburnID, true).setUnlocalizedName("computericon");
     }
 
     public static void registerTileEntitys(GameRegistry registry) {
