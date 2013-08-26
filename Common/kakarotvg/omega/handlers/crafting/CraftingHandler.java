@@ -1,6 +1,13 @@
-package kakarotvg.omega.handlers;
+package kakarotvg.omega.handlers.crafting;
 
-import kakarotvg.omega.computer.VgFurnaceRecipes;
+import kakarotvg.omega.computer.ComputerRecipes;
+import kakarotvg.omega.handlers.armor.ArmorHandler;
+import kakarotvg.omega.handlers.blocks.BlockHandler;
+import kakarotvg.omega.handlers.crops.CropHandler;
+import kakarotvg.omega.handlers.item.ItemHandler;
+import kakarotvg.omega.handlers.liquids.LiquidHandler;
+import kakarotvg.omega.handlers.tileentity.TileEntityHandler;
+import kakarotvg.omega.handlers.tools.ToolHandler;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -334,6 +341,11 @@ public class CraftingHandler {
         // seeds
         register.addRecipe(new ItemStack(ItemHandler.darkness, 1), "ddd", "ddd", "ddd", 'd', CropHandler.darknessseeds);
         register.addRecipe(new ItemStack(ItemHandler.light, 1), "lll", "lll", "lll", 'l', CropHandler.lightseeds);
+        // new stuff
+        register.addRecipe(new ItemStack(TileEntityHandler.darknesssolid, 1), "sss", "sss", "sss", 's', ItemHandler.soliddarkness);
+        register.addRecipe(new ItemStack(TileEntityHandler.computer, 1), "uds", "olo", "DhD", 'u', ItemHandler.urotarkingot, 'd', ItemHandler.darknessingot, 's', ItemHandler.selovaringot, 'l', LiquidHandler.lightbucket, 'o', ItemHandler.omegaingot, 'D', ItemHandler.dawningot, 'h', ToolHandler.omegahand);
+        register.addRecipe(new ItemStack(LiquidHandler.darknessbucket, 1), " l ", " d ", " b ", 'l', Item.bucketLava, 'd', BlockHandler.darknessblock, 'b', Item.bucketEmpty);
+        register.addRecipe(new ItemStack(LiquidHandler.lightbucket, 1), " l ", " L ", " b ", 'l', Item.bucketLava, 'L', BlockHandler.lightblock, 'b', Item.bucketEmpty);
     }
 
     public static void addSmelting(GameRegistry register) {

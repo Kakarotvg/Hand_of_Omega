@@ -1,8 +1,10 @@
-package kakarotvg.omega.handlers;
+package kakarotvg.omega.handlers.crops;
 
 import kakarotvg.omega.crops.BlockDarknessCrop;
 import kakarotvg.omega.crops.BlockLightCrop;
 import kakarotvg.omega.crops.VgSeeds;
+import kakarotvg.omega.handlers.IDs.IDHandler;
+import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

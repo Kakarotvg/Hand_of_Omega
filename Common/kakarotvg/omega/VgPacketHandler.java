@@ -1,4 +1,4 @@
-package kakarotvg.omega.computer;
+package kakarotvg.omega;
 
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;

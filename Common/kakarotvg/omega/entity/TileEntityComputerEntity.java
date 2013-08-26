@@ -1,6 +1,6 @@
 package kakarotvg.omega.entity;
 
-import kakarotvg.omega.computer.VgFurnaceRecipes;
+import kakarotvg.omega.computer.ComputerRecipes;
 import kakarotvg.omega.tileentity.TileEntityComputer;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -287,7 +287,7 @@ public class TileEntityComputerEntity extends TileEntity implements ISidedInvent
             return false;
         }
         else {
-            ItemStack itemstack = VgFurnaceRecipes.smelting().getSmeltingResult(this.furnaceItemStacks[0]);
+            ItemStack itemstack = ComputerRecipes.smelting().getSmeltingResult(this.furnaceItemStacks[0]);
             if (itemstack == null) return false;
             if (this.furnaceItemStacks[2] == null) return true;
             if (!this.furnaceItemStacks[2].isItemEqual(itemstack)) return false;
@@ -302,7 +302,7 @@ public class TileEntityComputerEntity extends TileEntity implements ISidedInvent
      */
     public void smeltItem() {
         if (this.canSmelt()) {
-            ItemStack itemstack = VgFurnaceRecipes.smelting().getSmeltingResult(this.furnaceItemStacks[0]);
+            ItemStack itemstack = ComputerRecipes.smelting().getSmeltingResult(this.furnaceItemStacks[0]);
 
             if (this.furnaceItemStacks[2] == null) {
                 this.furnaceItemStacks[2] = itemstack.copy();

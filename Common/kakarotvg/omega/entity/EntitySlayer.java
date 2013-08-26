@@ -1,7 +1,7 @@
 package kakarotvg.omega.entity;
 
 import kakarotvg.omega.Reference;
-import kakarotvg.omega.handlers.ItemHandler;
+import kakarotvg.omega.handlers.item.ItemHandler;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIFollowParent;

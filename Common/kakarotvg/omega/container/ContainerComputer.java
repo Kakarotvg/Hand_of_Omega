@@ -1,6 +1,8 @@
-package kakarotvg.omega.computer;
+package kakarotvg.omega.container;
 
+import kakarotvg.omega.computer.ComputerRecipes;
 import kakarotvg.omega.entity.TileEntityComputerEntity;
+import kakarotvg.omega.slots.SlotVgFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -108,7 +110,7 @@ public class ContainerComputer extends Container {
                 slot.onSlotChange(itemstack1, itemstack);
             }
             else if (par2 != 1 && par2 != 0) {
-                if (VgFurnaceRecipes.smelting().getSmeltingResult(itemstack1) != null) {
+                if (ComputerRecipes.smelting().getSmeltingResult(itemstack1) != null) {
                     if (!this.mergeItemStack(itemstack1, 0, 1, false)) {
                         return null;
                     }

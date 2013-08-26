@@ -1,5 +1,7 @@
-package kakarotvg.omega.handlers;
+package kakarotvg.omega.handlers.tools;
 
+import kakarotvg.omega.handlers.IDs.IDHandler;
+import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
 import kakarotvg.omega.tools.Vgaxe;
 import kakarotvg.omega.tools.Vghoe;
 import kakarotvg.omega.tools.Vgpickaxe;

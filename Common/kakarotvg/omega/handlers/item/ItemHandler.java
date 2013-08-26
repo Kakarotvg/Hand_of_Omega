@@ -1,5 +1,7 @@
-package kakarotvg.omega.handlers;
+package kakarotvg.omega.handlers.item;
 
+import kakarotvg.omega.handlers.IDs.IDHandler;
+import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
 import kakarotvg.omega.items.VgItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -97,6 +99,8 @@ public class ItemHandler {
     // vielvor
     public static Item vielvor;
     public static Item vielvoringot;
+    // new darkness
+    public static Item soliddarkness;
 
     public static void configureItems(Configuration config) {
 
@@ -187,7 +191,8 @@ public class ItemHandler {
         // vielvor
         vielvor = new VgItem(IDHandler.vielvorID).setUnlocalizedName("vielvor").setCreativeTab(CreativetabHandler.vgtab2);
         vielvoringot = new VgItem(IDHandler.vielvoringotID).setUnlocalizedName("vielvoringot").setCreativeTab(CreativetabHandler.vgtab2);
-
+        // new darkness
+        soliddarkness = new VgItem(IDHandler.soliddarknessID).setUnlocalizedName("soliddarkness").setCreativeTab(CreativetabHandler.vgtab2);
     }
 
     public static void registerItems(GameRegistry registry) {
@@ -278,6 +283,8 @@ public class ItemHandler {
         // vielvor
         registry.registerItem(vielvor, "vielvor");
         registry.registerItem(vielvoringot, "vielvoringot");
+        // new darkness
+        registry.registerItem(soliddarkness, "Solid.Darkness");
     }
 
     public static void setNames(LanguageRegistry registry) {
@@ -368,6 +375,8 @@ public class ItemHandler {
         // vielvor
         registry.addName(vielvor, "Vielvor");
         registry.addName(vielvoringot, "Vielvor Ingot");
+        // New darkenss
+        registry.addName(soliddarkness, "Solid Darkness");
 
     }
 

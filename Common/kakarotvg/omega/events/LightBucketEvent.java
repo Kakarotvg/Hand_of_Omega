@@ -1,7 +1,7 @@
 package kakarotvg.omega.events;
 
-import kakarotvg.omega.handlers.IDHandler;
-import kakarotvg.omega.handlers.LiquidHandler;
+import kakarotvg.omega.handlers.IDs.IDHandler;
+import kakarotvg.omega.handlers.liquids.LiquidHandler;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;

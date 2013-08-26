@@ -1,5 +1,6 @@
-package kakarotvg.omega.computer;
+package kakarotvg.omega.slots;
 
+import kakarotvg.omega.computer.ComputerRecipes;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -64,7 +65,7 @@ public class SlotVgFurnace extends Slot {
 
         if (!this.thePlayer.worldObj.isRemote) {
             int i = this.field_75228_b;
-            float f = VgFurnaceRecipes.smelting().getExperience(par1ItemStack);
+            float f = ComputerRecipes.smelting().getExperience(par1ItemStack);
             int j;
 
             if (f == 0.0F) {

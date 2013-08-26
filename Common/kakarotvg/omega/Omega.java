@@ -1,20 +1,17 @@
 package kakarotvg.omega;
 
-import kakarotvg.omega.computer.VgPacketHandler;
-import kakarotvg.omega.entity.TileEntityComputerEntity;
-import kakarotvg.omega.entity.TileEntityDarknessSolidEntity;
-import kakarotvg.omega.handlers.ArmorHandler;
-import kakarotvg.omega.handlers.BlockHandler;
-import kakarotvg.omega.handlers.CraftingHandler;
-import kakarotvg.omega.handlers.CreativetabHandler;
-import kakarotvg.omega.handlers.CropHandler;
-import kakarotvg.omega.handlers.GuiHandler;
-import kakarotvg.omega.handlers.IDHandler;
-import kakarotvg.omega.handlers.ItemHandler;
-import kakarotvg.omega.handlers.LiquidHandler;
-import kakarotvg.omega.handlers.TileEntityHandler;
-import kakarotvg.omega.handlers.ToolHandler;
-import kakarotvg.omega.handlers.VgEventHandler;
+import kakarotvg.omega.handlers.IDs.IDHandler;
+import kakarotvg.omega.handlers.armor.ArmorHandler;
+import kakarotvg.omega.handlers.blocks.BlockHandler;
+import kakarotvg.omega.handlers.crafting.CraftingHandler;
+import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
+import kakarotvg.omega.handlers.crops.CropHandler;
+import kakarotvg.omega.handlers.events.VgEventHandler;
+import kakarotvg.omega.handlers.gui.GuiHandler;
+import kakarotvg.omega.handlers.item.ItemHandler;
+import kakarotvg.omega.handlers.liquids.LiquidHandler;
+import kakarotvg.omega.handlers.tileentity.TileEntityHandler;
+import kakarotvg.omega.handlers.tools.ToolHandler;
 import kakarotvg.omega.proxys.CommonProxy;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
@@ -75,9 +72,6 @@ public class Omega {
 
         CreativetabHandler.setNames(new LanguageRegistry());
 
-        CraftingHandler.addCrafting(new GameRegistry());
-        CraftingHandler.addSmelting(new GameRegistry());
-
         LiquidHandler.configurefluids(config);
         LiquidHandler.registerfluids(new GameRegistry());
         LiquidHandler.addNames(new LanguageRegistry());
@@ -86,11 +80,13 @@ public class Omega {
         TileEntityHandler.configureTileEntitys(config);
         TileEntityHandler.registerTileEntitys(new GameRegistry());
         TileEntityHandler.addNames(new LanguageRegistry());
+        TileEntityHandler.tileentityRegistry(new GameRegistry());
 
         GameRegistry.registerWorldGenerator(new WorldGen());
-        GameRegistry.registerTileEntity(TileEntityDarknessSolidEntity.class, "tileEntityDarknessSolid");
-        GameRegistry.registerTileEntity(TileEntityComputerEntity.class, "tileEntityComputer");
         NetworkRegistry.instance().registerGuiHandler(this, guihandler);
+
+        CraftingHandler.addCrafting(new GameRegistry());
+        CraftingHandler.addSmelting(new GameRegistry());
 
         // loads the init method of Commonproxy
         proxy.init();

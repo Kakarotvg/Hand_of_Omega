@@ -5,14 +5,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import kakarotvg.omega.handlers.LiquidHandler;
-import kakarotvg.omega.handlers.TileEntityHandler;
+import kakarotvg.omega.handlers.blocks.BlockHandler;
+import kakarotvg.omega.handlers.item.ItemHandler;
+import kakarotvg.omega.handlers.liquids.LiquidHandler;
+import kakarotvg.omega.handlers.tileentity.TileEntityHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class VgFurnaceRecipes {
-    private static final VgFurnaceRecipes smeltingBase = new VgFurnaceRecipes();
+public class ComputerRecipes {
+    private static final ComputerRecipes smeltingBase = new ComputerRecipes();
 
     /** The list of smelting results. */
     private Map smeltingList = new HashMap();
@@ -23,13 +25,12 @@ public class VgFurnaceRecipes {
     /**
      * Used to call methods addSmelting and getSmeltingResult.
      */
-    public static final VgFurnaceRecipes smelting() {
+    public static final ComputerRecipes smelting() {
         return smeltingBase;
     }
 
-    private VgFurnaceRecipes() {
-        this.addSmelting(Block.oreNetherQuartz.blockID, new ItemStack(Item.netherQuartz), 0.2F);
-        this.addSmelting(LiquidHandler.darknessbucket.itemID, new ItemStack(TileEntityHandler.darknesssolid), 0.5F);
+    private ComputerRecipes() {
+        this.addSmelting(LiquidHandler.darknessbucket.itemID, new ItemStack(ItemHandler.soliddarkness), 0.5F);
     }
 
     /**

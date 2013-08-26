@@ -1,4 +1,4 @@
-package kakarotvg.omega.handlers;
+package kakarotvg.omega.handlers.events;
 
 import kakarotvg.omega.events.DarknessBucketEvent;
 import kakarotvg.omega.events.LightBucketEvent;

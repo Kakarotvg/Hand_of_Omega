@@ -3,7 +3,7 @@ package kakarotvg.omega.crops;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import kakarotvg.omega.Reference;
-import kakarotvg.omega.handlers.CreativetabHandler;
+import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;

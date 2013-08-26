@@ -1,4 +1,4 @@
-package kakarotvg.omega.handlers;
+package kakarotvg.omega.handlers.IDs;
 
 import net.minecraftforge.common.Configuration;
 
@@ -199,6 +199,7 @@ public class IDHandler {
     public static int darknessID;
     public static int darknessingotID;
     public static int darknessshardID;
+    public static int soliddarknessID;
     // light ids
     public static int lightID;
     public static int lightingotID;
@@ -520,6 +521,7 @@ public class IDHandler {
     public static int darknesssolidID;
     public static int computeridleID;
     public static int computerburnID;
+    public static int underworldchestID;
 
     public static void createConfiguration(Configuration config) {
         // BLOCK IDS    
@@ -694,6 +696,8 @@ public class IDHandler {
         // dawn ids
         dawnID = config.get(dawnids, "Dawn", 9057).getInt();
         dawningotID = config.get(dawnids, "Dawn Ingot", 9058).getInt();
+        // new darkness ids
+        soliddarknessID = config.get(darknessids, "Solid Darkness", 9059).getInt();
 
         // TOOL IDS    
         // urotark ids
@@ -1004,6 +1008,6 @@ public class IDHandler {
         darknesssolidID = config.get(tileentityids, "Darkness Extrapalator", 2850).getInt();
         computeridleID = config.get(tileentityids, "Computer", 2851).getInt();
         computerburnID = config.get(tileentityids, "Computer Burning", 2852).getInt();
+        underworldchestID = config.get(tileentityids, "Chest of the Underworld", 2853).getInt();
     }
-
 }
