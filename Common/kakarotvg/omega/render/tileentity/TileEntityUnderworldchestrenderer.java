@@ -1,4 +1,4 @@
-package kakarotvg.omega.render;
+package kakarotvg.omega.render.tileentity;
 
 import java.util.Calendar;
 

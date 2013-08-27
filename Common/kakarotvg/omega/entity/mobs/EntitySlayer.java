@@ -1,4 +1,4 @@
-package kakarotvg.omega.entity;
+package kakarotvg.omega.entity.mobs;
 
 import kakarotvg.omega.Reference;
 import kakarotvg.omega.handlers.item.ItemHandler;
@@ -17,9 +17,9 @@ import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 
-public class EntityJungleAssasin extends EntityMob {
+public class EntitySlayer extends EntityMob {
 
-    public EntityJungleAssasin(World par1World) {
+    public EntitySlayer(World par1World) {
         super(par1World);
         this.setSize(0.9F, 0.9F);
         this.getNavigator().setAvoidsWater(false);
@@ -53,25 +53,25 @@ public class EntityJungleAssasin extends EntityMob {
     }
 
     protected String getLivingSound() {
-        return Reference.MOD_ID + ":" + "mob.jungleassasin.say";
+        return Reference.MOD_ID + ":" + "mob.slayer.say";
     }
 
     /**
      * Returns the sound this mob makes when it is hurt.
      */
     protected String getHurtSound() {
-        return Reference.MOD_ID + ":" + "mob.jungleassasin.hurt";
+        return Reference.MOD_ID + ":" + "mob.slayer.say";
     }
 
     /**
      * Returns the sound this mob makes on death.
      */
     protected String getDeathSound() {
-        return Reference.MOD_ID + ":" + "mob.jungleassasin.death";
+        return Reference.MOD_ID + ":" + "mob.slayer.say";
     }
 
     protected int getDropItemId() {
-        return ItemHandler.charviole.itemID;
+        return ItemHandler.gilder.itemID;
     }
 
 }

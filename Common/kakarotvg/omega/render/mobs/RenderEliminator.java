@@ -1,7 +1,7 @@
-package kakarotvg.omega.render;
+package kakarotvg.omega.render.mobs;
 
 import kakarotvg.omega.Reference;
-import kakarotvg.omega.entity.EntityEliminator;
+import kakarotvg.omega.entity.mobs.EntityEliminator;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;

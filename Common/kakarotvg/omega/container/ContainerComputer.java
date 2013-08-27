@@ -1,7 +1,7 @@
 package kakarotvg.omega.container;
 
 import kakarotvg.omega.computer.ComputerRecipes;
-import kakarotvg.omega.entity.TileEntityComputerEntity;
+import kakarotvg.omega.entity.tileentity.TileEntityComputerEntity;
 import kakarotvg.omega.slots.SlotVgFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;

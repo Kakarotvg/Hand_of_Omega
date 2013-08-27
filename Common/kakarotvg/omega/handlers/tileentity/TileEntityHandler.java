@@ -1,8 +1,8 @@
 package kakarotvg.omega.handlers.tileentity;
 
 import kakarotvg.omega.blocks.UnderworldChest;
-import kakarotvg.omega.entity.TileEntityComputerEntity;
-import kakarotvg.omega.entity.TileEntityDarknessSolidEntity;
+import kakarotvg.omega.entity.tileentity.TileEntityComputerEntity;
+import kakarotvg.omega.entity.tileentity.TileEntityDarknessSolidEntity;
 import kakarotvg.omega.handlers.IDs.IDHandler;
 import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
 import kakarotvg.omega.tileentity.TileEntityComputer;

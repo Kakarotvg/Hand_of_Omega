@@ -3,7 +3,7 @@ package kakarotvg.omega.tileentity;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import kakarotvg.omega.Reference;
-import kakarotvg.omega.entity.TileEntityDarknessSolidEntity;
+import kakarotvg.omega.entity.tileentity.TileEntityDarknessSolidEntity;
 import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;

@@ -1,4 +1,4 @@
-package kakarotvg.omega.entity;
+package kakarotvg.omega.entity.tileentity;
 
 import kakarotvg.omega.computer.ComputerRecipes;
 import kakarotvg.omega.tileentity.TileEntityComputer;

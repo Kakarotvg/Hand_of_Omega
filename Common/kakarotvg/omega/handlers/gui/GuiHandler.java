@@ -1,7 +1,7 @@
 package kakarotvg.omega.handlers.gui;
 
 import kakarotvg.omega.container.ContainerComputer;
-import kakarotvg.omega.entity.TileEntityComputerEntity;
+import kakarotvg.omega.entity.tileentity.TileEntityComputerEntity;
 import kakarotvg.omega.gui.ComputerGui;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;

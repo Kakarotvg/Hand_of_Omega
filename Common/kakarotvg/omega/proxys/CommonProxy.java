@@ -1,12 +1,12 @@
 package kakarotvg.omega.proxys;
 
 import kakarotvg.omega.egg.CustomEgg;
-import kakarotvg.omega.entity.EntityAnnihilator;
-import kakarotvg.omega.entity.EntityEliminator;
-import kakarotvg.omega.entity.EntityJungleAssasin;
-import kakarotvg.omega.entity.EntityOmegaHound;
-import kakarotvg.omega.entity.EntityOmegakiller;
-import kakarotvg.omega.entity.EntitySlayer;
+import kakarotvg.omega.entity.mobs.EntityAnnihilator;
+import kakarotvg.omega.entity.mobs.EntityEliminator;
+import kakarotvg.omega.entity.mobs.EntityJungleAssasin;
+import kakarotvg.omega.entity.mobs.EntityOmegaHound;
+import kakarotvg.omega.entity.mobs.EntityOmegakiller;
+import kakarotvg.omega.entity.mobs.EntitySlayer;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.biome.BiomeGenBase;
 import cpw.mods.fml.common.registry.EntityRegistry;

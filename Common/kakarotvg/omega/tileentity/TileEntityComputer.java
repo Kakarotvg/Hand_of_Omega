@@ -4,7 +4,7 @@ import java.util.Random;
 
 import kakarotvg.omega.Omega;
 import kakarotvg.omega.Reference;
-import kakarotvg.omega.entity.TileEntityComputerEntity;
+import kakarotvg.omega.entity.tileentity.TileEntityComputerEntity;
 import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
 import kakarotvg.omega.handlers.tileentity.TileEntityHandler;
 import net.minecraft.block.Block;

@@ -1,9 +1,9 @@
-package kakarotvg.omega.render;
+package kakarotvg.omega.render.mobs;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import kakarotvg.omega.Reference;
-import kakarotvg.omega.entity.EntityOmegakiller;
+import kakarotvg.omega.entity.mobs.EntityOmegakiller;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;

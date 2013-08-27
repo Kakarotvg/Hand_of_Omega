@@ -2,7 +2,7 @@ package kakarotvg.omega.gui;
 
 import kakarotvg.omega.Reference;
 import kakarotvg.omega.container.ContainerComputer;
-import kakarotvg.omega.entity.TileEntityComputerEntity;
+import kakarotvg.omega.entity.tileentity.TileEntityComputerEntity;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;

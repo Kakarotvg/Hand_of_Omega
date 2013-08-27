@@ -1,4 +1,4 @@
-package kakarotvg.omega.entity;
+package kakarotvg.omega.entity.mobs;
 
 import kakarotvg.omega.handlers.item.ItemHandler;
 import net.minecraft.entity.EntityAgeable;
