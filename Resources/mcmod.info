@@ -1,0 +1,19 @@
+[
+{
+"modid": "handofomega",
+"name": "Hand of Omega",
+"description": "New blocks, items, tools, armor, and much much more!!",
+"version": "1.1.2",
+"credits": "Created by Kakarotvg",
+"logoFile": "/assets/handofomega/omega_logo.png",
+"mcversion": "",
+"url": "http://www.cloudmesa.com/kakarotvgs",
+"updateUrl": "http://www.minecraftforum.net/topic/1850853-162hand-of-omega/",
+"authors": [ "Kakarotvg" ],
+"parent":"",
+"screenshots": [],
+"dependencies": [
+         "Minecraft Forge"
+]
+}
+]
