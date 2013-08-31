@@ -13,7 +13,7 @@ public class VgPacketHandler implements IPacketHandler {
 
     @Override
     public void onPacketData(INetworkManager manager, Packet250CustomPayload packet, Player player) {
-        if (packet.channel.equals("Omega")) {
+        if (packet.channel.equals(Reference.channels)) {
             handlePacket(packet);
         }
 
