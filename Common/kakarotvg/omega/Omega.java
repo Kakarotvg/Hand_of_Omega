@@ -28,7 +28,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_N, version = Reference.MOD_V)
-@NetworkMod(serverSideRequired = false, clientSideRequired = true, channels = "Omega", packetHandler = VgPacketHandler.class)
+@NetworkMod(serverSideRequired = false, clientSideRequired = true, channels = Reference.channels, packetHandler = VgPacketHandler.class)
 public class Omega {
 
     @Instance(Reference.MOD_ID)
