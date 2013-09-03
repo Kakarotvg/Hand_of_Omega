@@ -15,7 +15,8 @@ import kakarotvg.omega.model.ModelJungleAsasin;
 import kakarotvg.omega.model.ModelOmegaHound;
 import kakarotvg.omega.model.ModelOmegakiller;
 import kakarotvg.omega.model.ModelSlayer;
-import kakarotvg.omega.render.ItemUnderworldChestRender;
+import kakarotvg.omega.render.itemrender.ItemComputerRenderer;
+import kakarotvg.omega.render.itemrender.UnderworldChestItemRender;
 import kakarotvg.omega.render.mobs.RenderAnnihilator;
 import kakarotvg.omega.render.mobs.RenderEliminator;
 import kakarotvg.omega.render.mobs.RenderJungleAssasin;
@@ -46,7 +47,8 @@ public class ClientProxy extends CommonProxy {
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityDarknessSolidEntity.class, new TileEntityDarknessSolidRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityComputerEntity.class, new TileEntityComputerRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityUnderworldChest.class, new TileEntityUnderworldchestrenderer());
-        MinecraftForgeClient.registerItemRenderer(TileEntityHandler.underworldchest.blockID, new ItemUnderworldChestRender());
+        MinecraftForgeClient.registerItemRenderer(TileEntityHandler.underworldchest.blockID, new UnderworldChestItemRender());
+        MinecraftForgeClient.registerItemRenderer(TileEntityHandler.computer.blockID, new ItemComputerRenderer());
     }
 
     @Override

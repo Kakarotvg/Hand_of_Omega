@@ -23,7 +23,6 @@ public class TileEntityHandler {
     public static void configureTileEntitys(Configuration config) {
         darknesssolid = new TileEntitySolidDarkness(IDHandler.darknesssolidID).setUnlocalizedName("soliddarknessicon");
         computer = new TileEntityComputer(IDHandler.computeridleID, false).setUnlocalizedName("computericon").setCreativeTab(CreativetabHandler.vgtab);
-        computerburn = new TileEntityComputer(IDHandler.computerburnID, true).setUnlocalizedName("computericon");
         underworldchest = new UnderworldChest(IDHandler.underworldchestID, 0).setUnlocalizedName("underworldchest").setCreativeTab(CreativetabHandler.vgtab);
     }
 

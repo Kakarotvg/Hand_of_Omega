@@ -1,17 +1,17 @@
-package kakarotvg.omega.render;
+package kakarotvg.omega.render.itemrender;
 
-import kakarotvg.omega.tileentity.TileEntityUnderworldChest;
-import net.minecraft.client.model.ModelChest;
+import kakarotvg.omega.entity.tileentity.TileEntityComputerEntity;
+import kakarotvg.omega.model.ModelComputer;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.IItemRenderer;
 
-public class ItemUnderworldChestRender implements IItemRenderer {
+public class ItemComputerRenderer implements IItemRenderer {
 
-    private ModelChest chestModel;
+    private ModelComputer computermodel;
 
-    public ItemUnderworldChestRender() {
-        chestModel = new ModelChest();
+    public ItemComputerRenderer() {
+        computermodel = new ModelComputer();
     }
 
     @Override
@@ -28,8 +28,7 @@ public class ItemUnderworldChestRender implements IItemRenderer {
 
     @Override
     public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
-        TileEntityRenderer.instance.renderTileEntityAt(new TileEntityUnderworldChest(), 0.0D, 0.0D, 0.0D, 0.0f);
-
+        TileEntityRenderer.instance.renderTileEntityAt(new TileEntityComputerEntity(), 0.0D, 0.0D, 0.0D, 0.0f);
     }
 
 }

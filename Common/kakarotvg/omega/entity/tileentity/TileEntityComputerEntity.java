@@ -5,7 +5,7 @@ import kakarotvg.omega.tileentity.TileEntityComputer;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemHoe;
@@ -19,7 +19,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TileEntityComputerEntity extends TileEntity implements ISidedInventory {
+public class TileEntityComputerEntity extends TileEntity implements IInventory {
     private static final int[] slots_top = new int[] { 0 };
     private static final int[] slots_bottom = new int[] { 2, 1 };
     private static final int[] slots_sides = new int[] { 1 };
