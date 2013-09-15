@@ -3,7 +3,7 @@ package kakarotvg.omega.handlers.tileentity;
 import kakarotvg.omega.blocks.UnderworldChest;
 import kakarotvg.omega.entity.tileentity.TileEntityComputerEntity;
 import kakarotvg.omega.entity.tileentity.TileEntityDarknessSolidEntity;
-import kakarotvg.omega.handlers.IDs.IDHandler;
+import kakarotvg.omega.handlers.IDs.BlockIDs;
 import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
 import kakarotvg.omega.tileentity.TileEntityComputer;
 import kakarotvg.omega.tileentity.TileEntitySolidDarkness;
@@ -21,9 +21,9 @@ public class TileEntityHandler {
     public static Block underworldchest;
 
     public static void configureTileEntitys(Configuration config) {
-        darknesssolid = new TileEntitySolidDarkness(IDHandler.darknesssolidID).setUnlocalizedName("soliddarknessicon");
-        computer = new TileEntityComputer(IDHandler.computeridleID, false).setUnlocalizedName("computericon").setCreativeTab(CreativetabHandler.vgtab);
-        underworldchest = new UnderworldChest(IDHandler.underworldchestID, 0).setUnlocalizedName("underworldchest").setCreativeTab(CreativetabHandler.vgtab);
+        darknesssolid = new TileEntitySolidDarkness(BlockIDs.darknesssolidID).setUnlocalizedName("soliddarknessicon");
+        computer = new TileEntityComputer(BlockIDs.computeridleID, false).setUnlocalizedName("computericon").setCreativeTab(CreativetabHandler.vgtab);
+        underworldchest = new UnderworldChest(BlockIDs.underworldchestID, 0).setUnlocalizedName("underworldchest").setCreativeTab(CreativetabHandler.vgtab);
     }
 
     public static void registerTileEntitys(GameRegistry registry) {

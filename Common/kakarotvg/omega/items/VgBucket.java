@@ -1,7 +1,7 @@
 package kakarotvg.omega.items;
 
 import kakarotvg.omega.Reference;
-import kakarotvg.omega.handlers.IDs.IDHandler;
+import kakarotvg.omega.handlers.IDs.ArmorIDs;
 import kakarotvg.omega.handlers.liquids.LiquidHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

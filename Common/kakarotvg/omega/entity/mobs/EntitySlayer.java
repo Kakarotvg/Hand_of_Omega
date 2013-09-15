@@ -15,6 +15,7 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class EntitySlayer extends EntityMob {
@@ -68,10 +69,6 @@ public class EntitySlayer extends EntityMob {
      */
     protected String getDeathSound() {
         return Reference.MOD_ID + ":" + "mob.slayer.say";
-    }
-
-    protected int getDropItemId() {
-        return ItemHandler.gilder.itemID;
     }
 
 }

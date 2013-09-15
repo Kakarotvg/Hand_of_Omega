@@ -4,7 +4,8 @@ import kakarotvg.omega.fluids.BlockDarkness;
 import kakarotvg.omega.fluids.BlockLight;
 import kakarotvg.omega.fluids.DarknessFluid;
 import kakarotvg.omega.fluids.LightFluid;
-import kakarotvg.omega.handlers.IDs.IDHandler;
+import kakarotvg.omega.handlers.IDs.BlockIDs;
+import kakarotvg.omega.handlers.IDs.ItemIDs;
 import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
 import kakarotvg.omega.items.VgBucket;
 import net.minecraft.block.Block;
@@ -34,13 +35,13 @@ public class LiquidHandler {
 
         // Darkness
         Darkness = new DarknessFluid("Darkness");
-        Darknessliquid = new BlockDarkness(IDHandler.darknessfluidID).setUnlocalizedName("darkness");
+        Darknessliquid = new BlockDarkness(BlockIDs.darknessfluidID).setUnlocalizedName("darkness");
         // Light
         Light = new LightFluid("Light");
-        LightLiquid = new BlockLight(IDHandler.lightfluidID).setUnlocalizedName("light");
+        LightLiquid = new BlockLight(BlockIDs.lightfluidID).setUnlocalizedName("light");
         // buckets
-        darknessbucket = new VgBucket(IDHandler.darknessbucketID, IDHandler.darknessfluidID, "darknessbucket").setCreativeTab(CreativetabHandler.vgtab2).setContainerItem(Item.bucketEmpty);
-        lightbucket = new VgBucket(IDHandler.lightbucketID, IDHandler.lightfluidID, "lightbucket").setCreativeTab(CreativetabHandler.vgtab2).setContainerItem(Item.bucketEmpty);
+        darknessbucket = new VgBucket(ItemIDs.darknessbucketID, BlockIDs.darknessfluidID, "darknessbucket").setCreativeTab(CreativetabHandler.vgtab2).setContainerItem(Item.bucketEmpty);
+        lightbucket = new VgBucket(ItemIDs.lightbucketID, BlockIDs.lightfluidID, "lightbucket").setCreativeTab(CreativetabHandler.vgtab2).setContainerItem(Item.bucketEmpty);
     }
 
     public static void registerfluids(GameRegistry registry) {

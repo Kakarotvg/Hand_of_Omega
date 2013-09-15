@@ -1,6 +1,6 @@
 package kakarotvg.omega.handlers.tools;
 
-import kakarotvg.omega.handlers.IDs.IDHandler;
+import kakarotvg.omega.handlers.IDs.ToolIDs;
 import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
 import kakarotvg.omega.tools.Vgaxe;
 import kakarotvg.omega.tools.Vghoe;
@@ -261,164 +261,164 @@ public class ToolHandler {
 
     public static void configureTools(Configuration config) {
         // urotark
-        urotarkaxe = new Vgaxe(IDHandler.urotarkaxeID, UROTARKTOOLS).setUnlocalizedName("urotarkaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        urotarkhoe = new Vghoe(IDHandler.urotarkhoeID, UROTARKTOOLS).setUnlocalizedName("urotarkhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        urotarkshovel = new Vgshovel(IDHandler.urotarkshovelID, UROTARKTOOLS).setUnlocalizedName("urotarkshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        urotarksword = new Vgsword(IDHandler.urotarkswordID, UROTARKSWORD).setUnlocalizedName("urotarksword").setCreativeTab(CreativetabHandler.vgtab4);
-        urotarkpickaxe = new Vgpickaxe(IDHandler.urotarkpickaxeID, UROTARKTOOLS).setUnlocalizedName("urotarkpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        urotarkaxe = new Vgaxe(ToolIDs.urotarkaxeID, UROTARKTOOLS).setUnlocalizedName("urotarkaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        urotarkhoe = new Vghoe(ToolIDs.urotarkhoeID, UROTARKTOOLS).setUnlocalizedName("urotarkhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        urotarkshovel = new Vgshovel(ToolIDs.urotarkshovelID, UROTARKTOOLS).setUnlocalizedName("urotarkshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        urotarksword = new Vgsword(ToolIDs.urotarkswordID, UROTARKSWORD).setUnlocalizedName("urotarksword").setCreativeTab(CreativetabHandler.vgtab4);
+        urotarkpickaxe = new Vgpickaxe(ToolIDs.urotarkpickaxeID, UROTARKTOOLS).setUnlocalizedName("urotarkpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // pearl
-        pearlaxe = new Vgaxe(IDHandler.pearlaxeID, PEARLTOOLS).setUnlocalizedName("pearlaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        pearlhoe = new Vghoe(IDHandler.pearlhoeID, PEARLTOOLS).setUnlocalizedName("pearlhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        pearlshovel = new Vgshovel(IDHandler.pearlshovelID, PEARLTOOLS).setUnlocalizedName("pearlshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        pearlsword = new Vgsword(IDHandler.pearlswordID, PEARLSWORD).setUnlocalizedName("pearlsword").setCreativeTab(CreativetabHandler.vgtab4);
-        pearlpickaxe = new Vgpickaxe(IDHandler.pearlpickaxeID, PEARLTOOLS).setUnlocalizedName("pearlpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        pearlaxe = new Vgaxe(ToolIDs.pearlaxeID, PEARLTOOLS).setUnlocalizedName("pearlaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        pearlhoe = new Vghoe(ToolIDs.pearlhoeID, PEARLTOOLS).setUnlocalizedName("pearlhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        pearlshovel = new Vgshovel(ToolIDs.pearlshovelID, PEARLTOOLS).setUnlocalizedName("pearlshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        pearlsword = new Vgsword(ToolIDs.pearlswordID, PEARLSWORD).setUnlocalizedName("pearlsword").setCreativeTab(CreativetabHandler.vgtab4);
+        pearlpickaxe = new Vgpickaxe(ToolIDs.pearlpickaxeID, PEARLTOOLS).setUnlocalizedName("pearlpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // sapphire
-        sapphireaxe = new Vgaxe(IDHandler.sapphireaxeID, SAPPHIRETOOLS).setUnlocalizedName("sapphireaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        sapphirehoe = new Vghoe(IDHandler.sapphirehoeID, SAPPHIRETOOLS).setUnlocalizedName("sapphirehoe").setCreativeTab(CreativetabHandler.vgtab3);
-        sapphireshovel = new Vgshovel(IDHandler.sapphireshovelID, SAPPHIRETOOLS).setUnlocalizedName("sapphireshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        sapphiresword = new Vgsword(IDHandler.sapphireswordID, SAPPHIRESWORD).setUnlocalizedName("sapphiresword").setCreativeTab(CreativetabHandler.vgtab4);
-        sapphirepickaxe = new Vgpickaxe(IDHandler.sapphirepickaxeID, SAPPHIRETOOLS).setUnlocalizedName("sapphirepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        sapphireaxe = new Vgaxe(ToolIDs.sapphireaxeID, SAPPHIRETOOLS).setUnlocalizedName("sapphireaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        sapphirehoe = new Vghoe(ToolIDs.sapphirehoeID, SAPPHIRETOOLS).setUnlocalizedName("sapphirehoe").setCreativeTab(CreativetabHandler.vgtab3);
+        sapphireshovel = new Vgshovel(ToolIDs.sapphireshovelID, SAPPHIRETOOLS).setUnlocalizedName("sapphireshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        sapphiresword = new Vgsword(ToolIDs.sapphireswordID, SAPPHIRESWORD).setUnlocalizedName("sapphiresword").setCreativeTab(CreativetabHandler.vgtab4);
+        sapphirepickaxe = new Vgpickaxe(ToolIDs.sapphirepickaxeID, SAPPHIRETOOLS).setUnlocalizedName("sapphirepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // muscovite
-        muscoviteaxe = new Vgaxe(IDHandler.muscoviteaxeID, MUSCOVITETOOLS).setUnlocalizedName("muscoviteaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        muscovitehoe = new Vghoe(IDHandler.muscovitehoeID, MUSCOVITETOOLS).setUnlocalizedName("muscovitehoe").setCreativeTab(CreativetabHandler.vgtab3);
-        muscoviteshovel = new Vgshovel(IDHandler.muscoviteshovelID, MUSCOVITETOOLS).setUnlocalizedName("muscoviteshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        muscovitesword = new Vgsword(IDHandler.muscoviteswordID, MUSCOVITESWORD).setUnlocalizedName("muscovitesword").setCreativeTab(CreativetabHandler.vgtab4);
-        muscovitepickaxe = new Vgpickaxe(IDHandler.muscovitepickaxeID, MUSCOVITETOOLS).setUnlocalizedName("muscovitepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        muscoviteaxe = new Vgaxe(ToolIDs.muscoviteaxeID, MUSCOVITETOOLS).setUnlocalizedName("muscoviteaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        muscovitehoe = new Vghoe(ToolIDs.muscovitehoeID, MUSCOVITETOOLS).setUnlocalizedName("muscovitehoe").setCreativeTab(CreativetabHandler.vgtab3);
+        muscoviteshovel = new Vgshovel(ToolIDs.muscoviteshovelID, MUSCOVITETOOLS).setUnlocalizedName("muscoviteshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        muscovitesword = new Vgsword(ToolIDs.muscoviteswordID, MUSCOVITESWORD).setUnlocalizedName("muscovitesword").setCreativeTab(CreativetabHandler.vgtab4);
+        muscovitepickaxe = new Vgpickaxe(ToolIDs.muscovitepickaxeID, MUSCOVITETOOLS).setUnlocalizedName("muscovitepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // ruby
-        rubyaxe = new Vgaxe(IDHandler.rubyaxeID, RUBYTOOLS).setUnlocalizedName("rubyaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        rubyhoe = new Vghoe(IDHandler.rubyhoeID, RUBYTOOLS).setUnlocalizedName("rubyhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        rubyshovel = new Vgshovel(IDHandler.rubyshovelID, RUBYTOOLS).setUnlocalizedName("rubyshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        rubysword = new Vgsword(IDHandler.rubyswordID, RUBYSWORD).setUnlocalizedName("rubysword").setCreativeTab(CreativetabHandler.vgtab4);
-        rubypickaxe = new Vgpickaxe(IDHandler.rubypickaxeID, RUBYTOOLS).setUnlocalizedName("rubypickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        rubyaxe = new Vgaxe(ToolIDs.rubyaxeID, RUBYTOOLS).setUnlocalizedName("rubyaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        rubyhoe = new Vghoe(ToolIDs.rubyhoeID, RUBYTOOLS).setUnlocalizedName("rubyhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        rubyshovel = new Vgshovel(ToolIDs.rubyshovelID, RUBYTOOLS).setUnlocalizedName("rubyshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        rubysword = new Vgsword(ToolIDs.rubyswordID, RUBYSWORD).setUnlocalizedName("rubysword").setCreativeTab(CreativetabHandler.vgtab4);
+        rubypickaxe = new Vgpickaxe(ToolIDs.rubypickaxeID, RUBYTOOLS).setUnlocalizedName("rubypickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // uriotyke
-        uriotykeaxe = new Vgaxe(IDHandler.uriotykeaxeID, URIOTYKETOOLS).setUnlocalizedName("uriotykeaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        uriotykehoe = new Vghoe(IDHandler.uriotykehoeID, URIOTYKETOOLS).setUnlocalizedName("uriotykehoe").setCreativeTab(CreativetabHandler.vgtab3);
-        uriotykeshovel = new Vgshovel(IDHandler.uriotykeshovelID, URIOTYKETOOLS).setUnlocalizedName("uriotykeshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        uriotykesword = new Vgsword(IDHandler.uriotykeswordID, URIOTYKESWORD).setUnlocalizedName("uriotykesword").setCreativeTab(CreativetabHandler.vgtab4);
-        uriotykepickaxe = new Vgpickaxe(IDHandler.uriotykepickaxeID, URIOTYKETOOLS).setUnlocalizedName("uriotykepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        uriotykeaxe = new Vgaxe(ToolIDs.uriotykeaxeID, URIOTYKETOOLS).setUnlocalizedName("uriotykeaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        uriotykehoe = new Vghoe(ToolIDs.uriotykehoeID, URIOTYKETOOLS).setUnlocalizedName("uriotykehoe").setCreativeTab(CreativetabHandler.vgtab3);
+        uriotykeshovel = new Vgshovel(ToolIDs.uriotykeshovelID, URIOTYKETOOLS).setUnlocalizedName("uriotykeshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        uriotykesword = new Vgsword(ToolIDs.uriotykeswordID, URIOTYKESWORD).setUnlocalizedName("uriotykesword").setCreativeTab(CreativetabHandler.vgtab4);
+        uriotykepickaxe = new Vgpickaxe(ToolIDs.uriotykepickaxeID, URIOTYKETOOLS).setUnlocalizedName("uriotykepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // gilder
-        gilderaxe = new Vgaxe(IDHandler.gilderaxeID, GILDERTOOLS).setUnlocalizedName("gilderaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        gilderhoe = new Vghoe(IDHandler.gilderhoeID, GILDERTOOLS).setUnlocalizedName("gilderhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        gildershovel = new Vgshovel(IDHandler.gildershovelID, GILDERTOOLS).setUnlocalizedName("gildershovel").setCreativeTab(CreativetabHandler.vgtab3);
-        gildersword = new Vgsword(IDHandler.gilderswordID, GILDERSWORD).setUnlocalizedName("gildersword").setCreativeTab(CreativetabHandler.vgtab4);
-        gilderpickaxe = new Vgpickaxe(IDHandler.gilderpickaxeID, GILDERTOOLS).setUnlocalizedName("gilderpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        gilderaxe = new Vgaxe(ToolIDs.gilderaxeID, GILDERTOOLS).setUnlocalizedName("gilderaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        gilderhoe = new Vghoe(ToolIDs.gilderhoeID, GILDERTOOLS).setUnlocalizedName("gilderhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        gildershovel = new Vgshovel(ToolIDs.gildershovelID, GILDERTOOLS).setUnlocalizedName("gildershovel").setCreativeTab(CreativetabHandler.vgtab3);
+        gildersword = new Vgsword(ToolIDs.gilderswordID, GILDERSWORD).setUnlocalizedName("gildersword").setCreativeTab(CreativetabHandler.vgtab4);
+        gilderpickaxe = new Vgpickaxe(ToolIDs.gilderpickaxeID, GILDERTOOLS).setUnlocalizedName("gilderpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // selovar
-        selovaraxe = new Vgaxe(IDHandler.selovaraxeID, SELOVARTOOLS).setUnlocalizedName("selovaraxe").setCreativeTab(CreativetabHandler.vgtab3);
-        selovarhoe = new Vghoe(IDHandler.selovarhoeID, SELOVARTOOLS).setUnlocalizedName("selovarhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        selovarshovel = new Vgshovel(IDHandler.selovarshovelID, SELOVARTOOLS).setUnlocalizedName("selovarshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        selovarsword = new Vgsword(IDHandler.selovarswordID, SELOVARSWORD).setUnlocalizedName("selovarsword").setCreativeTab(CreativetabHandler.vgtab4);
-        selovarpickaxe = new Vgpickaxe(IDHandler.selovarpickaxeID, SELOVARTOOLS).setUnlocalizedName("selovarpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        selovaraxe = new Vgaxe(ToolIDs.selovaraxeID, SELOVARTOOLS).setUnlocalizedName("selovaraxe").setCreativeTab(CreativetabHandler.vgtab3);
+        selovarhoe = new Vghoe(ToolIDs.selovarhoeID, SELOVARTOOLS).setUnlocalizedName("selovarhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        selovarshovel = new Vgshovel(ToolIDs.selovarshovelID, SELOVARTOOLS).setUnlocalizedName("selovarshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        selovarsword = new Vgsword(ToolIDs.selovarswordID, SELOVARSWORD).setUnlocalizedName("selovarsword").setCreativeTab(CreativetabHandler.vgtab4);
+        selovarpickaxe = new Vgpickaxe(ToolIDs.selovarpickaxeID, SELOVARTOOLS).setUnlocalizedName("selovarpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // parfilian
-        parfilianaxe = new Vgaxe(IDHandler.parfilianaxeID, PARFILIANTOOLS).setUnlocalizedName("parfilianaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        parfilianhoe = new Vghoe(IDHandler.parfilianhoeID, PARFILIANTOOLS).setUnlocalizedName("parfilianhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        parfilianshovel = new Vgshovel(IDHandler.parfilianshovelID, PARFILIANTOOLS).setUnlocalizedName("parfilianshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        parfiliansword = new Vgsword(IDHandler.parfilianswordID, PARFILIANSWORD).setUnlocalizedName("parfiliansword").setCreativeTab(CreativetabHandler.vgtab4);
-        parfilianpickaxe = new Vgpickaxe(IDHandler.parfilianpickaxeID, PARFILIANTOOLS).setUnlocalizedName("parfilianpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        parfilianaxe = new Vgaxe(ToolIDs.parfilianaxeID, PARFILIANTOOLS).setUnlocalizedName("parfilianaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        parfilianhoe = new Vghoe(ToolIDs.parfilianhoeID, PARFILIANTOOLS).setUnlocalizedName("parfilianhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        parfilianshovel = new Vgshovel(ToolIDs.parfilianshovelID, PARFILIANTOOLS).setUnlocalizedName("parfilianshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        parfiliansword = new Vgsword(ToolIDs.parfilianswordID, PARFILIANSWORD).setUnlocalizedName("parfiliansword").setCreativeTab(CreativetabHandler.vgtab4);
+        parfilianpickaxe = new Vgpickaxe(ToolIDs.parfilianpickaxeID, PARFILIANTOOLS).setUnlocalizedName("parfilianpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // barium
-        bariumaxe = new Vgaxe(IDHandler.bariumaxeID, BARIUMTOOLS).setUnlocalizedName("bariumaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        bariumhoe = new Vghoe(IDHandler.bariumhoeID, BARIUMTOOLS).setUnlocalizedName("bariumhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        bariumshovel = new Vgshovel(IDHandler.bariumshovelID, BARIUMTOOLS).setUnlocalizedName("bariumshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        bariumsword = new Vgsword(IDHandler.bariumswordID, BARIUMSWORD).setUnlocalizedName("bariumsword").setCreativeTab(CreativetabHandler.vgtab4);
-        bariumpickaxe = new Vgpickaxe(IDHandler.bariumpickaxeID, BARIUMTOOLS).setUnlocalizedName("bariumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        bariumaxe = new Vgaxe(ToolIDs.bariumaxeID, BARIUMTOOLS).setUnlocalizedName("bariumaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        bariumhoe = new Vghoe(ToolIDs.bariumhoeID, BARIUMTOOLS).setUnlocalizedName("bariumhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        bariumshovel = new Vgshovel(ToolIDs.bariumshovelID, BARIUMTOOLS).setUnlocalizedName("bariumshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        bariumsword = new Vgsword(ToolIDs.bariumswordID, BARIUMSWORD).setUnlocalizedName("bariumsword").setCreativeTab(CreativetabHandler.vgtab4);
+        bariumpickaxe = new Vgpickaxe(ToolIDs.bariumpickaxeID, BARIUMTOOLS).setUnlocalizedName("bariumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // radium
-        radiumaxe = new Vgaxe(IDHandler.radiumaxeID, RADIUMTOOLS).setUnlocalizedName("radiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        radiumhoe = new Vghoe(IDHandler.radiumhoeID, RADIUMTOOLS).setUnlocalizedName("radiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        radiumshovel = new Vgshovel(IDHandler.radiumshovelID, RADIUMTOOLS).setUnlocalizedName("radiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        radiumsword = new Vgsword(IDHandler.radiumswordID, RADIUMSWORD).setUnlocalizedName("radiumsword").setCreativeTab(CreativetabHandler.vgtab4);
-        radiumpickaxe = new Vgpickaxe(IDHandler.radiumpickaxeID, RADIUMTOOLS).setUnlocalizedName("radiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        radiumaxe = new Vgaxe(ToolIDs.radiumaxeID, RADIUMTOOLS).setUnlocalizedName("radiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        radiumhoe = new Vghoe(ToolIDs.radiumhoeID, RADIUMTOOLS).setUnlocalizedName("radiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        radiumshovel = new Vgshovel(ToolIDs.radiumshovelID, RADIUMTOOLS).setUnlocalizedName("radiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        radiumsword = new Vgsword(ToolIDs.radiumswordID, RADIUMSWORD).setUnlocalizedName("radiumsword").setCreativeTab(CreativetabHandler.vgtab4);
+        radiumpickaxe = new Vgpickaxe(ToolIDs.radiumpickaxeID, RADIUMTOOLS).setUnlocalizedName("radiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // gallum
-        gallumaxe = new Vgaxe(IDHandler.gallumaxeID, GALLUMTOOLS).setUnlocalizedName("gallumaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        gallumhoe = new Vghoe(IDHandler.gallumhoeID, GALLUMTOOLS).setUnlocalizedName("gallumhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        gallumshovel = new Vgshovel(IDHandler.gallumshovelID, GALLUMTOOLS).setUnlocalizedName("gallumshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        gallumsword = new Vgsword(IDHandler.gallumswordID, GALLUMSWORD).setUnlocalizedName("gallumsword").setCreativeTab(CreativetabHandler.vgtab4);
-        gallumpickaxe = new Vgpickaxe(IDHandler.gallumpickaxeID, GALLUMTOOLS).setUnlocalizedName("gallumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        gallumaxe = new Vgaxe(ToolIDs.gallumaxeID, GALLUMTOOLS).setUnlocalizedName("gallumaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        gallumhoe = new Vghoe(ToolIDs.gallumhoeID, GALLUMTOOLS).setUnlocalizedName("gallumhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        gallumshovel = new Vgshovel(ToolIDs.gallumshovelID, GALLUMTOOLS).setUnlocalizedName("gallumshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        gallumsword = new Vgsword(ToolIDs.gallumswordID, GALLUMSWORD).setUnlocalizedName("gallumsword").setCreativeTab(CreativetabHandler.vgtab4);
+        gallumpickaxe = new Vgpickaxe(ToolIDs.gallumpickaxeID, GALLUMTOOLS).setUnlocalizedName("gallumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // vanadium
-        vanadiumaxe = new Vgaxe(IDHandler.vanadiumaxeID, VANADIUMTOOLS).setUnlocalizedName("vanadiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        vanadiumhoe = new Vghoe(IDHandler.vanadiumhoeID, VANADIUMTOOLS).setUnlocalizedName("vanadiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        vanadiumshovel = new Vgshovel(IDHandler.vanadiumshovelID, VANADIUMTOOLS).setUnlocalizedName("vanadiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        vanadiumsword = new Vgsword(IDHandler.vanadiumswordID, VANADIUMSWORD).setUnlocalizedName("vanadiumsword").setCreativeTab(CreativetabHandler.vgtab4);
-        vanadiumpickaxe = new Vgpickaxe(IDHandler.vanadiumpickaxeID, VANADIUMTOOLS).setUnlocalizedName("vanadiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        vanadiumaxe = new Vgaxe(ToolIDs.vanadiumaxeID, VANADIUMTOOLS).setUnlocalizedName("vanadiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        vanadiumhoe = new Vghoe(ToolIDs.vanadiumhoeID, VANADIUMTOOLS).setUnlocalizedName("vanadiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        vanadiumshovel = new Vgshovel(ToolIDs.vanadiumshovelID, VANADIUMTOOLS).setUnlocalizedName("vanadiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        vanadiumsword = new Vgsword(ToolIDs.vanadiumswordID, VANADIUMSWORD).setUnlocalizedName("vanadiumsword").setCreativeTab(CreativetabHandler.vgtab4);
+        vanadiumpickaxe = new Vgpickaxe(ToolIDs.vanadiumpickaxeID, VANADIUMTOOLS).setUnlocalizedName("vanadiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // scandium
-        scandiumaxe = new Vgaxe(IDHandler.scandiumaxeID, SCANDIUMTOOLS).setUnlocalizedName("scandiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        scandiumhoe = new Vghoe(IDHandler.scandiumhoeID, SCANDIUMTOOLS).setUnlocalizedName("scandiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        scandiumshovel = new Vgshovel(IDHandler.scandiumshovelID, SCANDIUMTOOLS).setUnlocalizedName("scandiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        scandiumsword = new Vgsword(IDHandler.scandiumswordID, SCANDIUMSWORD).setUnlocalizedName("scandiumsword").setCreativeTab(CreativetabHandler.vgtab4);
-        scandiumpickaxe = new Vgpickaxe(IDHandler.scandiumpickaxeID, SCANDIUMTOOLS).setUnlocalizedName("scandiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        scandiumaxe = new Vgaxe(ToolIDs.scandiumaxeID, SCANDIUMTOOLS).setUnlocalizedName("scandiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        scandiumhoe = new Vghoe(ToolIDs.scandiumhoeID, SCANDIUMTOOLS).setUnlocalizedName("scandiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        scandiumshovel = new Vgshovel(ToolIDs.scandiumshovelID, SCANDIUMTOOLS).setUnlocalizedName("scandiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        scandiumsword = new Vgsword(ToolIDs.scandiumswordID, SCANDIUMSWORD).setUnlocalizedName("scandiumsword").setCreativeTab(CreativetabHandler.vgtab4);
+        scandiumpickaxe = new Vgpickaxe(ToolIDs.scandiumpickaxeID, SCANDIUMTOOLS).setUnlocalizedName("scandiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // bismuth
-        bismuthaxe = new Vgaxe(IDHandler.bismuthaxeID, BISMUTHTOOLS).setUnlocalizedName("bismuthaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        bismuthhoe = new Vghoe(IDHandler.bismuthhoeID, BISMUTHTOOLS).setUnlocalizedName("bismuthhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        bismuthshovel = new Vgshovel(IDHandler.bismuthshovelID, BISMUTHTOOLS).setUnlocalizedName("bismuthshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        bismuthsword = new Vgsword(IDHandler.bismuthswordID, BISMUTHSWORD).setUnlocalizedName("bismuthsword").setCreativeTab(CreativetabHandler.vgtab4);
-        bismuthpickaxe = new Vgpickaxe(IDHandler.bismuthpickaxeID, BISMUTHTOOLS).setUnlocalizedName("bismuthpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        bismuthaxe = new Vgaxe(ToolIDs.bismuthaxeID, BISMUTHTOOLS).setUnlocalizedName("bismuthaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        bismuthhoe = new Vghoe(ToolIDs.bismuthhoeID, BISMUTHTOOLS).setUnlocalizedName("bismuthhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        bismuthshovel = new Vgshovel(ToolIDs.bismuthshovelID, BISMUTHTOOLS).setUnlocalizedName("bismuthshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        bismuthsword = new Vgsword(ToolIDs.bismuthswordID, BISMUTHSWORD).setUnlocalizedName("bismuthsword").setCreativeTab(CreativetabHandler.vgtab4);
+        bismuthpickaxe = new Vgpickaxe(ToolIDs.bismuthpickaxeID, BISMUTHTOOLS).setUnlocalizedName("bismuthpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // indium
-        indiumaxe = new Vgaxe(IDHandler.indiumaxeID, INDIUMTOOLS).setUnlocalizedName("indiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        indiumhoe = new Vghoe(IDHandler.indiumhoeID, INDIUMTOOLS).setUnlocalizedName("indiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        indiumshovel = new Vgshovel(IDHandler.indiumshovelID, INDIUMTOOLS).setUnlocalizedName("indiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        indiumsword = new Vgsword(IDHandler.indiumswordID, INDIUMSWORD).setUnlocalizedName("indiumsword").setCreativeTab(CreativetabHandler.vgtab4);
-        indiumpickaxe = new Vgpickaxe(IDHandler.indiumpickaxeID, INDIUMTOOLS).setUnlocalizedName("indiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        indiumaxe = new Vgaxe(ToolIDs.indiumaxeID, INDIUMTOOLS).setUnlocalizedName("indiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        indiumhoe = new Vghoe(ToolIDs.indiumhoeID, INDIUMTOOLS).setUnlocalizedName("indiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        indiumshovel = new Vgshovel(ToolIDs.indiumshovelID, INDIUMTOOLS).setUnlocalizedName("indiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        indiumsword = new Vgsword(ToolIDs.indiumswordID, INDIUMSWORD).setUnlocalizedName("indiumsword").setCreativeTab(CreativetabHandler.vgtab4);
+        indiumpickaxe = new Vgpickaxe(ToolIDs.indiumpickaxeID, INDIUMTOOLS).setUnlocalizedName("indiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // platinum
-        platinumaxe = new Vgaxe(IDHandler.platinumaxeID, PLATINUMTOOLS).setUnlocalizedName("platinumaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        platinumhoe = new Vghoe(IDHandler.platinumhoeID, PLATINUMTOOLS).setUnlocalizedName("platinumhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        platinumshovel = new Vgshovel(IDHandler.platinumshovelID, PLATINUMTOOLS).setUnlocalizedName("platinumshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        platinumsword = new Vgsword(IDHandler.platinumswordID, PLATINUMSWORD).setUnlocalizedName("platinumsword").setCreativeTab(CreativetabHandler.vgtab4);
-        platinumpickaxe = new Vgpickaxe(IDHandler.platinumpickaxeID, PLATINUMTOOLS).setUnlocalizedName("platinumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        platinumaxe = new Vgaxe(ToolIDs.platinumaxeID, PLATINUMTOOLS).setUnlocalizedName("platinumaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        platinumhoe = new Vghoe(ToolIDs.platinumhoeID, PLATINUMTOOLS).setUnlocalizedName("platinumhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        platinumshovel = new Vgshovel(ToolIDs.platinumshovelID, PLATINUMTOOLS).setUnlocalizedName("platinumshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        platinumsword = new Vgsword(ToolIDs.platinumswordID, PLATINUMSWORD).setUnlocalizedName("platinumsword").setCreativeTab(CreativetabHandler.vgtab4);
+        platinumpickaxe = new Vgpickaxe(ToolIDs.platinumpickaxeID, PLATINUMTOOLS).setUnlocalizedName("platinumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // darkness
-        darknessaxe = new Vgaxe(IDHandler.darknessaxeID, DARKNESSTOOLS).setUnlocalizedName("darknessaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        darknesshoe = new Vghoe(IDHandler.darknesshoeID, DARKNESSTOOLS).setUnlocalizedName("darknesshoe").setCreativeTab(CreativetabHandler.vgtab3);
-        darknessshovel = new Vgshovel(IDHandler.darknessshovelID, DARKNESSTOOLS).setUnlocalizedName("darknessshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        darknesssword = new Vgsword(IDHandler.darknessswordID, DARKNESSSWORD).setUnlocalizedName("darknesssword").setCreativeTab(CreativetabHandler.vgtab4);
-        darknesspickaxe = new Vgpickaxe(IDHandler.darknesspickaxeID, DARKNESSTOOLS).setUnlocalizedName("darknesspickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        darknessaxe = new Vgaxe(ToolIDs.darknessaxeID, DARKNESSTOOLS).setUnlocalizedName("darknessaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        darknesshoe = new Vghoe(ToolIDs.darknesshoeID, DARKNESSTOOLS).setUnlocalizedName("darknesshoe").setCreativeTab(CreativetabHandler.vgtab3);
+        darknessshovel = new Vgshovel(ToolIDs.darknessshovelID, DARKNESSTOOLS).setUnlocalizedName("darknessshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        darknesssword = new Vgsword(ToolIDs.darknessswordID, DARKNESSSWORD).setUnlocalizedName("darknesssword").setCreativeTab(CreativetabHandler.vgtab4);
+        darknesspickaxe = new Vgpickaxe(ToolIDs.darknesspickaxeID, DARKNESSTOOLS).setUnlocalizedName("darknesspickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // light
-        lightaxe = new Vgaxe(IDHandler.lightaxeID, LIGHTTOOLS).setUnlocalizedName("lightaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        lighthoe = new Vghoe(IDHandler.lighthoeID, LIGHTTOOLS).setUnlocalizedName("lighthoe").setCreativeTab(CreativetabHandler.vgtab3);
-        lightshovel = new Vgshovel(IDHandler.lightshovelID, LIGHTTOOLS).setUnlocalizedName("lightshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        lightsword = new Vgsword(IDHandler.lightswordID, LIGHTSWORD).setUnlocalizedName("lightsword").setCreativeTab(CreativetabHandler.vgtab4);
-        lightpickaxe = new Vgpickaxe(IDHandler.lightpickaxeID, LIGHTTOOLS).setUnlocalizedName("lightpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        lightaxe = new Vgaxe(ToolIDs.lightaxeID, LIGHTTOOLS).setUnlocalizedName("lightaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        lighthoe = new Vghoe(ToolIDs.lighthoeID, LIGHTTOOLS).setUnlocalizedName("lighthoe").setCreativeTab(CreativetabHandler.vgtab3);
+        lightshovel = new Vgshovel(ToolIDs.lightshovelID, LIGHTTOOLS).setUnlocalizedName("lightshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        lightsword = new Vgsword(ToolIDs.lightswordID, LIGHTSWORD).setUnlocalizedName("lightsword").setCreativeTab(CreativetabHandler.vgtab4);
+        lightpickaxe = new Vgpickaxe(ToolIDs.lightpickaxeID, LIGHTTOOLS).setUnlocalizedName("lightpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // omega
-        omegaaxe = new Vgaxe(IDHandler.omegaaxeID, OMEGATOOLS).setUnlocalizedName("omegaaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        omegahoe = new Vghoe(IDHandler.omegahoeID, OMEGATOOLS).setUnlocalizedName("omegahoe").setCreativeTab(CreativetabHandler.vgtab3);
-        omegashovel = new Vgshovel(IDHandler.omegashovelID, OMEGATOOLS).setUnlocalizedName("omegashovel").setCreativeTab(CreativetabHandler.vgtab3);
-        omegasword = new Vgsword(IDHandler.omegaswordID, OMEGASWORD).setUnlocalizedName("omegasword").setCreativeTab(CreativetabHandler.vgtab4);
-        omegahand = new Vgsword(IDHandler.omegahandID, OMEGASWORD).setUnlocalizedName("omegahand").setCreativeTab(CreativetabHandler.vgtab4);
-        omegapickaxe = new Vgpickaxe(IDHandler.omegapickaxeID, OMEGATOOLS).setUnlocalizedName("omegapickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        omegaaxe = new Vgaxe(ToolIDs.omegaaxeID, OMEGATOOLS).setUnlocalizedName("omegaaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        omegahoe = new Vghoe(ToolIDs.omegahoeID, OMEGATOOLS).setUnlocalizedName("omegahoe").setCreativeTab(CreativetabHandler.vgtab3);
+        omegashovel = new Vgshovel(ToolIDs.omegashovelID, OMEGATOOLS).setUnlocalizedName("omegashovel").setCreativeTab(CreativetabHandler.vgtab3);
+        omegasword = new Vgsword(ToolIDs.omegaswordID, OMEGASWORD).setUnlocalizedName("omegasword").setCreativeTab(CreativetabHandler.vgtab4);
+        omegahand = new Vgsword(ToolIDs.omegahandID, OMEGASWORD).setUnlocalizedName("omegahand").setCreativeTab(CreativetabHandler.vgtab4);
+        omegapickaxe = new Vgpickaxe(ToolIDs.omegapickaxeID, OMEGATOOLS).setUnlocalizedName("omegapickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // bubble
-        bubblesword = new Vgsword(IDHandler.bubbleswordID, BUBBLESWORD).setUnlocalizedName("bubblesword").setCreativeTab(CreativetabHandler.vgtab4);
+        bubblesword = new Vgsword(ToolIDs.bubbleswordID, BUBBLESWORD).setUnlocalizedName("bubblesword").setCreativeTab(CreativetabHandler.vgtab4);
         // Berionvar
-        berionvaraxe = new Vgaxe(IDHandler.berionvaraxeID, BERIONVARTOOLS).setUnlocalizedName("berionvaraxe").setCreativeTab(CreativetabHandler.vgtab3);
-        berionvarhoe = new Vghoe(IDHandler.berionvarhoeID, BERIONVARTOOLS).setUnlocalizedName("berionvarhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        berionvarshovel = new Vgshovel(IDHandler.berionvarshovelID, BERIONVARTOOLS).setUnlocalizedName("berionvarshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        berionvarsword = new Vgsword(IDHandler.berionvarswordID, BERIONVARSWORD).setUnlocalizedName("berionvarsword").setCreativeTab(CreativetabHandler.vgtab4);
-        berionvarpickaxe = new Vgpickaxe(IDHandler.berionvarpickaxeID, BERIONVARTOOLS).setUnlocalizedName("berionvarpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        berionvaraxe = new Vgaxe(ToolIDs.berionvaraxeID, BERIONVARTOOLS).setUnlocalizedName("berionvaraxe").setCreativeTab(CreativetabHandler.vgtab3);
+        berionvarhoe = new Vghoe(ToolIDs.berionvarhoeID, BERIONVARTOOLS).setUnlocalizedName("berionvarhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        berionvarshovel = new Vgshovel(ToolIDs.berionvarshovelID, BERIONVARTOOLS).setUnlocalizedName("berionvarshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        berionvarsword = new Vgsword(ToolIDs.berionvarswordID, BERIONVARSWORD).setUnlocalizedName("berionvarsword").setCreativeTab(CreativetabHandler.vgtab4);
+        berionvarpickaxe = new Vgpickaxe(ToolIDs.berionvarpickaxeID, BERIONVARTOOLS).setUnlocalizedName("berionvarpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // Charviole
-        charvioleaxe = new Vgaxe(IDHandler.charvioleaxeID, CHARVIOLETOOLS).setUnlocalizedName("charvioleaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        charviolehoe = new Vghoe(IDHandler.charviolehoeID, CHARVIOLETOOLS).setUnlocalizedName("charviolehoe").setCreativeTab(CreativetabHandler.vgtab3);
-        charvioleshovel = new Vgshovel(IDHandler.charvioleshovelID, CHARVIOLETOOLS).setUnlocalizedName("charvioleshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        charviolesword = new Vgsword(IDHandler.charvioleswordID, CHARVIOLESWORD).setUnlocalizedName("charviolesword").setCreativeTab(CreativetabHandler.vgtab4);
-        charviolepickaxe = new Vgpickaxe(IDHandler.charviolepickaxeID, CHARVIOLETOOLS).setUnlocalizedName("charviolepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        charvioleaxe = new Vgaxe(ToolIDs.charvioleaxeID, CHARVIOLETOOLS).setUnlocalizedName("charvioleaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        charviolehoe = new Vghoe(ToolIDs.charviolehoeID, CHARVIOLETOOLS).setUnlocalizedName("charviolehoe").setCreativeTab(CreativetabHandler.vgtab3);
+        charvioleshovel = new Vgshovel(ToolIDs.charvioleshovelID, CHARVIOLETOOLS).setUnlocalizedName("charvioleshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        charviolesword = new Vgsword(ToolIDs.charvioleswordID, CHARVIOLESWORD).setUnlocalizedName("charviolesword").setCreativeTab(CreativetabHandler.vgtab4);
+        charviolepickaxe = new Vgpickaxe(ToolIDs.charviolepickaxeID, CHARVIOLETOOLS).setUnlocalizedName("charviolepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // Firlvear
-        firlvearaxe = new Vgaxe(IDHandler.firlvearaxeID, FIRLVEARTOOLS).setUnlocalizedName("firlvearaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        firlvearhoe = new Vghoe(IDHandler.firlvearhoeID, FIRLVEARTOOLS).setUnlocalizedName("firlvearhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        firlvearshovel = new Vgshovel(IDHandler.firlvearshovelID, FIRLVEARTOOLS).setUnlocalizedName("firlvearshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        firlvearsword = new Vgsword(IDHandler.firlvearswordID, FIRLVEARSWORD).setUnlocalizedName("firlvearsword").setCreativeTab(CreativetabHandler.vgtab4);
-        firlvearpickaxe = new Vgpickaxe(IDHandler.firlvearpickaxeID, FIRLVEARTOOLS).setUnlocalizedName("firlvearpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        firlvearaxe = new Vgaxe(ToolIDs.firlvearaxeID, FIRLVEARTOOLS).setUnlocalizedName("firlvearaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        firlvearhoe = new Vghoe(ToolIDs.firlvearhoeID, FIRLVEARTOOLS).setUnlocalizedName("firlvearhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        firlvearshovel = new Vgshovel(ToolIDs.firlvearshovelID, FIRLVEARTOOLS).setUnlocalizedName("firlvearshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        firlvearsword = new Vgsword(ToolIDs.firlvearswordID, FIRLVEARSWORD).setUnlocalizedName("firlvearsword").setCreativeTab(CreativetabHandler.vgtab4);
+        firlvearpickaxe = new Vgpickaxe(ToolIDs.firlvearpickaxeID, FIRLVEARTOOLS).setUnlocalizedName("firlvearpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // selmenrer
-        selmenreraxe = new Vgaxe(IDHandler.selmenreraxeID, SELMENRERTOOLS).setUnlocalizedName("selmenreraxe").setCreativeTab(CreativetabHandler.vgtab3);
-        selmenrerhoe = new Vghoe(IDHandler.selmenrerhoeID, SELMENRERTOOLS).setUnlocalizedName("selmenrerhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        selmenrershovel = new Vgshovel(IDHandler.selmenrershovelID, SELMENRERTOOLS).setUnlocalizedName("selmenrershovel").setCreativeTab(CreativetabHandler.vgtab3);
-        selmenrersword = new Vgsword(IDHandler.selmenrerswordID, SELMENRERSWORD).setUnlocalizedName("selmenrersword").setCreativeTab(CreativetabHandler.vgtab4);
-        selmenrerpickaxe = new Vgpickaxe(IDHandler.selmenrerpickaxeID, SELMENRERTOOLS).setUnlocalizedName("selmenrerpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        selmenreraxe = new Vgaxe(ToolIDs.selmenreraxeID, SELMENRERTOOLS).setUnlocalizedName("selmenreraxe").setCreativeTab(CreativetabHandler.vgtab3);
+        selmenrerhoe = new Vghoe(ToolIDs.selmenrerhoeID, SELMENRERTOOLS).setUnlocalizedName("selmenrerhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        selmenrershovel = new Vgshovel(ToolIDs.selmenrershovelID, SELMENRERTOOLS).setUnlocalizedName("selmenrershovel").setCreativeTab(CreativetabHandler.vgtab3);
+        selmenrersword = new Vgsword(ToolIDs.selmenrerswordID, SELMENRERSWORD).setUnlocalizedName("selmenrersword").setCreativeTab(CreativetabHandler.vgtab4);
+        selmenrerpickaxe = new Vgpickaxe(ToolIDs.selmenrerpickaxeID, SELMENRERTOOLS).setUnlocalizedName("selmenrerpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // verilion
-        verilionaxe = new Vgaxe(IDHandler.verilionaxeID, VERILIONTOOLS).setUnlocalizedName("verilionaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        verilionhoe = new Vghoe(IDHandler.verilionhoeID, VERILIONTOOLS).setUnlocalizedName("verilionhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        verilionshovel = new Vgshovel(IDHandler.verilionshovelID, VERILIONTOOLS).setUnlocalizedName("verilionshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        verilionsword = new Vgsword(IDHandler.verilionswordID, VERILIONSWORD).setUnlocalizedName("verilionsword").setCreativeTab(CreativetabHandler.vgtab4);
-        verilionpickaxe = new Vgpickaxe(IDHandler.verilionpickaxeID, VERILIONTOOLS).setUnlocalizedName("verilionpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        verilionaxe = new Vgaxe(ToolIDs.verilionaxeID, VERILIONTOOLS).setUnlocalizedName("verilionaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        verilionhoe = new Vghoe(ToolIDs.verilionhoeID, VERILIONTOOLS).setUnlocalizedName("verilionhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        verilionshovel = new Vgshovel(ToolIDs.verilionshovelID, VERILIONTOOLS).setUnlocalizedName("verilionshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        verilionsword = new Vgsword(ToolIDs.verilionswordID, VERILIONSWORD).setUnlocalizedName("verilionsword").setCreativeTab(CreativetabHandler.vgtab4);
+        verilionpickaxe = new Vgpickaxe(ToolIDs.verilionpickaxeID, VERILIONTOOLS).setUnlocalizedName("verilionpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // vielvor
-        vielvoraxe = new Vgaxe(IDHandler.vielvoraxeID, VIELVORTOOLS).setUnlocalizedName("vielvoraxe").setCreativeTab(CreativetabHandler.vgtab3);
-        vielvorhoe = new Vghoe(IDHandler.vielvorhoeID, VIELVORTOOLS).setUnlocalizedName("vielvorhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        vielvorshovel = new Vgshovel(IDHandler.vielvorshovelID, VIELVORTOOLS).setUnlocalizedName("vielvorshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        vielvorsword = new Vgsword(IDHandler.vielvorswordID, VIELVORSWORD).setUnlocalizedName("vielvorsword").setCreativeTab(CreativetabHandler.vgtab4);
-        vielvorpickaxe = new Vgpickaxe(IDHandler.vielvorpickaxeID, VIELVORTOOLS).setUnlocalizedName("vielvorpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        vielvoraxe = new Vgaxe(ToolIDs.vielvoraxeID, VIELVORTOOLS).setUnlocalizedName("vielvoraxe").setCreativeTab(CreativetabHandler.vgtab3);
+        vielvorhoe = new Vghoe(ToolIDs.vielvorhoeID, VIELVORTOOLS).setUnlocalizedName("vielvorhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        vielvorshovel = new Vgshovel(ToolIDs.vielvorshovelID, VIELVORTOOLS).setUnlocalizedName("vielvorshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        vielvorsword = new Vgsword(ToolIDs.vielvorswordID, VIELVORSWORD).setUnlocalizedName("vielvorsword").setCreativeTab(CreativetabHandler.vgtab4);
+        vielvorpickaxe = new Vgpickaxe(ToolIDs.vielvorpickaxeID, VIELVORTOOLS).setUnlocalizedName("vielvorpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
     }
 
     public static void registerItem(GameRegistry registry) {

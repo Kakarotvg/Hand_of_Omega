@@ -1,8 +1,11 @@
 package kakarotvg.omega.handlers.gui;
 
 import kakarotvg.omega.container.ContainerComputer;
+import kakarotvg.omega.container.Containerunderworldchest;
 import kakarotvg.omega.entity.tileentity.TileEntityComputerEntity;
 import kakarotvg.omega.gui.ComputerGui;
+import kakarotvg.omega.gui.UChestGui;
+import kakarotvg.omega.tileentity.TileEntityUnderworldChest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -18,6 +21,10 @@ public class GuiHandler implements IGuiHandler {
             return new ContainerComputer(player.inventory, (TileEntityComputerEntity) tileentity);
         }
 
+        if (tileentity instanceof TileEntityUnderworldChest) {
+            return new Containerunderworldchest(player.inventory, (TileEntityUnderworldChest) tileentity);
+        }
+
         return null;
     }
 
@@ -27,6 +34,10 @@ public class GuiHandler implements IGuiHandler {
 
         if (tileentity instanceof TileEntityComputerEntity) {
             return new ComputerGui(player.inventory, (TileEntityComputerEntity) tileentity);
+        }
+
+        if (tileentity instanceof TileEntityUnderworldChest) {
+            return new UChestGui(player.inventory, (TileEntityUnderworldChest) tileentity);
         }
 
         return null;

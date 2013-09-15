@@ -1,6 +1,6 @@
 package kakarotvg.omega.events;
 
-import kakarotvg.omega.handlers.IDs.IDHandler;
+import kakarotvg.omega.handlers.IDs.ArmorIDs;
 import kakarotvg.omega.handlers.liquids.LiquidHandler;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
@@ -25,7 +25,7 @@ public class LightBucketEvent {
     public ItemStack fillCustomBucket(World world, MovingObjectPosition pos) {
         int blockID = world.getBlockId(pos.blockX, pos.blockY, pos.blockZ);
 
-        if ((blockID == IDHandler.lightfluidID) && world.getBlockMetadata(pos.blockX, pos.blockY, pos.blockZ) == 0) {
+        if ((blockID == LiquidHandler.LightLiquid.blockID) && world.getBlockMetadata(pos.blockX, pos.blockY, pos.blockZ) == 0) {
             world.setBlock(pos.blockX, pos.blockY, pos.blockZ, 0);
             return new ItemStack(LiquidHandler.lightbucket);
         }

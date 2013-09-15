@@ -5,7 +5,7 @@ import kakarotvg.omega.armor.DarknessArmor;
 import kakarotvg.omega.armor.LightArmor;
 import kakarotvg.omega.armor.OmegaArmor;
 import kakarotvg.omega.armor.Vgarmor;
-import kakarotvg.omega.handlers.IDs.IDHandler;
+import kakarotvg.omega.handlers.IDs.ArmorIDs;
 import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.Item;
@@ -202,135 +202,135 @@ public class ArmorHandler {
 
     public static void configreArmor(Configuration config) {
         // urotark
-        urotarkhelm = new Vgarmor(IDHandler.urotarkhelmID, UROTARKARMOR, Omega.proxy.addArmor("UROTARKARMOR"), 0, "UROTARKARMOR_1").setUnlocalizedName("urotarkhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        urotarkplate = new Vgarmor(IDHandler.urotarkplateID, UROTARKARMOR, Omega.proxy.addArmor("UROTARKARMOR"), 1, "UROTARKARMOR_1").setUnlocalizedName("urotarkplate").setCreativeTab(CreativetabHandler.vgtab4);
-        urotarklegs = new Vgarmor(IDHandler.urotarklegsID, UROTARKARMOR, Omega.proxy.addArmor("UROTARKARMOR"), 2, "UROTARKARMOR_2").setUnlocalizedName("urotarklegs").setCreativeTab(CreativetabHandler.vgtab4);
-        urotarkboots = new Vgarmor(IDHandler.urotarkbootsID, UROTARKARMOR, Omega.proxy.addArmor("UROTARKARMOR"), 3, "UROTARKARMOR_1").setUnlocalizedName("urotarkboots").setCreativeTab(CreativetabHandler.vgtab4);
+        urotarkhelm = new Vgarmor(ArmorIDs.urotarkhelmID, UROTARKARMOR, Omega.proxy.addArmor("UROTARKARMOR"), 0, "UROTARKARMOR_1").setUnlocalizedName("urotarkhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        urotarkplate = new Vgarmor(ArmorIDs.urotarkplateID, UROTARKARMOR, Omega.proxy.addArmor("UROTARKARMOR"), 1, "UROTARKARMOR_1").setUnlocalizedName("urotarkplate").setCreativeTab(CreativetabHandler.vgtab4);
+        urotarklegs = new Vgarmor(ArmorIDs.urotarklegsID, UROTARKARMOR, Omega.proxy.addArmor("UROTARKARMOR"), 2, "UROTARKARMOR_2").setUnlocalizedName("urotarklegs").setCreativeTab(CreativetabHandler.vgtab4);
+        urotarkboots = new Vgarmor(ArmorIDs.urotarkbootsID, UROTARKARMOR, Omega.proxy.addArmor("UROTARKARMOR"), 3, "UROTARKARMOR_1").setUnlocalizedName("urotarkboots").setCreativeTab(CreativetabHandler.vgtab4);
         // pearl
-        pearlhelm = new Vgarmor(IDHandler.pearlhelmID, PEARLARMOR, Omega.proxy.addArmor("PEARLARMOR"), 0, "PEARLARMOR_1").setUnlocalizedName("pearlhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        pearlplate = new Vgarmor(IDHandler.pearlplateID, PEARLARMOR, Omega.proxy.addArmor("PEARLARMOR"), 1, "PEARLARMOR_1").setUnlocalizedName("pearlplate").setCreativeTab(CreativetabHandler.vgtab4);
-        pearllegs = new Vgarmor(IDHandler.pearllegsID, PEARLARMOR, Omega.proxy.addArmor("PEARLARMOR"), 2, "PEARLARMOR_2").setUnlocalizedName("pearllegs").setCreativeTab(CreativetabHandler.vgtab4);
-        pearlboots = new Vgarmor(IDHandler.pearlbootsID, PEARLARMOR, Omega.proxy.addArmor("PEARLARMOR"), 3, "PEARLARMOR_1").setUnlocalizedName("pearlboots").setCreativeTab(CreativetabHandler.vgtab4);
+        pearlhelm = new Vgarmor(ArmorIDs.pearlhelmID, PEARLARMOR, Omega.proxy.addArmor("PEARLARMOR"), 0, "PEARLARMOR_1").setUnlocalizedName("pearlhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        pearlplate = new Vgarmor(ArmorIDs.pearlplateID, PEARLARMOR, Omega.proxy.addArmor("PEARLARMOR"), 1, "PEARLARMOR_1").setUnlocalizedName("pearlplate").setCreativeTab(CreativetabHandler.vgtab4);
+        pearllegs = new Vgarmor(ArmorIDs.pearllegsID, PEARLARMOR, Omega.proxy.addArmor("PEARLARMOR"), 2, "PEARLARMOR_2").setUnlocalizedName("pearllegs").setCreativeTab(CreativetabHandler.vgtab4);
+        pearlboots = new Vgarmor(ArmorIDs.pearlbootsID, PEARLARMOR, Omega.proxy.addArmor("PEARLARMOR"), 3, "PEARLARMOR_1").setUnlocalizedName("pearlboots").setCreativeTab(CreativetabHandler.vgtab4);
         // sapphire
-        sapphirehelm = new Vgarmor(IDHandler.sapphirehelmID, SAPPHIREARMOR, Omega.proxy.addArmor("SAPPHIREARMOR"), 0, "SAPPHIREARMOR_1").setUnlocalizedName("sapphirehelm").setCreativeTab(CreativetabHandler.vgtab4);
-        sapphireplate = new Vgarmor(IDHandler.sapphireplateID, SAPPHIREARMOR, Omega.proxy.addArmor("SAPPHIREARMOR"), 1, "SAPPHIREARMOR_1").setUnlocalizedName("sapphireplate").setCreativeTab(CreativetabHandler.vgtab4);
-        sapphirelegs = new Vgarmor(IDHandler.sapphirelegsID, SAPPHIREARMOR, Omega.proxy.addArmor("SAPPHIREARMOR"), 2, "SAPPHIREARMOR_2").setUnlocalizedName("sapphirelegs").setCreativeTab(CreativetabHandler.vgtab4);
-        sapphireboots = new Vgarmor(IDHandler.sapphirebootsID, SAPPHIREARMOR, Omega.proxy.addArmor("SAPPHIREARMOR"), 3, "SAPPHIREARMOR_1").setUnlocalizedName("sapphireboots").setCreativeTab(CreativetabHandler.vgtab4);
+        sapphirehelm = new Vgarmor(ArmorIDs.sapphirehelmID, SAPPHIREARMOR, Omega.proxy.addArmor("SAPPHIREARMOR"), 0, "SAPPHIREARMOR_1").setUnlocalizedName("sapphirehelm").setCreativeTab(CreativetabHandler.vgtab4);
+        sapphireplate = new Vgarmor(ArmorIDs.sapphireplateID, SAPPHIREARMOR, Omega.proxy.addArmor("SAPPHIREARMOR"), 1, "SAPPHIREARMOR_1").setUnlocalizedName("sapphireplate").setCreativeTab(CreativetabHandler.vgtab4);
+        sapphirelegs = new Vgarmor(ArmorIDs.sapphirelegsID, SAPPHIREARMOR, Omega.proxy.addArmor("SAPPHIREARMOR"), 2, "SAPPHIREARMOR_2").setUnlocalizedName("sapphirelegs").setCreativeTab(CreativetabHandler.vgtab4);
+        sapphireboots = new Vgarmor(ArmorIDs.sapphirebootsID, SAPPHIREARMOR, Omega.proxy.addArmor("SAPPHIREARMOR"), 3, "SAPPHIREARMOR_1").setUnlocalizedName("sapphireboots").setCreativeTab(CreativetabHandler.vgtab4);
         // muscovite
-        muscovitehelm = new Vgarmor(IDHandler.muscovitehelmID, MUSCOVITEARMOR, Omega.proxy.addArmor("MUSCOVITEARMOR"), 0, "MUSCOVITEARMOR_1").setUnlocalizedName("muscovitehelm").setCreativeTab(CreativetabHandler.vgtab4);
-        muscoviteplate = new Vgarmor(IDHandler.muscoviteplateID, MUSCOVITEARMOR, Omega.proxy.addArmor("MUSCOVITEARMOR"), 1, "MUSCOVITEARMOR_1").setUnlocalizedName("muscoviteplate").setCreativeTab(CreativetabHandler.vgtab4);
-        muscovitelegs = new Vgarmor(IDHandler.muscovitelegsID, MUSCOVITEARMOR, Omega.proxy.addArmor("MUSCOVITEARMOR"), 2, "MUSCOVITEARMOR_2").setUnlocalizedName("muscovitelegs").setCreativeTab(CreativetabHandler.vgtab4);
-        muscoviteboots = new Vgarmor(IDHandler.muscovitebootsID, MUSCOVITEARMOR, Omega.proxy.addArmor("MUSCOVITEARMOR"), 3, "MUSCOVITEARMOR_1").setUnlocalizedName("muscoviteboots").setCreativeTab(CreativetabHandler.vgtab4);
+        muscovitehelm = new Vgarmor(ArmorIDs.muscovitehelmID, MUSCOVITEARMOR, Omega.proxy.addArmor("MUSCOVITEARMOR"), 0, "MUSCOVITEARMOR_1").setUnlocalizedName("muscovitehelm").setCreativeTab(CreativetabHandler.vgtab4);
+        muscoviteplate = new Vgarmor(ArmorIDs.muscoviteplateID, MUSCOVITEARMOR, Omega.proxy.addArmor("MUSCOVITEARMOR"), 1, "MUSCOVITEARMOR_1").setUnlocalizedName("muscoviteplate").setCreativeTab(CreativetabHandler.vgtab4);
+        muscovitelegs = new Vgarmor(ArmorIDs.muscovitelegsID, MUSCOVITEARMOR, Omega.proxy.addArmor("MUSCOVITEARMOR"), 2, "MUSCOVITEARMOR_2").setUnlocalizedName("muscovitelegs").setCreativeTab(CreativetabHandler.vgtab4);
+        muscoviteboots = new Vgarmor(ArmorIDs.muscovitebootsID, MUSCOVITEARMOR, Omega.proxy.addArmor("MUSCOVITEARMOR"), 3, "MUSCOVITEARMOR_1").setUnlocalizedName("muscoviteboots").setCreativeTab(CreativetabHandler.vgtab4);
         // ruby
-        rubyhelm = new Vgarmor(IDHandler.rubyhelmID, RUBYARMOR, Omega.proxy.addArmor("RUBYARMOR"), 0, "RUBYARMOR_1").setUnlocalizedName("rubyhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        rubyplate = new Vgarmor(IDHandler.rubyplateID, RUBYARMOR, Omega.proxy.addArmor("RUBYARMOR"), 1, "RUBYARMOR_1").setUnlocalizedName("rubyplate").setCreativeTab(CreativetabHandler.vgtab4);
-        rubylegs = new Vgarmor(IDHandler.rubylegsID, RUBYARMOR, Omega.proxy.addArmor("RUBYARMOR"), 2, "RUBYARMOR_2").setUnlocalizedName("rubylegs").setCreativeTab(CreativetabHandler.vgtab4);
-        rubyboots = new Vgarmor(IDHandler.rubybootsID, RUBYARMOR, Omega.proxy.addArmor("RUBYARMOR"), 3, "RUBYARMOR_1").setUnlocalizedName("rubyboots").setCreativeTab(CreativetabHandler.vgtab4);
+        rubyhelm = new Vgarmor(ArmorIDs.rubyhelmID, RUBYARMOR, Omega.proxy.addArmor("RUBYARMOR"), 0, "RUBYARMOR_1").setUnlocalizedName("rubyhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        rubyplate = new Vgarmor(ArmorIDs.rubyplateID, RUBYARMOR, Omega.proxy.addArmor("RUBYARMOR"), 1, "RUBYARMOR_1").setUnlocalizedName("rubyplate").setCreativeTab(CreativetabHandler.vgtab4);
+        rubylegs = new Vgarmor(ArmorIDs.rubylegsID, RUBYARMOR, Omega.proxy.addArmor("RUBYARMOR"), 2, "RUBYARMOR_2").setUnlocalizedName("rubylegs").setCreativeTab(CreativetabHandler.vgtab4);
+        rubyboots = new Vgarmor(ArmorIDs.rubybootsID, RUBYARMOR, Omega.proxy.addArmor("RUBYARMOR"), 3, "RUBYARMOR_1").setUnlocalizedName("rubyboots").setCreativeTab(CreativetabHandler.vgtab4);
         // uriotyke
-        uriotykehelm = new Vgarmor(IDHandler.uriotykehelmID, URIOTYKEARMOR, Omega.proxy.addArmor("URIOTYKEARMOR"), 0, "URIOTYKEARMOR_1").setUnlocalizedName("uriotykehelm").setCreativeTab(CreativetabHandler.vgtab4);
-        uriotykeplate = new Vgarmor(IDHandler.uriotykeplateID, URIOTYKEARMOR, Omega.proxy.addArmor("URIOTYKEARMOR"), 1, "URIOTYKEARMOR_1").setUnlocalizedName("uriotykeplate").setCreativeTab(CreativetabHandler.vgtab4);
-        uriotykelegs = new Vgarmor(IDHandler.uriotykelegsID, URIOTYKEARMOR, Omega.proxy.addArmor("URIOTYKEARMOR"), 2, "URIOTYKEARMOR_2").setUnlocalizedName("uriotykelegs").setCreativeTab(CreativetabHandler.vgtab4);
-        uriotykeboots = new Vgarmor(IDHandler.uriotykebootsID, URIOTYKEARMOR, Omega.proxy.addArmor("URIOTYKEARMOR"), 3, "URIOTYKEARMOR_1").setUnlocalizedName("uriotykeboots").setCreativeTab(CreativetabHandler.vgtab4);
+        uriotykehelm = new Vgarmor(ArmorIDs.uriotykehelmID, URIOTYKEARMOR, Omega.proxy.addArmor("URIOTYKEARMOR"), 0, "URIOTYKEARMOR_1").setUnlocalizedName("uriotykehelm").setCreativeTab(CreativetabHandler.vgtab4);
+        uriotykeplate = new Vgarmor(ArmorIDs.uriotykeplateID, URIOTYKEARMOR, Omega.proxy.addArmor("URIOTYKEARMOR"), 1, "URIOTYKEARMOR_1").setUnlocalizedName("uriotykeplate").setCreativeTab(CreativetabHandler.vgtab4);
+        uriotykelegs = new Vgarmor(ArmorIDs.uriotykelegsID, URIOTYKEARMOR, Omega.proxy.addArmor("URIOTYKEARMOR"), 2, "URIOTYKEARMOR_2").setUnlocalizedName("uriotykelegs").setCreativeTab(CreativetabHandler.vgtab4);
+        uriotykeboots = new Vgarmor(ArmorIDs.uriotykebootsID, URIOTYKEARMOR, Omega.proxy.addArmor("URIOTYKEARMOR"), 3, "URIOTYKEARMOR_1").setUnlocalizedName("uriotykeboots").setCreativeTab(CreativetabHandler.vgtab4);
         // gilder
-        gilderhelm = new Vgarmor(IDHandler.gilderhelmID, GILDERARMOR, Omega.proxy.addArmor("GILDERARMOR"), 0, "GILDERARMOR_1").setUnlocalizedName("gilderhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        gilderplate = new Vgarmor(IDHandler.gilderplateID, GILDERARMOR, Omega.proxy.addArmor("GILDERARMOR"), 1, "GILDERARMOR_1").setUnlocalizedName("gilderplate").setCreativeTab(CreativetabHandler.vgtab4);
-        gilderlegs = new Vgarmor(IDHandler.gilderlegsID, GILDERARMOR, Omega.proxy.addArmor("GILDERARMOR"), 2, "GILDERARMOR_2").setUnlocalizedName("gilderlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        gilderboots = new Vgarmor(IDHandler.gilderbootsID, GILDERARMOR, Omega.proxy.addArmor("GILDERARMOR"), 3, "GILDERARMOR_1").setUnlocalizedName("gilderboots").setCreativeTab(CreativetabHandler.vgtab4);
+        gilderhelm = new Vgarmor(ArmorIDs.gilderhelmID, GILDERARMOR, Omega.proxy.addArmor("GILDERARMOR"), 0, "GILDERARMOR_1").setUnlocalizedName("gilderhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        gilderplate = new Vgarmor(ArmorIDs.gilderplateID, GILDERARMOR, Omega.proxy.addArmor("GILDERARMOR"), 1, "GILDERARMOR_1").setUnlocalizedName("gilderplate").setCreativeTab(CreativetabHandler.vgtab4);
+        gilderlegs = new Vgarmor(ArmorIDs.gilderlegsID, GILDERARMOR, Omega.proxy.addArmor("GILDERARMOR"), 2, "GILDERARMOR_2").setUnlocalizedName("gilderlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        gilderboots = new Vgarmor(ArmorIDs.gilderbootsID, GILDERARMOR, Omega.proxy.addArmor("GILDERARMOR"), 3, "GILDERARMOR_1").setUnlocalizedName("gilderboots").setCreativeTab(CreativetabHandler.vgtab4);
         // selovar
-        selovarhelm = new Vgarmor(IDHandler.selovarhelmID, SELOVARARMOR, Omega.proxy.addArmor("SELOVARARMOR"), 0, "SELOVARARMOR_1").setUnlocalizedName("selovarhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        selovarplate = new Vgarmor(IDHandler.selovarplateID, SELOVARARMOR, Omega.proxy.addArmor("SELOVARARMOR"), 1, "SELOVARARMOR_1").setUnlocalizedName("selovarplate").setCreativeTab(CreativetabHandler.vgtab4);
-        selovarlegs = new Vgarmor(IDHandler.selovarlegsID, SELOVARARMOR, Omega.proxy.addArmor("SELOVARARMOR"), 2, "SELOVARARMOR_2").setUnlocalizedName("selovarlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        selovarboots = new Vgarmor(IDHandler.selovarbootsID, SELOVARARMOR, Omega.proxy.addArmor("SELOVARARMOR"), 3, "SELOVARARMOR_1").setUnlocalizedName("selovarboots").setCreativeTab(CreativetabHandler.vgtab4);
+        selovarhelm = new Vgarmor(ArmorIDs.selovarhelmID, SELOVARARMOR, Omega.proxy.addArmor("SELOVARARMOR"), 0, "SELOVARARMOR_1").setUnlocalizedName("selovarhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        selovarplate = new Vgarmor(ArmorIDs.selovarplateID, SELOVARARMOR, Omega.proxy.addArmor("SELOVARARMOR"), 1, "SELOVARARMOR_1").setUnlocalizedName("selovarplate").setCreativeTab(CreativetabHandler.vgtab4);
+        selovarlegs = new Vgarmor(ArmorIDs.selovarlegsID, SELOVARARMOR, Omega.proxy.addArmor("SELOVARARMOR"), 2, "SELOVARARMOR_2").setUnlocalizedName("selovarlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        selovarboots = new Vgarmor(ArmorIDs.selovarbootsID, SELOVARARMOR, Omega.proxy.addArmor("SELOVARARMOR"), 3, "SELOVARARMOR_1").setUnlocalizedName("selovarboots").setCreativeTab(CreativetabHandler.vgtab4);
         // parfilian
-        parfilianhelm = new Vgarmor(IDHandler.parfilianhelmID, PARFILIANARMOR, Omega.proxy.addArmor("PARFILIANARMOR"), 0, "PARFILIANARMOR_1").setUnlocalizedName("parfilianhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        parfilianplate = new Vgarmor(IDHandler.parfilianplateID, PARFILIANARMOR, Omega.proxy.addArmor("PARFILIANARMOR"), 1, "PARFILIANARMOR_1").setUnlocalizedName("parfilianplate").setCreativeTab(CreativetabHandler.vgtab4);
-        parfilianlegs = new Vgarmor(IDHandler.parfilianlegsID, PARFILIANARMOR, Omega.proxy.addArmor("PARFILIANARMOR"), 2, "PARFILIANARMOR_2").setUnlocalizedName("parfilianlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        parfilianboots = new Vgarmor(IDHandler.parfilianbootsID, PARFILIANARMOR, Omega.proxy.addArmor("PARFILIANARMOR"), 3, "PARFILIANARMOR_1").setUnlocalizedName("parfilianboots").setCreativeTab(CreativetabHandler.vgtab4);
+        parfilianhelm = new Vgarmor(ArmorIDs.parfilianhelmID, PARFILIANARMOR, Omega.proxy.addArmor("PARFILIANARMOR"), 0, "PARFILIANARMOR_1").setUnlocalizedName("parfilianhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        parfilianplate = new Vgarmor(ArmorIDs.parfilianplateID, PARFILIANARMOR, Omega.proxy.addArmor("PARFILIANARMOR"), 1, "PARFILIANARMOR_1").setUnlocalizedName("parfilianplate").setCreativeTab(CreativetabHandler.vgtab4);
+        parfilianlegs = new Vgarmor(ArmorIDs.parfilianlegsID, PARFILIANARMOR, Omega.proxy.addArmor("PARFILIANARMOR"), 2, "PARFILIANARMOR_2").setUnlocalizedName("parfilianlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        parfilianboots = new Vgarmor(ArmorIDs.parfilianbootsID, PARFILIANARMOR, Omega.proxy.addArmor("PARFILIANARMOR"), 3, "PARFILIANARMOR_1").setUnlocalizedName("parfilianboots").setCreativeTab(CreativetabHandler.vgtab4);
         // barium
-        bariumhelm = new Vgarmor(IDHandler.bariumhelmID, BARIUMARMOR, Omega.proxy.addArmor("BARIUMARMOR"), 0, "BARIUMARMOR_1").setUnlocalizedName("bariumhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        bariumplate = new Vgarmor(IDHandler.bariumplateID, BARIUMARMOR, Omega.proxy.addArmor("BARIUMARMOR"), 1, "BARIUMARMOR_1").setUnlocalizedName("bariumplate").setCreativeTab(CreativetabHandler.vgtab4);
-        bariumlegs = new Vgarmor(IDHandler.bariumlegsID, BARIUMARMOR, Omega.proxy.addArmor("BARIUMARMOR"), 2, "BARIUMARMOR_2").setUnlocalizedName("bariumlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        bariumboots = new Vgarmor(IDHandler.bariumbootsID, BARIUMARMOR, Omega.proxy.addArmor("BARIUMARMOR"), 3, "BARIUMARMOR_1").setUnlocalizedName("bariumboots").setCreativeTab(CreativetabHandler.vgtab4);
+        bariumhelm = new Vgarmor(ArmorIDs.bariumhelmID, BARIUMARMOR, Omega.proxy.addArmor("BARIUMARMOR"), 0, "BARIUMARMOR_1").setUnlocalizedName("bariumhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        bariumplate = new Vgarmor(ArmorIDs.bariumplateID, BARIUMARMOR, Omega.proxy.addArmor("BARIUMARMOR"), 1, "BARIUMARMOR_1").setUnlocalizedName("bariumplate").setCreativeTab(CreativetabHandler.vgtab4);
+        bariumlegs = new Vgarmor(ArmorIDs.bariumlegsID, BARIUMARMOR, Omega.proxy.addArmor("BARIUMARMOR"), 2, "BARIUMARMOR_2").setUnlocalizedName("bariumlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        bariumboots = new Vgarmor(ArmorIDs.bariumbootsID, BARIUMARMOR, Omega.proxy.addArmor("BARIUMARMOR"), 3, "BARIUMARMOR_1").setUnlocalizedName("bariumboots").setCreativeTab(CreativetabHandler.vgtab4);
         // radium
-        radiumhelm = new Vgarmor(IDHandler.radiumhelmID, RADIUMARMOR, Omega.proxy.addArmor("RADIUMARMOR"), 0, "RADIUMARMOR_1").setUnlocalizedName("radiumhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        radiumplate = new Vgarmor(IDHandler.radiumplateID, RADIUMARMOR, Omega.proxy.addArmor("RADIUMARMOR"), 1, "RADIUMARMOR_1").setUnlocalizedName("radiumplate").setCreativeTab(CreativetabHandler.vgtab4);
-        radiumlegs = new Vgarmor(IDHandler.radiumlegsID, RADIUMARMOR, Omega.proxy.addArmor("RADIUMARMOR"), 2, "RADIUMARMOR_2").setUnlocalizedName("radiumlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        radiumboots = new Vgarmor(IDHandler.radiumbootsID, RADIUMARMOR, Omega.proxy.addArmor("RADIUMARMOR"), 3, "RADIUMARMOR_1").setUnlocalizedName("radiumboots").setCreativeTab(CreativetabHandler.vgtab4);
+        radiumhelm = new Vgarmor(ArmorIDs.radiumhelmID, RADIUMARMOR, Omega.proxy.addArmor("RADIUMARMOR"), 0, "RADIUMARMOR_1").setUnlocalizedName("radiumhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        radiumplate = new Vgarmor(ArmorIDs.radiumplateID, RADIUMARMOR, Omega.proxy.addArmor("RADIUMARMOR"), 1, "RADIUMARMOR_1").setUnlocalizedName("radiumplate").setCreativeTab(CreativetabHandler.vgtab4);
+        radiumlegs = new Vgarmor(ArmorIDs.radiumlegsID, RADIUMARMOR, Omega.proxy.addArmor("RADIUMARMOR"), 2, "RADIUMARMOR_2").setUnlocalizedName("radiumlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        radiumboots = new Vgarmor(ArmorIDs.radiumbootsID, RADIUMARMOR, Omega.proxy.addArmor("RADIUMARMOR"), 3, "RADIUMARMOR_1").setUnlocalizedName("radiumboots").setCreativeTab(CreativetabHandler.vgtab4);
         // gallum
-        gallumhelm = new Vgarmor(IDHandler.gallumhelmID, GALLUMARMOR, Omega.proxy.addArmor("GALLUMARMOR"), 0, "GALLUMARMOR_1").setUnlocalizedName("gallumhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        gallumplate = new Vgarmor(IDHandler.gallumplateID, GALLUMARMOR, Omega.proxy.addArmor("GALLUMARMOR"), 1, "GALLUMARMOR_1").setUnlocalizedName("gallumplate").setCreativeTab(CreativetabHandler.vgtab4);
-        gallumlegs = new Vgarmor(IDHandler.gallumlegsID, GALLUMARMOR, Omega.proxy.addArmor("GALLUMARMOR"), 2, "GALLUMARMOR_2").setUnlocalizedName("gallumlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        gallumboots = new Vgarmor(IDHandler.gallumbootsID, GALLUMARMOR, Omega.proxy.addArmor("GALLUMARMOR"), 3, "GALLUMARMOR_1").setUnlocalizedName("gallumboots").setCreativeTab(CreativetabHandler.vgtab4);
+        gallumhelm = new Vgarmor(ArmorIDs.gallumhelmID, GALLUMARMOR, Omega.proxy.addArmor("GALLUMARMOR"), 0, "GALLUMARMOR_1").setUnlocalizedName("gallumhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        gallumplate = new Vgarmor(ArmorIDs.gallumplateID, GALLUMARMOR, Omega.proxy.addArmor("GALLUMARMOR"), 1, "GALLUMARMOR_1").setUnlocalizedName("gallumplate").setCreativeTab(CreativetabHandler.vgtab4);
+        gallumlegs = new Vgarmor(ArmorIDs.gallumlegsID, GALLUMARMOR, Omega.proxy.addArmor("GALLUMARMOR"), 2, "GALLUMARMOR_2").setUnlocalizedName("gallumlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        gallumboots = new Vgarmor(ArmorIDs.gallumbootsID, GALLUMARMOR, Omega.proxy.addArmor("GALLUMARMOR"), 3, "GALLUMARMOR_1").setUnlocalizedName("gallumboots").setCreativeTab(CreativetabHandler.vgtab4);
         // vanadium
-        vanadiumhelm = new Vgarmor(IDHandler.vanadiumhelmID, VANADIUMARMOR, Omega.proxy.addArmor("VANADIUMARMOR"), 0, "VANADIUMARMOR_1").setUnlocalizedName("vanadiumhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        vanadiumplate = new Vgarmor(IDHandler.vanadiumplateID, VANADIUMARMOR, Omega.proxy.addArmor("VANADIUMARMOR"), 1, "VANADIUMARMOR_1").setUnlocalizedName("vanadiumplate").setCreativeTab(CreativetabHandler.vgtab4);
-        vanadiumlegs = new Vgarmor(IDHandler.vanadiumlegsID, VANADIUMARMOR, Omega.proxy.addArmor("VANADIUMARMOR"), 2, "VANADIUMARMOR_2").setUnlocalizedName("vanadiumlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        vanadiumboots = new Vgarmor(IDHandler.vanadiumbootsID, VANADIUMARMOR, Omega.proxy.addArmor("VANADIUMARMOR"), 3, "VANADIUMARMOR_1").setUnlocalizedName("vanadiumboots").setCreativeTab(CreativetabHandler.vgtab4);
+        vanadiumhelm = new Vgarmor(ArmorIDs.vanadiumhelmID, VANADIUMARMOR, Omega.proxy.addArmor("VANADIUMARMOR"), 0, "VANADIUMARMOR_1").setUnlocalizedName("vanadiumhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        vanadiumplate = new Vgarmor(ArmorIDs.vanadiumplateID, VANADIUMARMOR, Omega.proxy.addArmor("VANADIUMARMOR"), 1, "VANADIUMARMOR_1").setUnlocalizedName("vanadiumplate").setCreativeTab(CreativetabHandler.vgtab4);
+        vanadiumlegs = new Vgarmor(ArmorIDs.vanadiumlegsID, VANADIUMARMOR, Omega.proxy.addArmor("VANADIUMARMOR"), 2, "VANADIUMARMOR_2").setUnlocalizedName("vanadiumlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        vanadiumboots = new Vgarmor(ArmorIDs.vanadiumbootsID, VANADIUMARMOR, Omega.proxy.addArmor("VANADIUMARMOR"), 3, "VANADIUMARMOR_1").setUnlocalizedName("vanadiumboots").setCreativeTab(CreativetabHandler.vgtab4);
         // scandium
-        scandiumhelm = new Vgarmor(IDHandler.scandiumhelmID, SCANDIUMARMOR, Omega.proxy.addArmor("SCANDIUMARMOR"), 0, "SCANDIUMARMOR_1").setUnlocalizedName("scandiumhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        scandiumplate = new Vgarmor(IDHandler.scandiumplateID, SCANDIUMARMOR, Omega.proxy.addArmor("SCANDIUMARMOR"), 1, "SCANDIUMARMOR_1").setUnlocalizedName("scandiumplate").setCreativeTab(CreativetabHandler.vgtab4);
-        scandiumlegs = new Vgarmor(IDHandler.scandiumlegsID, SCANDIUMARMOR, Omega.proxy.addArmor("SCANDIUMARMOR"), 2, "SCANDIUMARMOR_2").setUnlocalizedName("scandiumlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        scandiumboots = new Vgarmor(IDHandler.scandiumbootsID, SCANDIUMARMOR, Omega.proxy.addArmor("SCANDIUMARMOR"), 3, "SCANDIUMARMOR_1").setUnlocalizedName("scandiumboots").setCreativeTab(CreativetabHandler.vgtab4);
+        scandiumhelm = new Vgarmor(ArmorIDs.scandiumhelmID, SCANDIUMARMOR, Omega.proxy.addArmor("SCANDIUMARMOR"), 0, "SCANDIUMARMOR_1").setUnlocalizedName("scandiumhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        scandiumplate = new Vgarmor(ArmorIDs.scandiumplateID, SCANDIUMARMOR, Omega.proxy.addArmor("SCANDIUMARMOR"), 1, "SCANDIUMARMOR_1").setUnlocalizedName("scandiumplate").setCreativeTab(CreativetabHandler.vgtab4);
+        scandiumlegs = new Vgarmor(ArmorIDs.scandiumlegsID, SCANDIUMARMOR, Omega.proxy.addArmor("SCANDIUMARMOR"), 2, "SCANDIUMARMOR_2").setUnlocalizedName("scandiumlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        scandiumboots = new Vgarmor(ArmorIDs.scandiumbootsID, SCANDIUMARMOR, Omega.proxy.addArmor("SCANDIUMARMOR"), 3, "SCANDIUMARMOR_1").setUnlocalizedName("scandiumboots").setCreativeTab(CreativetabHandler.vgtab4);
         // bismuth
-        bismuthhelm = new Vgarmor(IDHandler.bismuthhelmID, BISMUTHARMOR, Omega.proxy.addArmor("BISMUTHARMOR"), 0, "BISMUTHARMOR_1").setUnlocalizedName("bismuthhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        bismuthplate = new Vgarmor(IDHandler.bismuthplateID, BISMUTHARMOR, Omega.proxy.addArmor("BISMUTHARMOR"), 1, "BISMUTHARMOR_1").setUnlocalizedName("bismuthplate").setCreativeTab(CreativetabHandler.vgtab4);
-        bismuthlegs = new Vgarmor(IDHandler.bismuthlegsID, BISMUTHARMOR, Omega.proxy.addArmor("BISMUTHARMOR"), 2, "BISMUTHARMOR_2").setUnlocalizedName("bismuthlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        bismuthboots = new Vgarmor(IDHandler.bismuthbootsID, BISMUTHARMOR, Omega.proxy.addArmor("BISMUTHARMOR"), 3, "BISMUTHARMOR_1").setUnlocalizedName("bismuthboots").setCreativeTab(CreativetabHandler.vgtab4);
+        bismuthhelm = new Vgarmor(ArmorIDs.bismuthhelmID, BISMUTHARMOR, Omega.proxy.addArmor("BISMUTHARMOR"), 0, "BISMUTHARMOR_1").setUnlocalizedName("bismuthhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        bismuthplate = new Vgarmor(ArmorIDs.bismuthplateID, BISMUTHARMOR, Omega.proxy.addArmor("BISMUTHARMOR"), 1, "BISMUTHARMOR_1").setUnlocalizedName("bismuthplate").setCreativeTab(CreativetabHandler.vgtab4);
+        bismuthlegs = new Vgarmor(ArmorIDs.bismuthlegsID, BISMUTHARMOR, Omega.proxy.addArmor("BISMUTHARMOR"), 2, "BISMUTHARMOR_2").setUnlocalizedName("bismuthlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        bismuthboots = new Vgarmor(ArmorIDs.bismuthbootsID, BISMUTHARMOR, Omega.proxy.addArmor("BISMUTHARMOR"), 3, "BISMUTHARMOR_1").setUnlocalizedName("bismuthboots").setCreativeTab(CreativetabHandler.vgtab4);
         // indium
-        indiumhelm = new Vgarmor(IDHandler.indiumhelmID, INDIUMARMOR, Omega.proxy.addArmor("INDIUMARMOR"), 0, "INDIUMARMOR_1").setUnlocalizedName("indiumhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        indiumplate = new Vgarmor(IDHandler.indiumplateID, INDIUMARMOR, Omega.proxy.addArmor("INDIUMARMOR"), 1, "INDIUMARMOR_1").setUnlocalizedName("indiumplate").setCreativeTab(CreativetabHandler.vgtab4);
-        indiumlegs = new Vgarmor(IDHandler.indiumlegsID, INDIUMARMOR, Omega.proxy.addArmor("INDIUMARMOR"), 2, "INDIUMARMOR_2").setUnlocalizedName("indiumlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        indiumboots = new Vgarmor(IDHandler.indiumbootsID, INDIUMARMOR, Omega.proxy.addArmor("INDIUMARMOR"), 3, "INDIUMARMOR_1").setUnlocalizedName("indiumboots").setCreativeTab(CreativetabHandler.vgtab4);
+        indiumhelm = new Vgarmor(ArmorIDs.indiumhelmID, INDIUMARMOR, Omega.proxy.addArmor("INDIUMARMOR"), 0, "INDIUMARMOR_1").setUnlocalizedName("indiumhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        indiumplate = new Vgarmor(ArmorIDs.indiumplateID, INDIUMARMOR, Omega.proxy.addArmor("INDIUMARMOR"), 1, "INDIUMARMOR_1").setUnlocalizedName("indiumplate").setCreativeTab(CreativetabHandler.vgtab4);
+        indiumlegs = new Vgarmor(ArmorIDs.indiumlegsID, INDIUMARMOR, Omega.proxy.addArmor("INDIUMARMOR"), 2, "INDIUMARMOR_2").setUnlocalizedName("indiumlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        indiumboots = new Vgarmor(ArmorIDs.indiumbootsID, INDIUMARMOR, Omega.proxy.addArmor("INDIUMARMOR"), 3, "INDIUMARMOR_1").setUnlocalizedName("indiumboots").setCreativeTab(CreativetabHandler.vgtab4);
         // platinum
-        platinumhelm = new Vgarmor(IDHandler.platinumhelmID, PLATINUMARMOR, Omega.proxy.addArmor("PLATINUMARMOR"), 0, "PLATINUMARMOR_1").setUnlocalizedName("platinumhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        platinumplate = new Vgarmor(IDHandler.platinumplateID, PLATINUMARMOR, Omega.proxy.addArmor("PLATINUMARMOR"), 1, "PLATINUMARMOR_1").setUnlocalizedName("platinumplate").setCreativeTab(CreativetabHandler.vgtab4);
-        platinumlegs = new Vgarmor(IDHandler.platinumlegsID, PLATINUMARMOR, Omega.proxy.addArmor("PLATINUMARMOR"), 2, "PLATINUMARMOR_2").setUnlocalizedName("platinumlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        platinumboots = new Vgarmor(IDHandler.platinumbootsID, PLATINUMARMOR, Omega.proxy.addArmor("PLATINUMARMOR"), 3, "PLATINUMARMOR_1").setUnlocalizedName("platinumboots").setCreativeTab(CreativetabHandler.vgtab4);
+        platinumhelm = new Vgarmor(ArmorIDs.platinumhelmID, PLATINUMARMOR, Omega.proxy.addArmor("PLATINUMARMOR"), 0, "PLATINUMARMOR_1").setUnlocalizedName("platinumhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        platinumplate = new Vgarmor(ArmorIDs.platinumplateID, PLATINUMARMOR, Omega.proxy.addArmor("PLATINUMARMOR"), 1, "PLATINUMARMOR_1").setUnlocalizedName("platinumplate").setCreativeTab(CreativetabHandler.vgtab4);
+        platinumlegs = new Vgarmor(ArmorIDs.platinumlegsID, PLATINUMARMOR, Omega.proxy.addArmor("PLATINUMARMOR"), 2, "PLATINUMARMOR_2").setUnlocalizedName("platinumlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        platinumboots = new Vgarmor(ArmorIDs.platinumbootsID, PLATINUMARMOR, Omega.proxy.addArmor("PLATINUMARMOR"), 3, "PLATINUMARMOR_1").setUnlocalizedName("platinumboots").setCreativeTab(CreativetabHandler.vgtab4);
         // darkness
-        darknesshelm = new DarknessArmor(IDHandler.darknesshelmID, DARKNESSARMOR, Omega.proxy.addArmor("DARKNESSARMOR"), 0, "DARKNESSARMOR_1").setUnlocalizedName("darknesshelm").setCreativeTab(CreativetabHandler.vgtab4);
-        darknessplate = new DarknessArmor(IDHandler.darknessplateID, DARKNESSARMOR, Omega.proxy.addArmor("DARKNESSARMOR"), 1, "DARKNESSARMOR_1").setUnlocalizedName("darknessplate").setCreativeTab(CreativetabHandler.vgtab4);
-        darknesslegs = new DarknessArmor(IDHandler.darknesslegsID, DARKNESSARMOR, Omega.proxy.addArmor("DARKNESSARMOR"), 2, "DARKNESSARMOR_2").setUnlocalizedName("darknesslegs").setCreativeTab(CreativetabHandler.vgtab4);
-        darknessboots = new DarknessArmor(IDHandler.darknessbootsID, DARKNESSARMOR, Omega.proxy.addArmor("DARKNESSARMOR"), 3, "DARKNESSARMOR_1").setUnlocalizedName("darknessboots").setCreativeTab(CreativetabHandler.vgtab4);
+        darknesshelm = new DarknessArmor(ArmorIDs.darknesshelmID, DARKNESSARMOR, Omega.proxy.addArmor("DARKNESSARMOR"), 0, "DARKNESSARMOR_1").setUnlocalizedName("darknesshelm").setCreativeTab(CreativetabHandler.vgtab4);
+        darknessplate = new DarknessArmor(ArmorIDs.darknessplateID, DARKNESSARMOR, Omega.proxy.addArmor("DARKNESSARMOR"), 1, "DARKNESSARMOR_1").setUnlocalizedName("darknessplate").setCreativeTab(CreativetabHandler.vgtab4);
+        darknesslegs = new DarknessArmor(ArmorIDs.darknesslegsID, DARKNESSARMOR, Omega.proxy.addArmor("DARKNESSARMOR"), 2, "DARKNESSARMOR_2").setUnlocalizedName("darknesslegs").setCreativeTab(CreativetabHandler.vgtab4);
+        darknessboots = new DarknessArmor(ArmorIDs.darknessbootsID, DARKNESSARMOR, Omega.proxy.addArmor("DARKNESSARMOR"), 3, "DARKNESSARMOR_1").setUnlocalizedName("darknessboots").setCreativeTab(CreativetabHandler.vgtab4);
         // light
-        lighthelm = new LightArmor(IDHandler.lighthelmID, LIGHTARMOR, Omega.proxy.addArmor("LIGHTARMOR"), 0, "LIGHTARMOR_1").setUnlocalizedName("lighthelm").setCreativeTab(CreativetabHandler.vgtab4);
-        lightplate = new LightArmor(IDHandler.lightplateID, LIGHTARMOR, Omega.proxy.addArmor("LIGHTARMOR"), 1, "LIGHTARMOR_1").setUnlocalizedName("lightplate").setCreativeTab(CreativetabHandler.vgtab4);
-        lightlegs = new LightArmor(IDHandler.lightlegsID, LIGHTARMOR, Omega.proxy.addArmor("LIGHTARMOR"), 2, "LIGHTARMOR_2").setUnlocalizedName("lightlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        lightboots = new LightArmor(IDHandler.lightbootsID, LIGHTARMOR, Omega.proxy.addArmor("LIGHTARMOR"), 3, "LIGHTARMOR_1").setUnlocalizedName("lightboots").setCreativeTab(CreativetabHandler.vgtab4);
+        lighthelm = new LightArmor(ArmorIDs.lighthelmID, LIGHTARMOR, Omega.proxy.addArmor("LIGHTARMOR"), 0, "LIGHTARMOR_1").setUnlocalizedName("lighthelm").setCreativeTab(CreativetabHandler.vgtab4);
+        lightplate = new LightArmor(ArmorIDs.lightplateID, LIGHTARMOR, Omega.proxy.addArmor("LIGHTARMOR"), 1, "LIGHTARMOR_1").setUnlocalizedName("lightplate").setCreativeTab(CreativetabHandler.vgtab4);
+        lightlegs = new LightArmor(ArmorIDs.lightlegsID, LIGHTARMOR, Omega.proxy.addArmor("LIGHTARMOR"), 2, "LIGHTARMOR_2").setUnlocalizedName("lightlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        lightboots = new LightArmor(ArmorIDs.lightbootsID, LIGHTARMOR, Omega.proxy.addArmor("LIGHTARMOR"), 3, "LIGHTARMOR_1").setUnlocalizedName("lightboots").setCreativeTab(CreativetabHandler.vgtab4);
         // omega
-        omegahelm = new OmegaArmor(IDHandler.omegahelmID, OMEGAARMOR, Omega.proxy.addArmor("OMEGAARMOR"), 0, "OMEGAARMOR_1").setUnlocalizedName("omegahelm").setCreativeTab(CreativetabHandler.vgtab4);
-        omegaplate = new OmegaArmor(IDHandler.omegaplateID, OMEGAARMOR, Omega.proxy.addArmor("OMEGAARMOR"), 1, "OMEGAARMOR_1").setUnlocalizedName("omegaplate").setCreativeTab(CreativetabHandler.vgtab4);
-        omegalegs = new OmegaArmor(IDHandler.omegalegsID, OMEGAARMOR, Omega.proxy.addArmor("OMEGAARMOR"), 2, "OMEGAARMOR_2").setUnlocalizedName("omegalegs").setCreativeTab(CreativetabHandler.vgtab4);
-        omegaboots = new OmegaArmor(IDHandler.omegabootsID, OMEGAARMOR, Omega.proxy.addArmor("OMEGAARMOR"), 3, "OMEGAARMOR_1").setUnlocalizedName("omegaboots").setCreativeTab(CreativetabHandler.vgtab4);
+        omegahelm = new OmegaArmor(ArmorIDs.omegahelmID, OMEGAARMOR, Omega.proxy.addArmor("OMEGAARMOR"), 0, "OMEGAARMOR_1").setUnlocalizedName("omegahelm").setCreativeTab(CreativetabHandler.vgtab4);
+        omegaplate = new OmegaArmor(ArmorIDs.omegaplateID, OMEGAARMOR, Omega.proxy.addArmor("OMEGAARMOR"), 1, "OMEGAARMOR_1").setUnlocalizedName("omegaplate").setCreativeTab(CreativetabHandler.vgtab4);
+        omegalegs = new OmegaArmor(ArmorIDs.omegalegsID, OMEGAARMOR, Omega.proxy.addArmor("OMEGAARMOR"), 2, "OMEGAARMOR_2").setUnlocalizedName("omegalegs").setCreativeTab(CreativetabHandler.vgtab4);
+        omegaboots = new OmegaArmor(ArmorIDs.omegabootsID, OMEGAARMOR, Omega.proxy.addArmor("OMEGAARMOR"), 3, "OMEGAARMOR_1").setUnlocalizedName("omegaboots").setCreativeTab(CreativetabHandler.vgtab4);
         // berionvar
-        berionvarhelm = new Vgarmor(IDHandler.berionvarhelmID, BERIONVARARMOR, Omega.proxy.addArmor("BERIONVARARMOR"), 0, "BERIONVARARMOR_1").setUnlocalizedName("berionvarhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        berionvarplate = new Vgarmor(IDHandler.berionvarplateID, BERIONVARARMOR, Omega.proxy.addArmor("BERIONVARARMOR"), 1, "BERIONVARARMOR_1").setUnlocalizedName("berionvarplate").setCreativeTab(CreativetabHandler.vgtab4);
-        berionvarlegs = new Vgarmor(IDHandler.berionvarlegsID, BERIONVARARMOR, Omega.proxy.addArmor("BERIONVARARMOR"), 2, "BERIONVARARMOR_2").setUnlocalizedName("berionvarlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        berionvarboots = new Vgarmor(IDHandler.berionvarbootsID, BERIONVARARMOR, Omega.proxy.addArmor("BERIONVARARMOR"), 3, "BERIONVARARMOR_1").setUnlocalizedName("berionvarboots").setCreativeTab(CreativetabHandler.vgtab4);
+        berionvarhelm = new Vgarmor(ArmorIDs.berionvarhelmID, BERIONVARARMOR, Omega.proxy.addArmor("BERIONVARARMOR"), 0, "BERIONVARARMOR_1").setUnlocalizedName("berionvarhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        berionvarplate = new Vgarmor(ArmorIDs.berionvarplateID, BERIONVARARMOR, Omega.proxy.addArmor("BERIONVARARMOR"), 1, "BERIONVARARMOR_1").setUnlocalizedName("berionvarplate").setCreativeTab(CreativetabHandler.vgtab4);
+        berionvarlegs = new Vgarmor(ArmorIDs.berionvarlegsID, BERIONVARARMOR, Omega.proxy.addArmor("BERIONVARARMOR"), 2, "BERIONVARARMOR_2").setUnlocalizedName("berionvarlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        berionvarboots = new Vgarmor(ArmorIDs.berionvarbootsID, BERIONVARARMOR, Omega.proxy.addArmor("BERIONVARARMOR"), 3, "BERIONVARARMOR_1").setUnlocalizedName("berionvarboots").setCreativeTab(CreativetabHandler.vgtab4);
         // charviole
-        charviolehelm = new Vgarmor(IDHandler.charviolehelmID, CHARVIOLEARMOR, Omega.proxy.addArmor("CHARVIOLEARMOR"), 0, "CHARVIOLEARMOR_1").setUnlocalizedName("charviolehelm").setCreativeTab(CreativetabHandler.vgtab4);
-        charvioleplate = new Vgarmor(IDHandler.charvioleplateID, CHARVIOLEARMOR, Omega.proxy.addArmor("CHARVIOLEARMOR"), 1, "CHARVIOLEARMOR_1").setUnlocalizedName("charvioleplate").setCreativeTab(CreativetabHandler.vgtab4);
-        charviolelegs = new Vgarmor(IDHandler.charviolelegsID, CHARVIOLEARMOR, Omega.proxy.addArmor("CHARVIOLEARMOR"), 2, "CHARVIOLEARMOR_2").setUnlocalizedName("charviolelegs").setCreativeTab(CreativetabHandler.vgtab4);
-        charvioleboots = new Vgarmor(IDHandler.charviolebootsID, CHARVIOLEARMOR, Omega.proxy.addArmor("CHARVIOLEARMOR"), 3, "CHARVIOLEARMOR_1").setUnlocalizedName("charvioleboots").setCreativeTab(CreativetabHandler.vgtab4);
+        charviolehelm = new Vgarmor(ArmorIDs.charviolehelmID, CHARVIOLEARMOR, Omega.proxy.addArmor("CHARVIOLEARMOR"), 0, "CHARVIOLEARMOR_1").setUnlocalizedName("charviolehelm").setCreativeTab(CreativetabHandler.vgtab4);
+        charvioleplate = new Vgarmor(ArmorIDs.charvioleplateID, CHARVIOLEARMOR, Omega.proxy.addArmor("CHARVIOLEARMOR"), 1, "CHARVIOLEARMOR_1").setUnlocalizedName("charvioleplate").setCreativeTab(CreativetabHandler.vgtab4);
+        charviolelegs = new Vgarmor(ArmorIDs.charviolelegsID, CHARVIOLEARMOR, Omega.proxy.addArmor("CHARVIOLEARMOR"), 2, "CHARVIOLEARMOR_2").setUnlocalizedName("charviolelegs").setCreativeTab(CreativetabHandler.vgtab4);
+        charvioleboots = new Vgarmor(ArmorIDs.charviolebootsID, CHARVIOLEARMOR, Omega.proxy.addArmor("CHARVIOLEARMOR"), 3, "CHARVIOLEARMOR_1").setUnlocalizedName("charvioleboots").setCreativeTab(CreativetabHandler.vgtab4);
         // firlvear
-        firlvearhelm = new Vgarmor(IDHandler.firlvearhelmID, FIRLVEARARMOR, Omega.proxy.addArmor("FIRLVEARARMOR"), 0, "FIRLVEARARMOR_1").setUnlocalizedName("firlvearhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        firlvearplate = new Vgarmor(IDHandler.firlvearplateID, FIRLVEARARMOR, Omega.proxy.addArmor("FIRLVEARARMOR"), 1, "FIRLVEARARMOR_1").setUnlocalizedName("firlvearplate").setCreativeTab(CreativetabHandler.vgtab4);
-        firlvearlegs = new Vgarmor(IDHandler.firlvearlegsID, FIRLVEARARMOR, Omega.proxy.addArmor("FIRLVEARARMOR"), 2, "FIRLVEARARMOR_2").setUnlocalizedName("firlvearlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        firlvearboots = new Vgarmor(IDHandler.firlvearbootsID, FIRLVEARARMOR, Omega.proxy.addArmor("FIRLVEARARMOR"), 3, "FIRLVEARARMOR_1").setUnlocalizedName("firlvearboots").setCreativeTab(CreativetabHandler.vgtab4);
+        firlvearhelm = new Vgarmor(ArmorIDs.firlvearhelmID, FIRLVEARARMOR, Omega.proxy.addArmor("FIRLVEARARMOR"), 0, "FIRLVEARARMOR_1").setUnlocalizedName("firlvearhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        firlvearplate = new Vgarmor(ArmorIDs.firlvearplateID, FIRLVEARARMOR, Omega.proxy.addArmor("FIRLVEARARMOR"), 1, "FIRLVEARARMOR_1").setUnlocalizedName("firlvearplate").setCreativeTab(CreativetabHandler.vgtab4);
+        firlvearlegs = new Vgarmor(ArmorIDs.firlvearlegsID, FIRLVEARARMOR, Omega.proxy.addArmor("FIRLVEARARMOR"), 2, "FIRLVEARARMOR_2").setUnlocalizedName("firlvearlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        firlvearboots = new Vgarmor(ArmorIDs.firlvearbootsID, FIRLVEARARMOR, Omega.proxy.addArmor("FIRLVEARARMOR"), 3, "FIRLVEARARMOR_1").setUnlocalizedName("firlvearboots").setCreativeTab(CreativetabHandler.vgtab4);
         // selmenrer
-        selmenrerhelm = new Vgarmor(IDHandler.selmenrerhelmID, SELMENRERARMOR, Omega.proxy.addArmor("SELMENRERARMOR"), 0, "SELMENRERARMOR_1").setUnlocalizedName("selmenrerhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        selmenrerplate = new Vgarmor(IDHandler.selmenrerplateID, SELMENRERARMOR, Omega.proxy.addArmor("SELMENRERARMOR"), 1, "SELMENRERARMOR_1").setUnlocalizedName("selmenrerplate").setCreativeTab(CreativetabHandler.vgtab4);
-        selmenrerlegs = new Vgarmor(IDHandler.selmenrerlegsID, SELMENRERARMOR, Omega.proxy.addArmor("SELMENRERARMOR"), 2, "SELMENRERARMOR_2").setUnlocalizedName("selmenrerlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        selmenrerboots = new Vgarmor(IDHandler.selmenrerbootsID, SELMENRERARMOR, Omega.proxy.addArmor("SELMENRERARMOR"), 3, "SELMENRERARMOR_1").setUnlocalizedName("selmenrerboots").setCreativeTab(CreativetabHandler.vgtab4);
+        selmenrerhelm = new Vgarmor(ArmorIDs.selmenrerhelmID, SELMENRERARMOR, Omega.proxy.addArmor("SELMENRERARMOR"), 0, "SELMENRERARMOR_1").setUnlocalizedName("selmenrerhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        selmenrerplate = new Vgarmor(ArmorIDs.selmenrerplateID, SELMENRERARMOR, Omega.proxy.addArmor("SELMENRERARMOR"), 1, "SELMENRERARMOR_1").setUnlocalizedName("selmenrerplate").setCreativeTab(CreativetabHandler.vgtab4);
+        selmenrerlegs = new Vgarmor(ArmorIDs.selmenrerlegsID, SELMENRERARMOR, Omega.proxy.addArmor("SELMENRERARMOR"), 2, "SELMENRERARMOR_2").setUnlocalizedName("selmenrerlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        selmenrerboots = new Vgarmor(ArmorIDs.selmenrerbootsID, SELMENRERARMOR, Omega.proxy.addArmor("SELMENRERARMOR"), 3, "SELMENRERARMOR_1").setUnlocalizedName("selmenrerboots").setCreativeTab(CreativetabHandler.vgtab4);
         // verilion
-        verilionhelm = new Vgarmor(IDHandler.verilionhelmID, VERILIONARMOR, Omega.proxy.addArmor("VERILIONARMOR"), 0, "VERILIONARMOR_1").setUnlocalizedName("verilionhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        verilionplate = new Vgarmor(IDHandler.verilionplateID, VERILIONARMOR, Omega.proxy.addArmor("VERILIONARMOR"), 1, "VERILIONARMOR_1").setUnlocalizedName("verilionplate").setCreativeTab(CreativetabHandler.vgtab4);
-        verilionlegs = new Vgarmor(IDHandler.verilionlegsID, VERILIONARMOR, Omega.proxy.addArmor("VERILIONARMOR"), 2, "VERILIONARMOR_2").setUnlocalizedName("verilionlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        verilionboots = new Vgarmor(IDHandler.verilionbootsID, VERILIONARMOR, Omega.proxy.addArmor("VERILIONARMOR"), 3, "VERILIONARMOR_1").setUnlocalizedName("verilionboots").setCreativeTab(CreativetabHandler.vgtab4);
+        verilionhelm = new Vgarmor(ArmorIDs.verilionhelmID, VERILIONARMOR, Omega.proxy.addArmor("VERILIONARMOR"), 0, "VERILIONARMOR_1").setUnlocalizedName("verilionhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        verilionplate = new Vgarmor(ArmorIDs.verilionplateID, VERILIONARMOR, Omega.proxy.addArmor("VERILIONARMOR"), 1, "VERILIONARMOR_1").setUnlocalizedName("verilionplate").setCreativeTab(CreativetabHandler.vgtab4);
+        verilionlegs = new Vgarmor(ArmorIDs.verilionlegsID, VERILIONARMOR, Omega.proxy.addArmor("VERILIONARMOR"), 2, "VERILIONARMOR_2").setUnlocalizedName("verilionlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        verilionboots = new Vgarmor(ArmorIDs.verilionbootsID, VERILIONARMOR, Omega.proxy.addArmor("VERILIONARMOR"), 3, "VERILIONARMOR_1").setUnlocalizedName("verilionboots").setCreativeTab(CreativetabHandler.vgtab4);
         // vielvor
-        vielvorhelm = new Vgarmor(IDHandler.vielvorhelmID, VIELVORARMOR, Omega.proxy.addArmor("VIELVORARMOR"), 0, "VIELVORARMOR_1").setUnlocalizedName("vielvorhelm").setCreativeTab(CreativetabHandler.vgtab4);
-        vielvorplate = new Vgarmor(IDHandler.vielvorplateID, VIELVORARMOR, Omega.proxy.addArmor("VIELVORARMOR"), 1, "VIELVORARMOR_1").setUnlocalizedName("vielvorplate").setCreativeTab(CreativetabHandler.vgtab4);
-        vielvorlegs = new Vgarmor(IDHandler.vielvorlegsID, VIELVORARMOR, Omega.proxy.addArmor("VIELVORARMOR"), 2, "VIELVORARMOR_2").setUnlocalizedName("vielvorlegs").setCreativeTab(CreativetabHandler.vgtab4);
-        vielvorboots = new Vgarmor(IDHandler.vielvorbootsID, VIELVORARMOR, Omega.proxy.addArmor("VIELVORARMOR"), 3, "VIELVORARMOR_1").setUnlocalizedName("vielvorboots").setCreativeTab(CreativetabHandler.vgtab4);
+        vielvorhelm = new Vgarmor(ArmorIDs.vielvorhelmID, VIELVORARMOR, Omega.proxy.addArmor("VIELVORARMOR"), 0, "VIELVORARMOR_1").setUnlocalizedName("vielvorhelm").setCreativeTab(CreativetabHandler.vgtab4);
+        vielvorplate = new Vgarmor(ArmorIDs.vielvorplateID, VIELVORARMOR, Omega.proxy.addArmor("VIELVORARMOR"), 1, "VIELVORARMOR_1").setUnlocalizedName("vielvorplate").setCreativeTab(CreativetabHandler.vgtab4);
+        vielvorlegs = new Vgarmor(ArmorIDs.vielvorlegsID, VIELVORARMOR, Omega.proxy.addArmor("VIELVORARMOR"), 2, "VIELVORARMOR_2").setUnlocalizedName("vielvorlegs").setCreativeTab(CreativetabHandler.vgtab4);
+        vielvorboots = new Vgarmor(ArmorIDs.vielvorbootsID, VIELVORARMOR, Omega.proxy.addArmor("VIELVORARMOR"), 3, "VIELVORARMOR_1").setUnlocalizedName("vielvorboots").setCreativeTab(CreativetabHandler.vgtab4);
     }
 
     public static void registerArmor(GameRegistry register) {

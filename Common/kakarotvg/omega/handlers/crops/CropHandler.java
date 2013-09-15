@@ -3,7 +3,8 @@ package kakarotvg.omega.handlers.crops;
 import kakarotvg.omega.crops.BlockDarknessCrop;
 import kakarotvg.omega.crops.BlockLightCrop;
 import kakarotvg.omega.crops.VgSeeds;
-import kakarotvg.omega.handlers.IDs.IDHandler;
+import kakarotvg.omega.handlers.IDs.BlockIDs;
+import kakarotvg.omega.handlers.IDs.ItemIDs;
 import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -21,10 +22,10 @@ public class CropHandler {
     public static Item lightseeds;
 
     public static void configurecrops(Configuration config) {
-        darknesscrop = new BlockDarknessCrop(IDHandler.darknesscropID).setUnlocalizedName("darknesscrop");
-        darknessseeds = new VgSeeds(IDHandler.darknessseedsID, 4, 0.3F, darknesscrop.blockID, Block.tilledField.blockID).setUnlocalizedName("darknessseeds").setCreativeTab(CreativetabHandler.vgtab2);
-        lightcrop = new BlockLightCrop(IDHandler.lightcropID).setUnlocalizedName("lightcrop");
-        lightseeds = new VgSeeds(IDHandler.lightseedsID, 4, 0.3F, lightcrop.blockID, Block.tilledField.blockID).setUnlocalizedName("lightseeds").setCreativeTab(CreativetabHandler.vgtab2);
+        darknesscrop = new BlockDarknessCrop(BlockIDs.darknesscropID).setUnlocalizedName("darknesscrop");
+        darknessseeds = new VgSeeds(ItemIDs.darknessseedsID, 4, 0.3F, darknesscrop.blockID, Block.tilledField.blockID).setUnlocalizedName("darknessseeds").setCreativeTab(CreativetabHandler.vgtab2);
+        lightcrop = new BlockLightCrop(BlockIDs.lightcropID).setUnlocalizedName("lightcrop");
+        lightseeds = new VgSeeds(ItemIDs.lightseedsID, 4, 0.3F, lightcrop.blockID, Block.tilledField.blockID).setUnlocalizedName("lightseeds").setCreativeTab(CreativetabHandler.vgtab2);
 
         MinecraftForge.addGrassSeed(new ItemStack(CropHandler.darknessseeds), 3);
         MinecraftForge.addGrassSeed(new ItemStack(CropHandler.lightseeds), 3);

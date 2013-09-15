@@ -16,6 +16,7 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
@@ -75,7 +76,4 @@ public class EntityOmegakiller extends EntityMob {
         return Reference.MOD_ID + ":" + "mob.omegakiller.death";
     }
 
-    protected int getDropItemId() {
-        return ItemHandler.sapphire.itemID;
-    }
 }

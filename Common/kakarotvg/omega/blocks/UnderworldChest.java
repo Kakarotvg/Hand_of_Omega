@@ -5,6 +5,7 @@ import static net.minecraftforge.common.ForgeDirection.DOWN;
 import java.util.Iterator;
 import java.util.Random;
 
+import kakarotvg.omega.Omega;
 import kakarotvg.omega.Reference;
 import kakarotvg.omega.tileentity.TileEntityUnderworldChest;
 import net.minecraft.block.Block;
@@ -359,19 +360,17 @@ public class UnderworldChest extends BlockContainer {
     /**
      * Called upon block activation (right click on the block.)
      */
-    public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9) {
-        if (par1World.isRemote) {
-            return true;
-        }
-        else {
-            IInventory iinventory = this.getInventory(par1World, par2, par3, par4);
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
+        TileEntity tile_entity = world.getBlockTileEntity(x, y, z);
 
-            if (iinventory != null) {
-                par5EntityPlayer.displayGUIChest(iinventory);
-            }
+        if (tile_entity == null || player.isSneaking()) {
 
-            return true;
+            return false;
         }
+
+        player.openGui(Omega.instance, 0, world, x, y, z);
+
+        return true;
     }
 
     /**

@@ -15,6 +15,7 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class EntityEliminator extends EntityMob {
@@ -68,10 +69,6 @@ public class EntityEliminator extends EntityMob {
      */
     protected String getDeathSound() {
         return Reference.MOD_ID + ":" + "mob.eliminator.death";
-    }
-
-    protected int getDropItemId() {
-        return ItemHandler.barium.itemID;
     }
 
 }

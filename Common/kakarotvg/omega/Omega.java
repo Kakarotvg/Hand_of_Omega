@@ -1,6 +1,10 @@
 package kakarotvg.omega;
 
-import kakarotvg.omega.handlers.IDs.IDHandler;
+import kakarotvg.omega.generation.WorldGen;
+import kakarotvg.omega.handlers.IDs.BlockIDs;
+import kakarotvg.omega.handlers.IDs.ArmorIDs;
+import kakarotvg.omega.handlers.IDs.ItemIDs;
+import kakarotvg.omega.handlers.IDs.ToolIDs;
 import kakarotvg.omega.handlers.armor.ArmorHandler;
 import kakarotvg.omega.handlers.blocks.BlockHandler;
 import kakarotvg.omega.handlers.crafting.CraftingHandler;
@@ -42,7 +46,10 @@ public class Omega {
     public void preInit(FMLPreInitializationEvent event) {
         Configuration config = new Configuration(event.getSuggestedConfigurationFile());
         config.load();
-        IDHandler.createConfiguration(config);
+        BlockIDs.configureBlockIDs(config);
+        ArmorIDs.configureArmorIDs(config);
+        ToolIDs.ConfigureToolIDs(config);
+        ItemIDs.ConfigureItemIDs(config);
         config.save();
 
         VgEventHandler.Events();

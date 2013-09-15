@@ -2,12 +2,9 @@ package kakarotvg.omega.entity.mobs;
 
 import kakarotvg.omega.Reference;
 import kakarotvg.omega.handlers.item.ItemHandler;
-import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
-import net.minecraft.entity.ai.EntityAIFollowParent;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAILookIdle;
-import net.minecraft.entity.ai.EntityAIMate;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
@@ -15,6 +12,7 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class EntityAnnihilator extends EntityMob {
@@ -68,10 +66,6 @@ public class EntityAnnihilator extends EntityMob {
      */
     protected String getDeathSound() {
         return Reference.MOD_ID + ":" + "mob.annihilator.death";
-    }
-
-    protected int getDropItemId() {
-        return ItemHandler.radium.itemID;
     }
 
 }

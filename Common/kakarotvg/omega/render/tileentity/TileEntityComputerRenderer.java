@@ -37,8 +37,13 @@ public class TileEntityComputerRenderer extends TileEntitySpecialRenderer {
         Minecraft.getMinecraft().renderEngine.func_110577_a(resourceloc);
         GL11.glPushMatrix();
         GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
-
-        adjustLightFixture(te.worldObj, te.xCoord, te.yCoord, te.zCoord, te.blockType);
+        if (te.worldObj == null) {
+            GL11.glRotatef(te.blockMetadata * (180), 0.0F, 1.0F, 0.0F);
+            this.model.render((Entity) null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+        }
+        else {
+            adjustLightFixture(te.worldObj, te.xCoord, te.yCoord, te.zCoord, te.blockType);
+        }
         //A reference to your Model file. Again, very important.
         //Tell it to stop rendering for both the PushMatrix's
         GL11.glPopMatrix();
@@ -60,9 +65,6 @@ public class TileEntityComputerRenderer extends TileEntitySpecialRenderer {
              */
 
             GL11.glPopMatrix();
-        }
-        else {
-            this.model.render((Entity) null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
         }
 
     }

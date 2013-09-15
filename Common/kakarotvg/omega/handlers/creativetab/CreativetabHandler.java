@@ -18,7 +18,7 @@ public class CreativetabHandler {
 
     public static CreativeTabs vgtab2 = new CreativeTabs("vgtab2") {
         public ItemStack getIconItemStack() {
-            return new ItemStack(ItemHandler.selovaringot, 1, 0);
+            return new ItemStack(ItemHandler.urotarkingot, 1, 7);
         }
     };
 

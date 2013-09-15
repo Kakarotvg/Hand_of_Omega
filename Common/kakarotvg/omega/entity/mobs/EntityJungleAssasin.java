@@ -70,8 +70,4 @@ public class EntityJungleAssasin extends EntityMob {
         return Reference.MOD_ID + ":" + "mob.jungleassasin.death";
     }
 
-    protected int getDropItemId() {
-        return ItemHandler.charviole.itemID;
-    }
-
 }
