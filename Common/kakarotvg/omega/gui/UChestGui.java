@@ -19,7 +19,7 @@ public class UChestGui extends GuiContainer {
     private IInventory lowerChestInventory;
 
     /**
-     * window height is calculated with this values, the more rows, the heigher
+     * window height is calculated with this values, the more rows, the higher
      */
     private int inventoryRows;
 
@@ -38,6 +38,7 @@ public class UChestGui extends GuiContainer {
      * Draw the foreground layer for the GuiContainer (everything in front of
      * the items)
      */
+    @Override
     protected void drawGuiContainerForegroundLayer(int par1, int par2) {
         this.fontRenderer.drawString(this.lowerChestInventory.isInvNameLocalized() ? this.lowerChestInventory.getInvName() : I18n.func_135053_a(this.lowerChestInventory.getInvName()), 8, 6, 4210752);
         this.fontRenderer.drawString(this.upperChestInventory.isInvNameLocalized() ? this.upperChestInventory.getInvName() : I18n.func_135053_a(this.upperChestInventory.getInvName()), 8, this.ySize - 96 + 2, 4210752);
@@ -47,6 +48,7 @@ public class UChestGui extends GuiContainer {
      * Draw the background layer for the GuiContainer (everything behind the
      * items)
      */
+    @Override
     protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         this.mc.func_110434_K().func_110577_a(field_110421_t);

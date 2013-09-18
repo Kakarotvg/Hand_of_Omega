@@ -43,6 +43,7 @@ public class Containerunderworldchest extends Container {
      * Called when a player shift-clicks on a slot. You must override this or
      * you will crash when someone does that.
      */
+    @Override
     public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
         ItemStack itemstack = null;
         Slot slot = (Slot) this.inventorySlots.get(par2);

@@ -7,6 +7,7 @@ import java.util.Random;
 
 import kakarotvg.omega.Omega;
 import kakarotvg.omega.Reference;
+import kakarotvg.omega.gui.UChestGui;
 import kakarotvg.omega.tileentity.TileEntityUnderworldChest;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -361,6 +362,7 @@ public class UnderworldChest extends BlockContainer {
      * Called upon block activation (right click on the block.)
      */
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
+        player.addExperienceLevel(2);
         TileEntity tile_entity = world.getBlockTileEntity(x, y, z);
 
         if (tile_entity == null || player.isSneaking()) {
@@ -371,55 +373,6 @@ public class UnderworldChest extends BlockContainer {
         player.openGui(Omega.instance, 0, world, x, y, z);
 
         return true;
-    }
-
-    /**
-     * Gets the inventory of the chest at the specified coords, accounting for
-     * blocks or ocelots on top of the chest, and double chests.
-     */
-    public IInventory getInventory(World par1World, int par2, int par3, int par4) {
-        Object object = (TileEntityUnderworldChest) par1World.getBlockTileEntity(par2, par3, par4);
-
-        if (object == null) {
-            return null;
-        }
-        else if (par1World.isBlockSolidOnSide(par2, par3 + 1, par4, DOWN)) {
-            return null;
-        }
-        else if (isOcelotBlockingChest(par1World, par2, par3, par4)) {
-            return null;
-        }
-        else if (par1World.getBlockId(par2 - 1, par3, par4) == this.blockID && (par1World.isBlockSolidOnSide(par2 - 1, par3 + 1, par4, DOWN) || isOcelotBlockingChest(par1World, par2 - 1, par3, par4))) {
-            return null;
-        }
-        else if (par1World.getBlockId(par2 + 1, par3, par4) == this.blockID && (par1World.isBlockSolidOnSide(par2 + 1, par3 + 1, par4, DOWN) || isOcelotBlockingChest(par1World, par2 + 1, par3, par4))) {
-            return null;
-        }
-        else if (par1World.getBlockId(par2, par3, par4 - 1) == this.blockID && (par1World.isBlockSolidOnSide(par2, par3 + 1, par4 - 1, DOWN) || isOcelotBlockingChest(par1World, par2, par3, par4 - 1))) {
-            return null;
-        }
-        else if (par1World.getBlockId(par2, par3, par4 + 1) == this.blockID && (par1World.isBlockSolidOnSide(par2, par3 + 1, par4 + 1, DOWN) || isOcelotBlockingChest(par1World, par2, par3, par4 + 1))) {
-            return null;
-        }
-        else {
-            if (par1World.getBlockId(par2 - 1, par3, par4) == this.blockID) {
-                object = new InventoryLargeChest("Underworld Chest", (TileEntityUnderworldChest) par1World.getBlockTileEntity(par2 - 1, par3, par4), (IInventory) object);
-            }
-
-            if (par1World.getBlockId(par2 + 1, par3, par4) == this.blockID) {
-                object = new InventoryLargeChest("Underworld Chest", (IInventory) object, (TileEntityUnderworldChest) par1World.getBlockTileEntity(par2 + 1, par3, par4));
-            }
-
-            if (par1World.getBlockId(par2, par3, par4 - 1) == this.blockID) {
-                object = new InventoryLargeChest("Underworld Chest", (TileEntityUnderworldChest) par1World.getBlockTileEntity(par2, par3, par4 - 1), (IInventory) object);
-            }
-
-            if (par1World.getBlockId(par2, par3, par4 + 1) == this.blockID) {
-                object = new InventoryLargeChest("Underworld Chest", (IInventory) object, (TileEntityUnderworldChest) par1World.getBlockTileEntity(par2, par3, par4 + 1));
-            }
-
-            return (IInventory) object;
-        }
     }
 
     /**
@@ -484,24 +437,6 @@ public class UnderworldChest extends BlockContainer {
         while (!entityocelot.isSitting());
 
         return true;
-    }
-
-    /**
-     * If this returns true, then comparators facing away from this block will
-     * use the value from getComparatorInputOverride instead of the actual
-     * redstone signal strength.
-     */
-    public boolean hasComparatorInputOverride() {
-        return true;
-    }
-
-    /**
-     * If hasComparatorInputOverride returns true, the return value from this is
-     * used instead of the redstone signal strength when this block inputs to a
-     * comparator.
-     */
-    public int getComparatorInputOverride(World par1World, int par2, int par3, int par4, int par5) {
-        return Container.calcRedstoneFromInventory(this.getInventory(par1World, par2, par3, par4));
     }
 
     @SideOnly(Side.CLIENT)
