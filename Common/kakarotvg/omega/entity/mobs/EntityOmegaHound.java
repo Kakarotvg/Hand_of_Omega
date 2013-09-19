@@ -2,6 +2,7 @@ package kakarotvg.omega.entity.mobs;
 
 import kakarotvg.omega.handlers.item.ItemHandler;
 import net.minecraft.entity.EntityAgeable;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIControlledByPlayer;
 import net.minecraft.entity.ai.EntityAIFollowParent;
 import net.minecraft.entity.ai.EntityAILookIdle;
@@ -30,10 +31,11 @@ public class EntityOmegaHound extends EntityAnimal {
         this.tasks.addTask(8, new EntityAILookIdle(this));
     }
 
-    public int getMaxHealth() {
-        return 20;
+    protected void applyEntityAttributes() {
+        super.applyEntityAttributes();
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(30.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.25D);
     }
-
 
     public boolean isAIEnabled() {
         return true;

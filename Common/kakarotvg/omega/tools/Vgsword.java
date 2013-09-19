@@ -12,7 +12,7 @@ public class Vgsword extends ItemSword {
     public Vgsword(int par1, EnumToolMaterial par2EnumToolMaterial) {
         super(par1, par2EnumToolMaterial);
     }
-    
+
     @SideOnly(Side.CLIENT)
     @Override
     public void registerIcons(IconRegister register) {

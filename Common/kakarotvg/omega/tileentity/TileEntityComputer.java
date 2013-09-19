@@ -29,8 +29,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class TileEntityComputer extends BlockContainer {
 
     /**
-     * Is the random generator used by furnace to drop the inventory contents in
-     * random directions.
+     * Is the random generator used by furnace to drop the inventory contents in random directions.
      */
     private final Random furnaceRand = new Random();
 
@@ -38,9 +37,7 @@ public class TileEntityComputer extends BlockContainer {
     private final boolean isActive;
 
     /**
-     * This flag is used to prevent the furnace inventory to be dropped upon
-     * block removal, is used internally when the furnace block changes from
-     * idle to active and vice-versa.
+     * This flag is used to prevent the furnace inventory to be dropped upon block removal, is used internally when the furnace block changes from idle to active and vice-versa.
      */
     private static boolean keepFurnaceInventory;
 
@@ -123,8 +120,7 @@ public class TileEntityComputer extends BlockContainer {
     }
 
     /**
-     * Update which block ID the furnace is using depending on whether or not it
-     * is burning
+     * Update which block ID the furnace is using depending on whether or not it is burning
      */
     public static void updateFurnaceBlockState(boolean par0, World par1World, int par2, int par3, int par4) {
         int l = par1World.getBlockMetadata(par2, par3, par4);
@@ -132,7 +128,7 @@ public class TileEntityComputer extends BlockContainer {
         keepFurnaceInventory = true;
 
         if (par0) {
-            par1World.setBlock(par2, par3, par4, TileEntityHandler.computerburn.blockID);
+            par1World.setBlock(par2, par3, par4, TileEntityHandler.computer.blockID);
         }
         else {
             par1World.setBlock(par2, par3, par4, TileEntityHandler.computer.blockID);
@@ -180,8 +176,7 @@ public class TileEntityComputer extends BlockContainer {
     }
 
     /**
-     * Returns a new instance of a block's tile entity class. Called on placing
-     * the block.
+     * Returns a new instance of a block's tile entity class. Called on placing the block.
      */
     public TileEntity createNewTileEntity(World par1World) {
         return new TileEntityComputerEntity();
@@ -198,8 +193,7 @@ public class TileEntityComputer extends BlockContainer {
     }
 
     /**
-     * ejects contained items into the world, and notifies neighbours of an
-     * update, as appropriate
+     * ejects contained items into the world, and notifies neighbours of an update, as appropriate
      */
     public void breakBlock(World par1World, int par2, int par3, int par4, int par5, int par6) {
         if (!keepFurnaceInventory) {
@@ -245,18 +239,14 @@ public class TileEntityComputer extends BlockContainer {
     }
 
     /**
-     * If this returns true, then comparators facing away from this block will
-     * use the value from getComparatorInputOverride instead of the actual
-     * redstone signal strength.
+     * If this returns true, then comparators facing away from this block will use the value from getComparatorInputOverride instead of the actual redstone signal strength.
      */
     public boolean hasComparatorInputOverride() {
         return true;
     }
 
     /**
-     * If hasComparatorInputOverride returns true, the return value from this is
-     * used instead of the redstone signal strength when this block inputs to a
-     * comparator.
+     * If hasComparatorInputOverride returns true, the return value from this is used instead of the redstone signal strength when this block inputs to a comparator.
      */
     public int getComparatorInputOverride(World par1World, int par2, int par3, int par4, int par5) {
         return Container.calcRedstoneFromInventory((IInventory) par1World.getBlockTileEntity(par2, par3, par4));

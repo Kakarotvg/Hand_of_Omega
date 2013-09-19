@@ -12,7 +12,7 @@ public class Vgpickaxe extends ItemPickaxe {
     public Vgpickaxe(int par1, EnumToolMaterial par2EnumToolMaterial) {
         super(par1, par2EnumToolMaterial);
     }
-    
+
     @SideOnly(Side.CLIENT)
     @Override
     public void registerIcons(IconRegister register) {

@@ -79,7 +79,7 @@ public class TileEntityUnderworldchestrenderer extends TileEntitySpecialRenderer
 
                 }
                 else {
-                    this.func_110628_a(field_110631_g);
+                    this.bindTexture(field_110631_g);
                 }
             }
             else {
@@ -89,7 +89,7 @@ public class TileEntityUnderworldchestrenderer extends TileEntitySpecialRenderer
 
                 }
                 else {
-                    this.func_110628_a(field_110632_d);
+                    this.bindTexture(field_110632_d);
                 }
             }
 

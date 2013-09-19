@@ -19,7 +19,7 @@ public class TileEntityComputerRenderer extends TileEntitySpecialRenderer {
 
     //The model of your block
     public final ModelComputer model;
-    private static final ResourceLocation resourceloc = new ResourceLocation(Reference.MOD_ID + ":" + "textures/tileentity/computer.png");
+    private static final ResourceLocation resourceloc = new ResourceLocation(Reference.MOD_ID, "textures/TileEntity/Computer.png");
 
     public TileEntityComputerRenderer() {
         this.model = new ModelComputer();
@@ -34,7 +34,7 @@ public class TileEntityComputerRenderer extends TileEntitySpecialRenderer {
         GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
         //This is the texture of your block. It's pathed to be the same place as your other blocks here.
         //This rotation part is very important! Without it, your model will render upside-down! And for some reason you DO need PushMatrix again!    
-        Minecraft.getMinecraft().renderEngine.func_110577_a(resourceloc);
+        Minecraft.getMinecraft().renderEngine.bindTexture(resourceloc);
         GL11.glPushMatrix();
         GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
         if (te.worldObj == null) {

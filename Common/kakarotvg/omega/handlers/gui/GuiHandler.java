@@ -17,14 +17,13 @@ public class GuiHandler implements IGuiHandler {
     @Override
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
         TileEntity tileentity = world.getBlockTileEntity(x, y, z);
-        IInventory iinventory = UnderworldChestgetinv.getInventory(world, x, y, z);
 
         if (tileentity instanceof TileEntityComputerEntity) {
             return new ContainerComputer(player.inventory, (TileEntityComputerEntity) tileentity);
         }
 
-        if (iinventory != null) {
-            return new Containerunderworldchest(player.inventory, iinventory);
+        if (UnderworldChestgetinv.getInventory(world, x, y, z) != null) {
+            return new Containerunderworldchest(player.inventory, UnderworldChestgetinv.getInventory(world, x, y, z));
         }
 
         return true;
@@ -34,14 +33,13 @@ public class GuiHandler implements IGuiHandler {
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
         TileEntity tileentity = world.getBlockTileEntity(x, y, z);
-        IInventory iinventory = UnderworldChestgetinv.getInventory(world, x, y, z);
 
         if (tileentity instanceof TileEntityComputerEntity) {
             return new ComputerGui(player.inventory, (TileEntityComputerEntity) tileentity);
         }
 
-        if (iinventory != null) {
-            return new UChestGui(player.inventory, iinventory);
+        if (UnderworldChestgetinv.getInventory(world, x, y, z) != null) {
+            return new UChestGui(player.inventory, UnderworldChestgetinv.getInventory(world, x, y, z));
         }
 
         return true;

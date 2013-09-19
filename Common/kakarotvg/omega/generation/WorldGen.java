@@ -3,7 +3,7 @@ package kakarotvg.omega.generation;
 import java.util.Random;
 
 import kakarotvg.omega.handlers.blocks.BlockHandler;
-
+import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
@@ -27,193 +27,98 @@ public class WorldGen implements IWorldGenerator {
 
     }
 
-    private void generateSurface(World world, Random random, int chunkX, int chunkZ) {
-        for (int i = 0; i < 4; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
+    private void generateSurface(World world, Random random, int x, int z) {
+        // urotark
+        this.addOreSpawn(BlockHandler.urotarkore, 0, world, random, x, z, 16, 16, 4 + random.nextInt(4), 5, 2, 16, 1);
+        // pearl
+        this.addOreSpawn(BlockHandler.urotarkore, 1, world, random, x, z, 16, 16, 4 + random.nextInt(4), 5, 2, 16, 1);
+        // sapphire
+        this.addOreSpawn(BlockHandler.urotarkore, 2, world, random, x, z, 16, 16, 4 + random.nextInt(4), 5, 2, 16, 1);
+        // muscovite
+        this.addOreSpawn(BlockHandler.muscoviteore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // ruby
+        this.addOreSpawn(BlockHandler.muscoviteore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // uriotyke
+        this.addOreSpawn(BlockHandler.muscoviteore, 2, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // gilder
+        this.addOreSpawn(BlockHandler.gilderore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // selovar
+        this.addOreSpawn(BlockHandler.gilderore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // parfilian
+        this.addOreSpawn(BlockHandler.gilderore, 2, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // barium
+        this.addOreSpawn(BlockHandler.bariumore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // radium
+        this.addOreSpawn(BlockHandler.bariumore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // gallum
+        this.addOreSpawn(BlockHandler.bariumore, 2, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // vanadium
+        this.addOreSpawn(BlockHandler.vanadiumore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // scandium
+        this.addOreSpawn(BlockHandler.vanadiumore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // bismuth
+        this.addOreSpawn(BlockHandler.bismuthore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // indium
+        this.addOreSpawn(BlockHandler.bismuthore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // platinum
+        this.addOreSpawn(BlockHandler.platinumore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // darkness
+        this.addOreSpawn(BlockHandler.darknessore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // light
+        this.addOreSpawn(BlockHandler.darknessore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        //omega
+        this.addOreSpawn(BlockHandler.omegaore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // berionvar
+        this.addOreSpawn(BlockHandler.berionvarore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // charviole
+        this.addOreSpawn(BlockHandler.berionvarore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // firlvear
+        this.addOreSpawn(BlockHandler.firlvearore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // selmenrer
+        this.addOreSpawn(BlockHandler.firlvearore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // verilion
+        this.addOreSpawn(BlockHandler.verilionore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        // vielvor
+        this.addOreSpawn(BlockHandler.verilionore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
 
-            (new WorldGenMinable(BlockHandler.urotarkore.blockID, 12)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 4; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.urotarkore.blockID, 1, 12)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 4; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.urotarkore.blockID, 2, 12)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 3.75; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(14);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.muscoviteore.blockID, 10)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 3.75; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(14);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.muscoviteore.blockID, 1, 10)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 3.75; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(14);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.muscoviteore.blockID, 2, 10)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 3.5; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(12);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.gilderore.blockID, 8)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 3.5; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(12);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.gilderore.blockID, 1, 8)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 3.5; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(12);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.gilderore.blockID, 2, 8)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 3.25; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(10);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.bariumore.blockID, 6)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 3.25; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(10);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.bariumore.blockID, 1, 6)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 3.25; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(10);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.bariumore.blockID, 2, 6)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 3; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.vanadiumore.blockID, 4)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 3; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.vanadiumore.blockID, 1, 4)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 2; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.bismuthore.blockID, 2)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 2; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.bismuthore.blockID, 1, 2)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 1.5; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.platinumore.blockID, 2)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 1; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.darknessore.blockID, 1)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 1; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.darknessore.blockID, 1, 1)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 0.1; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.omegaore.blockID, 1)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 0.5; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.berionvarore.blockID, 1)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 0.5; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.berionvarore.blockID, 1, 1)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 0.5; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.firlvearore.blockID, 1)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 0.5; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.firlvearore.blockID, 1, 1)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 0.5; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.verilionore.blockID, 1)).generate(world, random, coordX, coordY, coordZ);
-        }
-        for (int i = 0; i < 0.5; i++) {
-            int coordX = random.nextInt(16) + chunkX;
-            int coordY = random.nextInt(16);
-            int coordZ = random.nextInt(16) + chunkZ;
-
-            (new WorldGenMinable(BlockHandler.verilionore.blockID, 1, 1)).generate(world, random, coordX, coordY, coordZ);
-        }
     }
 
     private void generateNether(World world, Random random, int chunkX, int chunkZ) {
 
+    }
+
+    /**
+     * Adds an Ore Spawn to Minecraft. Simply register all Ores to spawn with this method in your Generation method in your IWorldGeneration extending Class
+     * 
+     * @param The Block to spawn
+     * @param The blocks metadata
+     * @param The World to spawn in
+     * @param A Random object for retrieving random positions within the world to spawn the Block
+     * @param An int for passing the X-Coordinate for the Generation method
+     * @param An int for passing the Z-Coordinate for the Generation method
+     * @param An int for setting the maximum X-Coordinate values for spawning on the X-Axis on a Per-Chunk basis
+     * @param An int for setting the maximum Z-Coordinate values for spawning on the Z-Axis on a Per-Chunk basis
+     * @param An int for setting the maximum size of a vein
+     * @param An int for the Number of chances available for the Block to spawn per-chunk
+     * @param An int for the minimum Y-Coordinate height at which this block may spawn
+     * @param An int for the maximum Y-Coordinate height at which this block may spawn
+     * @param The target block id (stone being 1)
+     **/
+    public void addOreSpawn(Block block, int metadata, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY, int target) {
+        int maxPossY = minY + (maxY - 1);
+        assert maxY > minY : "The maximum Y must be greater than the Minimum Y";
+        assert maxX > 0 && maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
+        assert minY > 0 : "addOreSpawn: The Minimum Y must be greater than 0";
+        assert maxY < 256 && maxY > 0 : "addOreSpawn: The Maximum Y must be less than 256 but greater than 0";
+        assert maxZ > 0 && maxZ <= 16 : "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
+
+        int diffBtwnMinMaxY = maxY - minY;
+        for (int x = 0; x < chancesToSpawn; x++) {
+            int posX = blockXPos + random.nextInt(maxX);
+            int posY = minY + random.nextInt(diffBtwnMinMaxY);
+            int posZ = blockZPos + random.nextInt(maxZ);
+            (new WorldGenMinable(block.blockID, metadata, maxVeinSize, target)).generate(world, random, posX, posY, posZ);
+        }
     }
 
 }

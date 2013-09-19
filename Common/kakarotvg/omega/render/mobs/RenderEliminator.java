@@ -11,17 +11,20 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class RenderEliminator extends RenderLiving {
-    private static final ResourceLocation field_110833_a = new ResourceLocation(Reference.MOD_ID + ":" + "textures/mob/Eliminator.png");
+    private static final ResourceLocation resourceloc = new ResourceLocation(Reference.MOD_ID, "textures/mob/Eliminator.png");
 
     public RenderEliminator(ModelBase par1ModelBase, float par2) {
         super(par1ModelBase, par2);
     }
 
-    protected ResourceLocation func_110832_a(EntityEliminator par1EntityCow) {
-        return field_110833_a;
+    protected ResourceLocation getAnnihilatorTextures(EntityEliminator par1EntityCow) {
+        return resourceloc;
     }
 
-    protected ResourceLocation func_110775_a(Entity par1Entity) {
-        return this.func_110832_a((EntityEliminator) par1Entity);
+    /**
+     * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
+     */
+    protected ResourceLocation getEntityTexture(Entity par1Entity) {
+        return this.getAnnihilatorTextures((EntityEliminator) par1Entity);
     }
 }
