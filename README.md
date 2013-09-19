@@ -6,3 +6,5 @@ Source code to Hand of Omega for 1.6.2
 Constantly being updated.
 
 New features to come
+
+Bug tracker in progress.
