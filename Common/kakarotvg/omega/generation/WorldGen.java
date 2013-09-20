@@ -29,57 +29,57 @@ public class WorldGen implements IWorldGenerator {
 
     private void generateSurface(World world, Random random, int x, int z) {
         // urotark
-        this.addOreSpawn(BlockHandler.urotarkore, 0, world, random, x, z, 16, 16, 4 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.urotarkore, 0, world, random, x, z, 16, 16, 4 + random.nextInt(4), 12, 2, 32, 1);
         // pearl
-        this.addOreSpawn(BlockHandler.urotarkore, 1, world, random, x, z, 16, 16, 4 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.urotarkore, 1, world, random, x, z, 16, 16, 4 + random.nextInt(4), 12, 2, 32, 1);
         // sapphire
-        this.addOreSpawn(BlockHandler.urotarkore, 2, world, random, x, z, 16, 16, 4 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.urotarkore, 2, world, random, x, z, 16, 16, 4 + random.nextInt(4), 12, 2, 32, 1);
         // muscovite
-        this.addOreSpawn(BlockHandler.muscoviteore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.muscoviteore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 11, 2, 28, 1);
         // ruby
-        this.addOreSpawn(BlockHandler.muscoviteore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.muscoviteore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 11, 2, 28, 1);
         // uriotyke
-        this.addOreSpawn(BlockHandler.muscoviteore, 2, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.muscoviteore, 2, world, random, x, z, 16, 16, 3 + random.nextInt(4), 11, 2, 28, 1);
         // gilder
-        this.addOreSpawn(BlockHandler.gilderore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.gilderore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 10, 2, 24, 1);
         // selovar
-        this.addOreSpawn(BlockHandler.gilderore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.gilderore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 10, 2, 24, 1);
         // parfilian
-        this.addOreSpawn(BlockHandler.gilderore, 2, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.gilderore, 2, world, random, x, z, 16, 16, 3 + random.nextInt(4), 10, 2, 24, 1);
         // barium
-        this.addOreSpawn(BlockHandler.bariumore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.bariumore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 9, 2, 20, 1);
         // radium
-        this.addOreSpawn(BlockHandler.bariumore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.bariumore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 9, 2, 20, 1);
         // gallum
-        this.addOreSpawn(BlockHandler.bariumore, 2, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.bariumore, 2, world, random, x, z, 16, 16, 3 + random.nextInt(4), 9, 2, 20, 1);
         // vanadium
-        this.addOreSpawn(BlockHandler.vanadiumore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.vanadiumore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 8, 2, 16, 1);
         // scandium
-        this.addOreSpawn(BlockHandler.vanadiumore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.vanadiumore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 8, 2, 16, 1);
         // bismuth
-        this.addOreSpawn(BlockHandler.bismuthore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.bismuthore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 7, 2, 12, 1);
         // indium
-        this.addOreSpawn(BlockHandler.bismuthore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.bismuthore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 7, 2, 12, 1);
         // platinum
-        this.addOreSpawn(BlockHandler.platinumore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.platinumore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 6, 2, 10, 1);
         // darkness
-        this.addOreSpawn(BlockHandler.darknessore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.darknessore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 2, 2, 8, 1);
         // light
-        this.addOreSpawn(BlockHandler.darknessore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
-        //omega
-        this.addOreSpawn(BlockHandler.omegaore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.darknessore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 2, 2, 8, 1);
+        // omega
+        this.addOreSpawn(BlockHandler.omegaore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 1, 2, 8, 1);
         // berionvar
-        this.addOreSpawn(BlockHandler.berionvarore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.berionvarore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 8, 1);
         // charviole
-        this.addOreSpawn(BlockHandler.berionvarore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.berionvarore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 8, 1);
         // firlvear
-        this.addOreSpawn(BlockHandler.firlvearore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.firlvearore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 4, 2, 8, 1);
         // selmenrer
-        this.addOreSpawn(BlockHandler.firlvearore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.firlvearore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 4, 2, 8, 1);
         // verilion
-        this.addOreSpawn(BlockHandler.verilionore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.verilionore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 2, 2, 8, 1);
         // vielvor
-        this.addOreSpawn(BlockHandler.verilionore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 5, 2, 16, 1);
+        this.addOreSpawn(BlockHandler.verilionore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 2, 2, 8, 1);
 
     }
 

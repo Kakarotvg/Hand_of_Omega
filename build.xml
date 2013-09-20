@@ -19,13 +19,12 @@
         
 		<exec executable="recompile.bat" dir="forge/mcp" resolveexecutable="true" osfamily="windows"></exec>
         
-		<exec executable="reobfuscate.bat" dir="forge/mcp" resolveexecutable="true" osfamily="windows"></exec>
+		<exec executable="reobfuscate_srg.bat" dir="forge/mcp" resolveexecutable="true" osfamily="windows"></exec>
         
 		<exec executable="recompile.sh" dir="forge/mcp" resolveexecutable="true" osfamily="unix"></exec>
         
-		<exec executable="reobfuscate.sh" dir="forge/mcp" resolveexecutable="true" osfamily="unix"></exec>
+		<exec executable="reobfuscate_srg.sh" dir="forge/mcp" resolveexecutable="true" osfamily="unix"></exec>
     
-        <delete dir="forge/mcp/reobf/minecraft/net"/>
 		<jar destfile="releases/Hand_of_Omega_1.2.0.jar">
             
 			<fileset dir="forge/mcp/reobf/minecraft/" />
