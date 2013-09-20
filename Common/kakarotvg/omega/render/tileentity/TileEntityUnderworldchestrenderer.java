@@ -22,9 +22,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class TileEntityUnderworldchestrenderer extends TileEntitySpecialRenderer {
     private static final ResourceLocation field_110634_c = new ResourceLocation("textures/entity/chest/christmas_double.png");
-    private static final ResourceLocation field_110632_d = new ResourceLocation(Reference.MOD_ID + ":" + "textures/tileentity/underworlddouble.png");
+    private static final ResourceLocation field_110632_d = new ResourceLocation(Reference.MOD_ID + ":" + "textures/TileEntity/underworlddouble.png");
     private static final ResourceLocation field_110630_f = new ResourceLocation("textures/entity/chest/christmas.png");
-    private static final ResourceLocation field_110631_g = new ResourceLocation(Reference.MOD_ID + ":" + "textures/tileentity/underworldnormal.png");
+    private static final ResourceLocation field_110631_g = new ResourceLocation(Reference.MOD_ID + ":" + "textures/TileEntity/underworldnormal.png");
 
     /** The normal small chest model. */
     private ModelChest chestModel = new ModelChest();
