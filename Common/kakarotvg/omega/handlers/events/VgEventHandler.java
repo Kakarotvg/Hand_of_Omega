@@ -1,5 +1,6 @@
 package kakarotvg.omega.handlers.events;
 
+import kakarotvg.omega.events.BoneMealTreeEvent;
 import kakarotvg.omega.events.DarknessBucketEvent;
 import kakarotvg.omega.events.EventDropAnnihilator;
 import kakarotvg.omega.events.EventDropEliminator;
@@ -20,6 +21,7 @@ public class VgEventHandler {
         MinecraftForge.EVENT_BUS.register(new EventDropSlayer());
         MinecraftForge.EVENT_BUS.register(new EventDropEliminator());
         MinecraftForge.EVENT_BUS.register(new EventDropJungleAssasin());
+        MinecraftForge.EVENT_BUS.register(new BoneMealTreeEvent());
     }
 
     public static void registerSound() {

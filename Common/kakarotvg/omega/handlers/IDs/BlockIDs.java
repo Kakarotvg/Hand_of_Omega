@@ -22,6 +22,7 @@ public class BlockIDs {
     public static String cropids = "Crop IDs";
     public static String unknownids = "??? IDs";
     public static String tileentityids = "Tile Entity IDs";
+    public static String treeids = "Tree IDs";
 
     // BLOCK IDS
     // urotark ids
@@ -120,8 +121,14 @@ public class BlockIDs {
     public static int computeridleID;
     public static int underworldchestID;
 
+    // TREE STUFF IDS
+    public static int teallogID;
+    public static int tealleafID;
+    public static int tealsaplingID;
+    public static int tealplankID;
+
     public static void configureBlockIDs(Configuration config) {
-        // BLOCK IDS    
+        // BLOCK IDS
         // urotark ids
         urotarkblockID = config.get(urotarkids, "Urotark Block", 2500).getInt();
         // muscovite ids
@@ -176,7 +183,7 @@ public class BlockIDs {
         // omega
         omegaoreID = config.get(omegaids, "Omega Ore", 2525).getInt();
 
-        //LIQUID IDS
+        // LIQUID IDS
         darknessfluidID = config.get(liquidids, "Darkness Fluid", 2526).getInt();
         lightfluidID = config.get(liquidids, "Light Fluid", 2527).getInt();
 
@@ -188,6 +195,12 @@ public class BlockIDs {
         darknesssolidID = config.get(tileentityids, "Darkness Extrapalator", 2850).getInt();
         computeridleID = config.get(tileentityids, "Computer", 2851).getInt();
         underworldchestID = config.get(tileentityids, "Chest of the Underworld", 2853).getInt();
+
+        // TREE STUFF IDS
+        teallogID = config.get(treeids, "Teal Log", 2854).getInt();
+        tealleafID = config.get(treeids, "Teal Leaf", 2855).getInt();
+        tealsaplingID = config.get(treeids, "Teal Sapling", 2856).getInt();
+        tealplankID = config.get(treeids, "Teal Plank", 2857).getInt();
     }
 
 }

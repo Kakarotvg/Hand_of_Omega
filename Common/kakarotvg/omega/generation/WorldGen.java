@@ -80,6 +80,14 @@ public class WorldGen implements IWorldGenerator {
         this.addOreSpawn(BlockHandler.verilionore, 0, world, random, x, z, 16, 16, 3 + random.nextInt(4), 2, 2, 8, 1);
         // vielvor
         this.addOreSpawn(BlockHandler.verilionore, 1, world, random, x, z, 16, 16, 3 + random.nextInt(4), 2, 2, 8, 1);
+        // tree stuff
+        for (int i = 0; i < 20; i++) {
+            int xcoord = x + random.nextInt(16);
+            int ycoord = random.nextInt(256);
+            int zcoord = z + random.nextInt(16);
+
+            (new WorldGenVgTrees(false, 6, 0, 0, false)).generate(world, random, xcoord, ycoord, zcoord);
+        }
 
     }
 
