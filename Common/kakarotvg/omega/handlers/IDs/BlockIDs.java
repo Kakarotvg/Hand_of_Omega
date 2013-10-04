@@ -120,6 +120,7 @@ public class BlockIDs {
     public static int darknesssolidID;
     public static int computeridleID;
     public static int underworldchestID;
+    public static int tealworkbenchID;
 
     // TREE STUFF IDS
     public static int teallogID;
@@ -195,12 +196,13 @@ public class BlockIDs {
         darknesssolidID = config.get(tileentityids, "Darkness Extrapalator", 2850).getInt();
         computeridleID = config.get(tileentityids, "Computer", 2851).getInt();
         underworldchestID = config.get(tileentityids, "Chest of the Underworld", 2853).getInt();
+        tealworkbenchID = config.get(tileentityids, "Teal workbench", 2854).getInt();
 
         // TREE STUFF IDS
-        teallogID = config.get(treeids, "Teal Log", 2854).getInt();
-        tealleafID = config.get(treeids, "Teal Leaf", 2855).getInt();
-        tealsaplingID = config.get(treeids, "Teal Sapling", 2856).getInt();
-        tealplankID = config.get(treeids, "Teal Plank", 2857).getInt();
+        teallogID = config.get(treeids, "Teal Log", 2855).getInt();
+        tealleafID = config.get(treeids, "Teal Leaf", 2856).getInt();
+        tealsaplingID = config.get(treeids, "Teal Sapling", 2857).getInt();
+        tealplankID = config.get(treeids, "Teal Plank", 2858).getInt();
     }
 
 }

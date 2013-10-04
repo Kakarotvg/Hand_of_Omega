@@ -19,6 +19,7 @@ import kakarotvg.omega.handlers.tools.ToolHandler;
 import kakarotvg.omega.proxys.CommonProxy;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
+import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;

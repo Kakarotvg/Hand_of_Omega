@@ -3,7 +3,6 @@ package kakarotvg.omega.generation;
 import java.util.Random;
 
 import kakarotvg.omega.handlers.blocks.BlockHandler;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
 import net.minecraft.util.Direction;
@@ -124,19 +123,19 @@ public class WorldGenVgTrees extends WorldGenerator {
 
                             if (this.vinesGrow && j1 > 0) {
                                 if (par2Random.nextInt(3) > 0 && par1World.isAirBlock(par3 - 1, par4 + j1, par5)) {
-                                    this.setBlockAndMetadata(par1World, par3 - 1, par4 + j1, par5, Block.vine.blockID, 8);
+                                    this.setBlockAndMetadata(par1World, par3 - 1, par4 + j1, par5, BlockHandler.teallog.blockID, 8);
                                 }
 
                                 if (par2Random.nextInt(3) > 0 && par1World.isAirBlock(par3 + 1, par4 + j1, par5)) {
-                                    this.setBlockAndMetadata(par1World, par3 + 1, par4 + j1, par5, Block.vine.blockID, 2);
+                                    this.setBlockAndMetadata(par1World, par3 + 1, par4 + j1, par5, BlockHandler.teallog.blockID, 2);
                                 }
 
                                 if (par2Random.nextInt(3) > 0 && par1World.isAirBlock(par3, par4 + j1, par5 - 1)) {
-                                    this.setBlockAndMetadata(par1World, par3, par4 + j1, par5 - 1, Block.vine.blockID, 1);
+                                    this.setBlockAndMetadata(par1World, par3, par4 + j1, par5 - 1, BlockHandler.teallog.blockID, 1);
                                 }
 
                                 if (par2Random.nextInt(3) > 0 && par1World.isAirBlock(par3, par4 + j1, par5 + 1)) {
-                                    this.setBlockAndMetadata(par1World, par3, par4 + j1, par5 + 1, Block.vine.blockID, 4);
+                                    this.setBlockAndMetadata(par1World, par3, par4 + j1, par5 + 1, BlockHandler.teallog.blockID, 4);
                                 }
                             }
                         }

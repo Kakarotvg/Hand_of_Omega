@@ -3,9 +3,11 @@ package kakarotvg.omega.generation;
 import java.util.Random;
 
 import kakarotvg.omega.handlers.blocks.BlockHandler;
+import kakarotvg.omega.handlers.liquids.LiquidHandler;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.feature.WorldGenLakes;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
 
@@ -86,7 +88,7 @@ public class WorldGen implements IWorldGenerator {
             int ycoord = random.nextInt(256);
             int zcoord = z + random.nextInt(16);
 
-            (new WorldGenVgTrees(false, 6, 0, 0, false)).generate(world, random, xcoord, ycoord, zcoord);
+            (new WorldGenVgTrees(false, 4, 0, 0, false)).generate(world, random, xcoord, ycoord, zcoord);
         }
 
     }
