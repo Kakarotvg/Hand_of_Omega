@@ -146,6 +146,11 @@ public class ArmorHandler {
     public static Item vielvorplate;
     public static Item vielvorlegs;
     public static Item vielvorboots;
+    // invisible
+    public static Item invisiblehelm;
+    public static Item invisibleplate;
+    public static Item invisiblelegs;
+    public static Item invisibleboots;
 
     // urotark
     public static EnumArmorMaterial UROTARKARMOR = EnumHelper.addArmorMaterial("UROTARKARMOR", 600, new int[] { 6, 11, 9, 6 }, 10);
@@ -199,6 +204,8 @@ public class ArmorHandler {
     public static EnumArmorMaterial VERILIONARMOR = EnumHelper.addArmorMaterial("VERILIONARMOR", 2700, new int[] { 27, 32, 30, 27 }, 10);
     // vielvor
     public static EnumArmorMaterial VIELVORARMOR = EnumHelper.addArmorMaterial("VIELVORARMOR", 2800, new int[] { 28, 33, 31, 28 }, 10);
+    // invisible
+    public static EnumArmorMaterial INVISIBLEARMOR = EnumHelper.addArmorMaterial("INVISIBLEARMOR", 3000, new int[] { 35, 40, 38, 35 }, 10);
 
     public static void configreArmor(Configuration config) {
         // urotark
@@ -331,6 +338,11 @@ public class ArmorHandler {
         vielvorplate = new Vgarmor(ArmorIDs.vielvorplateID, VIELVORARMOR, Omega.proxy.addArmor("VIELVORARMOR"), 1, "VIELVORARMOR_1").setUnlocalizedName("vielvorplate").setCreativeTab(CreativetabHandler.vgtab4);
         vielvorlegs = new Vgarmor(ArmorIDs.vielvorlegsID, VIELVORARMOR, Omega.proxy.addArmor("VIELVORARMOR"), 2, "VIELVORARMOR_2").setUnlocalizedName("vielvorlegs").setCreativeTab(CreativetabHandler.vgtab4);
         vielvorboots = new Vgarmor(ArmorIDs.vielvorbootsID, VIELVORARMOR, Omega.proxy.addArmor("VIELVORARMOR"), 3, "VIELVORARMOR_1").setUnlocalizedName("vielvorboots").setCreativeTab(CreativetabHandler.vgtab4);
+        // Invisible armor
+        invisiblehelm = new Vgarmor(ArmorIDs.invisiblehelmID, INVISIBLEARMOR, Omega.proxy.addArmor("INVISIBLEARMOR"), 0, "INVISIBLEARMOR_1").setUnlocalizedName("invisiblehelm").setCreativeTab(CreativetabHandler.vgtab4);
+        invisibleplate = new Vgarmor(ArmorIDs.invisibleplateID, INVISIBLEARMOR, Omega.proxy.addArmor("INVISIBLEARMOR"), 1, "INVISIBLEARMOR_1").setUnlocalizedName("invisibleplate").setCreativeTab(CreativetabHandler.vgtab4);
+        invisiblelegs = new Vgarmor(ArmorIDs.invisiblelegsID, INVISIBLEARMOR, Omega.proxy.addArmor("INVISIBLEARMOR"), 2, "INVISIBLEARMOR_2").setUnlocalizedName("invisiblelegs").setCreativeTab(CreativetabHandler.vgtab4);
+        invisibleboots = new Vgarmor(ArmorIDs.invisiblebootsID, INVISIBLEARMOR, Omega.proxy.addArmor("INVISIBLEARMOR"), 3, "INVISIBLEARMOR_1").setUnlocalizedName("invisibleboots").setCreativeTab(CreativetabHandler.vgtab4);
     }
 
     public static void registerArmor(GameRegistry register) {
@@ -464,6 +476,11 @@ public class ArmorHandler {
         register.registerItem(vielvorplate, "vielvorplate");
         register.registerItem(vielvorlegs, "vielvorlegs");
         register.registerItem(vielvorboots, "vielvorboots");
+        // invisible
+        register.registerItem(invisiblehelm, "invisiblehelm");
+        register.registerItem(invisibleplate, "invisibleplate");
+        register.registerItem(invisiblelegs, "invisiblelegs");
+        register.registerItem(invisibleboots, "invisibleboots");
     }
 
     public static void setNames(LanguageRegistry register) {
@@ -597,6 +614,11 @@ public class ArmorHandler {
         register.addName(vielvorplate, "Vielvor Chestplate");
         register.addName(vielvorlegs, "Vielvor Leggins");
         register.addName(vielvorboots, "Vielvor Boots");
+        // invisible
+        register.addName(invisiblehelm, "Invisible Helmet");
+        register.addName(invisibleplate, "Invisible Chestplate");
+        register.addName(invisiblelegs, "Invisible Leggins");
+        register.addName(invisibleboots, "Invisible Boots");
     }
 
 }

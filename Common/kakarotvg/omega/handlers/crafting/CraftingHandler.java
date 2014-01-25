@@ -347,8 +347,13 @@ public class CraftingHandler {
         register.addRecipe(new ItemStack(TileEntityHandler.computer, 1), "uds", "olo", "DhD", 'u', ItemHandler.urotarkingot, 'd', new ItemStack(ItemHandler.platinumingot, 1, 1), 's', new ItemStack(ItemHandler.urotarkingot, 1, 7), 'l', LiquidHandler.lightbucket, 'o', new ItemStack(ItemHandler.platinumingot, 1, 3), 'D', new ItemStack(ItemHandler.platinumingot, 1, 4), 'h', ToolHandler.omegahand);
         register.addRecipe(new ItemStack(LiquidHandler.darknessbucket, 1), " l ", " d ", " b ", 'l', Item.bucketLava, 'd', new ItemStack(BlockHandler.darknessblock, 1), 'b', Item.bucketEmpty);
         register.addRecipe(new ItemStack(LiquidHandler.lightbucket, 1), " l ", " L ", " b ", 'l', Item.bucketLava, 'L', new ItemStack(BlockHandler.darknessblock, 1, 1), 'b', Item.bucketEmpty);
-        // tree stuff
-        register.addShapelessRecipe(new ItemStack(BlockHandler.tealplank, 4), new Object[] { new ItemStack(BlockHandler.teallog, 1) });
+        // invisible
+        register.addRecipe(new ItemStack(ArmorHandler.invisibleboots, 1), "   ", "d l", "d l", 'l', new ItemStack(ItemHandler.platinum, 1, 2), 'd', new ItemStack(ItemHandler.platinum, 1, 1));
+        register.addRecipe(new ItemStack(ArmorHandler.invisiblehelm, 1), "dld", "d l", "   ", 'l', new ItemStack(ItemHandler.platinum, 1, 2), 'd', new ItemStack(ItemHandler.platinum, 1, 1));
+        register.addRecipe(new ItemStack(ArmorHandler.invisibleplate, 1), "d l", "dll", "ddl", 'l', new ItemStack(ItemHandler.platinum, 1, 2), 'd', new ItemStack(ItemHandler.platinum, 1, 1));
+        register.addRecipe(new ItemStack(ArmorHandler.invisiblelegs, 1), "dld", "d l", "l l", 'l', new ItemStack(ItemHandler.platinum, 1, 2), 'd', new ItemStack(ItemHandler.platinum, 1, 1));
+        register.addRecipe(new ItemStack(ToolHandler.invisibledagger, 1), " l ", " d ", " s ", 'l', new ItemStack(ItemHandler.platinum, 1, 2), 'd', new ItemStack(ItemHandler.platinum, 1, 1), 's', Item.stick);
+
     }
 
     public static void addSmelting(GameRegistry register) {

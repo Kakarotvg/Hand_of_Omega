@@ -177,6 +177,8 @@ public class ToolHandler {
     public static Item vielvorshovel;
     public static Item vielvorsword;
     public static Item vielvorpickaxe;
+    // invisible
+    public static Item invisibledagger;
 
     // urotark
     public static EnumToolMaterial UROTARKTOOLS = EnumHelper.addToolMaterial("UROTARK TOOLS", 4, 2000, 12, 8, 10);
@@ -258,6 +260,8 @@ public class ToolHandler {
     // vielvor
     public static EnumToolMaterial VIELVORTOOLS = EnumHelper.addToolMaterial("VIELVOR TOOLS", 16, 4200, 32, 54, 10);
     public static EnumToolMaterial VIELVORSWORD = EnumHelper.addToolMaterial("VIELVORSWORD", 16, 4200, 32, 56, 10);
+    // invisble
+    public static EnumToolMaterial INVISIBLESWORD = EnumHelper.addToolMaterial("INVISIBLESWORD", 20, 5000, 40, 65, 10);
 
     public static void configureTools(Configuration config) {
         // urotark
@@ -419,6 +423,8 @@ public class ToolHandler {
         vielvorshovel = new Vgshovel(ToolIDs.vielvorshovelID, VIELVORTOOLS).setUnlocalizedName("vielvorshovel").setCreativeTab(CreativetabHandler.vgtab3);
         vielvorsword = new Vgsword(ToolIDs.vielvorswordID, VIELVORSWORD).setUnlocalizedName("vielvorsword").setCreativeTab(CreativetabHandler.vgtab4);
         vielvorpickaxe = new Vgpickaxe(ToolIDs.vielvorpickaxeID, VIELVORTOOLS).setUnlocalizedName("vielvorpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        // invisible
+        invisibledagger = new Vgsword(ToolIDs.invisibledaggerID, INVISIBLESWORD).setUnlocalizedName("invisibledagger").setCreativeTab(CreativetabHandler.vgtab4);
     }
 
     public static void registerItem(GameRegistry registry) {
@@ -581,6 +587,8 @@ public class ToolHandler {
         registry.registerItem(vielvorshovel, "vielvorshovel");
         registry.registerItem(vielvorsword, "vielvorsword");
         registry.registerItem(vielvorpickaxe, "vielvorpickaxe");
+        // invisible
+        registry.registerItem(invisibledagger, "invisibledagger");
     }
 
     public static void setNames(LanguageRegistry registry) {
@@ -743,6 +751,8 @@ public class ToolHandler {
         registry.addName(vielvorshovel, "Vielvor Shovel");
         registry.addName(vielvorsword, "Vielvor Sword");
         registry.addName(vielvorpickaxe, "Vielvor Pickaxe");
+        // invisible
+        registry.addName(invisibledagger, "Invisible Dagger");
     }
 
     public static void setToolClass(MinecraftForge registry) {
@@ -849,24 +859,24 @@ public class ToolHandler {
         registry.setToolClass(platinumsword, "sword", 10);
         registry.setToolClass(platinumpickaxe, "pickaxe", 10);
         // darkness
-        registry.setToolClass(darknessaxe, "axe", 15);
-        registry.setToolClass(darknesshoe, "hoe", 15);
-        registry.setToolClass(darknessshovel, "shovel", 15);
-        registry.setToolClass(darknesssword, "sword", 15);
-        registry.setToolClass(darknesspickaxe, "pickaxe", 15);
+        registry.setToolClass(darknessaxe, "axe", 20);
+        registry.setToolClass(darknesshoe, "hoe", 20);
+        registry.setToolClass(darknessshovel, "shovel", 20);
+        registry.setToolClass(darknesssword, "sword", 20);
+        registry.setToolClass(darknesspickaxe, "pickaxe", 20);
         // light
-        registry.setToolClass(lightaxe, "axe", 15);
-        registry.setToolClass(lighthoe, "hoe", 15);
-        registry.setToolClass(lightshovel, "shovel", 15);
-        registry.setToolClass(lightsword, "sword", 15);
-        registry.setToolClass(lightpickaxe, "pickaxe", 15);
+        registry.setToolClass(lightaxe, "axe", 20);
+        registry.setToolClass(lighthoe, "hoe", 20);
+        registry.setToolClass(lightshovel, "shovel", 20);
+        registry.setToolClass(lightsword, "sword", 20);
+        registry.setToolClass(lightpickaxe, "pickaxe", 20);
         // omega
-        registry.setToolClass(omegaaxe, "axe", 20);
+        registry.setToolClass(omegaaxe, "axe", 25);
         registry.setToolClass(omegahoe, "hoe", 20);
-        registry.setToolClass(omegashovel, "shovel", 20);
-        registry.setToolClass(omegasword, "sword", 20);
-        registry.setToolClass(omegahand, "sword", 20);
-        registry.setToolClass(omegapickaxe, "pickaxe", 20);
+        registry.setToolClass(omegashovel, "shovel", 25);
+        registry.setToolClass(omegasword, "sword", 25);
+        registry.setToolClass(omegahand, "sword", 25);
+        registry.setToolClass(omegapickaxe, "pickaxe", 25);
         // bubble
         registry.setToolClass(bubblesword, "sword", 3);
         // Berionvar
@@ -905,6 +915,8 @@ public class ToolHandler {
         registry.setToolClass(vielvorshovel, "shovel", 17);
         registry.setToolClass(vielvorsword, "sword", 17);
         registry.setToolClass(vielvorpickaxe, "pickaxe", 17);
+        // invisible
+        registry.setToolClass(invisibledagger, "sword", 20);
     }
 
 }

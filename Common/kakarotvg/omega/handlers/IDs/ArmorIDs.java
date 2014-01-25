@@ -31,6 +31,7 @@ public class ArmorIDs {
     public static String darknessids = "Darkness IDs";
     public static String lightids = "Light IDs";
     public static String omegaids = "Omega IDs";
+    public static String invisibleids = "Invisible IDs";
 
     // ARMOR IDS
     // urotark ids
@@ -163,9 +164,14 @@ public class ArmorIDs {
     public static int omegaplateID;
     public static int omegalegsID;
     public static int omegabootsID;
+    // invisible ids
+    public static int invisiblehelmID;
+    public static int invisibleplateID;
+    public static int invisiblelegsID;
+    public static int invisiblebootsID;
 
     public static void configureArmorIDs(Configuration config) {
-        // ARMOR IDS    
+        // ARMOR IDS
         // urotark ids
         urotarkhelmID = config.get(urotarkids, "Urotark Helmet", 9400).getInt();
         urotarkplateID = config.get(urotarkids, "Urotark Chestplate", 9401).getInt();
@@ -296,5 +302,10 @@ public class ArmorIDs {
         omegaplateID = config.get(omegaids, "Omega Chestplate", 9501).getInt();
         omegalegsID = config.get(omegaids, "Omega Leggings", 9502).getInt();
         omegabootsID = config.get(omegaids, "Omega Boots", 9503).getInt();
+     // invisible ids
+        invisiblehelmID = config.get(invisibleids, "Invisible Helmet", 9504).getInt();
+        invisibleplateID = config.get(invisibleids, "Invisible Chestplate", 9505).getInt();
+        invisiblelegsID = config.get(invisibleids, "Invisible Leggings", 9506).getInt();
+        invisiblebootsID = config.get(invisibleids, "Invisible Boots", 9507).getInt();
     }
 }

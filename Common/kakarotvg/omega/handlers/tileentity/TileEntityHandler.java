@@ -1,6 +1,5 @@
 package kakarotvg.omega.handlers.tileentity;
 
-import kakarotvg.omega.blocks.BlockTealWorkbench;
 import kakarotvg.omega.blocks.UnderworldChest;
 import kakarotvg.omega.entity.tileentity.TileEntityComputerEntity;
 import kakarotvg.omega.entity.tileentity.TileEntityDarknessSolidEntity;
@@ -26,21 +25,19 @@ public class TileEntityHandler {
         darknesssolid = new TileEntitySolidDarkness(BlockIDs.darknesssolidID).setUnlocalizedName("soliddarknessicon").setHardness(2.5F);
         computer = new TileEntityComputer(BlockIDs.computeridleID, false).setUnlocalizedName("computericon").setCreativeTab(CreativetabHandler.vgtab).setHardness(2.5F);
         underworldchest = new UnderworldChest(BlockIDs.underworldchestID, 0).setUnlocalizedName("underworldchest").setCreativeTab(CreativetabHandler.vgtab).setHardness(2.5F);
-        tealworkbench = new BlockTealWorkbench(BlockIDs.tealworkbenchID).setUnlocalizedName("tealworkbench").setTextureName("tealtable").setCreativeTab(CreativetabHandler.vgtab).setHardness(2.5F);
     }
 
     public static void registerTileEntitys(GameRegistry registry) {
         registry.registerBlock(darknesssolid, "darknesssolid");
         registry.registerBlock(computer, "computer");
         registry.registerBlock(underworldchest, "underworldchest");
-        registry.registerBlock(tealworkbench, "tealworkbench");
+
     }
 
     public static void addNames(LanguageRegistry register) {
         register.addName(darknesssolid, "Darkness Extrapalator");
         register.addName(computer, "Laptop");
         register.addName(underworldchest, "Underworld Chest");
-        register.addName(tealworkbench, "Teal Crafting Table");
     }
 
     public static void tileentityRegistry(GameRegistry registry) {

@@ -32,6 +32,7 @@ public class ToolIDs {
     public static String darknessids = "Darkness IDs";
     public static String lightids = "Light IDs";
     public static String omegaids = "Omega IDs";
+    public static String invisibleids = "Invisible IDs";
 
     // TOOL IDS
     // urotark ids
@@ -193,9 +194,11 @@ public class ToolIDs {
     public static int omegaswordID;
     public static int omegahandID;
     public static int omegapickaxeID;
+    // invisible ids
+    public static int invisibledaggerID;
 
     public static void ConfigureToolIDs(Configuration config) {
-        // TOOL IDS    
+        // TOOL IDS
         // urotark ids
         urotarkaxeID = config.get(urotarkids, "Urotark Axe", 9100).getInt();
         urotarkhoeID = config.get(urotarkids, "Urotark Hoe", 9101).getInt();
@@ -355,6 +358,8 @@ public class ToolIDs {
         omegaswordID = config.get(omegaids, "Omega Sword", 9229).getInt();
         omegahandID = config.get(omegaids, "Omega Hand", 9230).getInt();
         omegapickaxeID = config.get(omegaids, "Omega Pickaxe", 9231).getInt();
+        // invisible ids
+        invisibledaggerID = config.get(invisibleids, "Invisible Dagger", 9232).getInt();
     }
 
 }

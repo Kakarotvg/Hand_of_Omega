@@ -4,9 +4,6 @@ import kakarotvg.omega.blocks.ItemMetaBlock;
 import kakarotvg.omega.blocks.ItemMetaBlock2;
 import kakarotvg.omega.blocks.MetaBlock;
 import kakarotvg.omega.blocks.MetaBlock2;
-import kakarotvg.omega.blocks.TealLeaf;
-import kakarotvg.omega.blocks.TealLog;
-import kakarotvg.omega.blocks.TealSapling;
 import kakarotvg.omega.blocks.Vgblock;
 import kakarotvg.omega.handlers.IDs.BlockIDs;
 import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
@@ -163,11 +160,6 @@ public class BlockHandler {
         darknessore = new MetaBlock2(BlockIDs.darknessoreID, Material.rock).setUnlocalizedName("darknessore").setCreativeTab(CreativetabHandler.vgtab).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(5.0F);
         // omega
         omegaore = new Vgblock(BlockIDs.omegaoreID, Material.rock).setUnlocalizedName("omegaore").setCreativeTab(CreativetabHandler.vgtab).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(5.0F);
-        // tree stuff
-        tealsapling = new TealSapling(BlockIDs.tealsaplingID, Material.plants).setUnlocalizedName("tealsapling").setCreativeTab(CreativetabHandler.vgtab).setStepSound(Block.soundGrassFootstep);
-        teallog = new TealLog(BlockIDs.teallogID, Material.wood).setUnlocalizedName("teallog").setCreativeTab(CreativetabHandler.vgtab).setStepSound(Block.soundWoodFootstep).setHardness(2.0F);
-        tealleaf = new TealLeaf(BlockIDs.tealleafID, Material.leaves).setUnlocalizedName("tealleaf").setCreativeTab(CreativetabHandler.vgtab).setStepSound(Block.soundGrassFootstep).setHardness(0.5F).setResistance(1.0F);
-        tealplank = new Vgblock(BlockIDs.tealplankID, Material.wood).setUnlocalizedName("tealplank").setCreativeTab(CreativetabHandler.vgtab).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(5.0F);
 
     }
 
@@ -225,11 +217,7 @@ public class BlockHandler {
         registry.registerBlock(darknessore, ItemMetaBlock2.class, "darknessore");
         // Omega
         registry.registerBlock(omegaore, "omegaore");
-        // tree stuff
-        registry.registerBlock(tealsapling, "tealsapling");
-        registry.registerBlock(teallog, "teallog");
-        registry.registerBlock(tealleaf, "tealleaf");
-        registry.registerBlock(tealplank, "tealplank");
+
     }
 
     // meta set 1
@@ -344,11 +332,7 @@ public class BlockHandler {
         registry.addName(omegablock, "Omega Block");
         registry.addName(omegaore, "Omega Ore");
         registry.addName(unknown, "Unknown");
-        // tree stuff
-        registry.addName(tealsapling, "Teal Tree Sapling");
-        registry.addName(teallog, "Teal Tree Log");
-        registry.addName(tealleaf, "Teal Tree Leaf");
-        registry.addName(tealplank, "Teal Tree Plank");
+
     }
 
     public static void setHarvestlevel(MinecraftForge registry) {
