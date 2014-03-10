@@ -1,3 +1,442 @@
+// Blocks
+//meta set 1
 tile.urotarkblock.first.name=Urotark Block
+tile.urotarkore.first.name=Urotark Ore
 tile.urotarkblock.second.name=Pearl Block
+tile.urotarkore.second.name=Pearl Ore
 tile.urotarkblock.third.name=Sapphire Block
+tile.urotarkore.third.name=Sapphire Ore
+// meta set 2
+tile.muscoviteblock.first.name=Mucscovite Block
+tile.muscoviteore.first.name=Muscovite Ore
+tile.muscoviteblock.second.name=Ruby Block
+tile.muscoviteore.second.name=Ruby Ore
+tile.muscoviteblock.third.name=Uriotyke Block
+tile.muscoviteore.third.name=Uriotyke Ore
+// meta set 3
+tile.gilderblock.first.name=Gilder Block
+tile.gilderore.first.name=Gilder Ore
+tile.gilderblock.second.name=Selovar Block
+tile.gilderore.second.name=Selovar Ore
+tile.gilderblock.third.name=Parfilian Block
+tile.gilderore.third.name=Parfilian Ore
+// meta set 4
+tile.bariumblock.first.name=Barium Block
+tile.bariumore.first.name=Barium Ore
+tile.bariumblock.second.name=Radium Block
+tile.bariumore.second.name=Radium Ore
+tile.bariumblock.third.name=Gallum Block
+tile.bariumore.third.name=Gallum Ore
+// meta set 5
+tile.vanadiumblock.first.name=Vanadium Block
+tile.vanadiumore.first.name=Vanadium Ore
+tile.vanadiumblock.second.name=Scandium Block
+tile.vanadiumore.second.name=Scandium Ore
+// meta set 6
+tile.bismuthblock.first.name=Bismuth Block
+tile.bismuthore.first.name=Bismuth Ore
+tile.bismuthblock.second.name=Indium Block
+tile.bismuthore.second.name=Indium Ore
+// meta set 7
+tile.berionvarblock.first.name=Berionvar Block
+tile.berionvarore.first.name=Berionvar Ore
+tile.berionvarblock.second.name=Charviole Block
+tile.berionvarore.second.name=Charviole Ore
+// meta set 8
+tile.firlvearblock.first.name=Firlvear Block
+tile.firlvearore.first.name=Firlvear Ore
+tile.firlvearblock.second.name=Selmenrer Block
+tile.firlvearore.second.name=Selmenrer Ore
+// meta set 9
+tile.verilionblock.first.name=Verilion Block
+tile.verilionore.first.name=Verilion Ore
+tile.verilionblock.second.name=Vielvor Block
+tile.verilionore.second.name=Vielvor Ore
+// meta set 10
+tile.darknessblock.first.name=Darkness Block
+tile.darknessore.first.name=Darkness Ore
+tile.darknessblock.second.name=Light Block
+tile.darknessore.second.name=Light Ore
+// Single blocks
+tile.platinumblock.name=Platinum Block
+tile.platinumore.name=Platinum Ore
+tile.omegablockanimated.name=Omega Block
+tile.omegaore.name=Omega Ore
+tile.???animated.name=Unknown
+
+//Creative Tabs
+itemGroup.vgtab=Omega Blocks
+itemGroup.vgtab2=Omega Items
+itemGroup.vgtab3=Omega Tools
+itemGroup.vgtab4=Omega Combat
+
+//Items
+//meta set 1
+item.urotark.urotark.name=Urotark
+item.urotark.pearl.name=Pearl
+item.urotark.sapphire.name=Sapphire
+item.urotark.muscovite.name=Muscovite
+item.urotark.ruby.name=Ruby
+item.urotark.uriotyke.name=Uriotyke
+item.urotark.gilder.name=Gilder
+item.urotark.selovar.name=Selovar
+item.urotark.parfilian.name=Parfilian
+item.urotark.barium.name=Barium
+item.urotark.radium.name=Radium
+item.urotark.gallum.name=Gallum
+item.urotark.vanadium.name=Vanadium
+item.urotark.scandium.name=Scandium
+item.urotark.bismuth.name=Bismuth
+item.urotark.indium.name=Indium
+//meta set 2
+item.platinum.platinum.name=Platinum
+item.platinum.darkness.name=Darkness
+item.platinum.light.name=Light
+item.platinum.omega.name=Omega
+item.platinum.dawn.name=Dawn
+item.platinum.bubble.name=Bubble
+item.platinum.berionvar.name=Berionvar
+item.platinum.charviole.name=Charviole
+item.platinum.firlvear.name=Firlvear
+item.platinum.selmenrer.name=Selmenrer
+item.platinum.verilion.name=Verilion
+item.platinum.vielvor.name=Vielvor
+//meta set 3
+item.urotarkingot.urotarkingot.name=Urotark Ingot
+item.urotarkingot.pearlingot.name=Pearl Ingot
+item.urotarkingot.sapphireingot.name=Sapphire Ingot
+item.urotarkingot.muscoviteingot.name=Muscovite Ingot
+item.urotarkingot.rubyingot.name=Ruby Ingot
+item.urotarkingot.uriotykeingot.name=Uriotyke Ingot
+item.urotarkingot.gilderingot.name=Gilder Ingot
+item.urotarkingot.selovaringot.name=Selovar Ingot
+item.urotarkingot.parfilianingot.name=Parfilian Ingot
+item.urotarkingot.bariumingot.name=Barium Ingot
+item.urotarkingot.radiumingot.name=Radium Ingot
+item.urotarkingot.gallumingot.name=Gallum Ingot
+item.urotarkingot.vanadiumingot.name=Vanadium Ingot
+item.urotarkingot.scandiumingot.name=Scandium Ingot
+item.urotarkingot.bismuthingot.name=Bismuth Ingot
+item.urotarkingot.indiumingot.name=Indium Ingot
+//meta set 4
+item.platinumingot.platinumingot.name=Platinum Ingot
+item.platinumingot.darknessingot.name=Darkness Ingot
+item.platinumingot.lightingot.name=Light Ingot
+item.platinumingot.omegaingot.name=Omega Ingot
+item.platinumingot.dawningot.name=Dawn Ingot
+item.platinumingot.bubbles.name=Bubbles
+item.platinumingot.berionvaringot.name=Berionvar Ingot
+item.platinumingot.charvioleingot.name=Charviole Ingot
+item.platinumingot.firlvearingot.name=Firlvear Ingot
+item.platinumingot.selmenreringot.name=Selmenrer Ingot
+item.platinumingot.verilioningot.name=Verilion Ingot
+item.platinumingot.vielvoringot.name=Vielvor Ingot
+//single items
+item.darknessshard.name=Darkness Shard
+item.lightshard.name=Light Shard
+item.omegashards.name=Omega Shards
+item.soliddarkness.name=Solid Darkness
+
+//Crop Stuff
+tile.darknesscrop.name=Darkness Crop
+tile.lightcrop.name=Light Crop
+item.lightseeds.name=Light Seeds
+item.darknessseeds.name=Darkness Seeds
+
+//Armors
+//urotark
+item.urotarkhelm.name=Urotark Helmet
+item.urotarkplate.name=Urotark Chestplate
+item.urotarklegs.name=Urotark Leggings
+item.urotarkboots.name=Urotark Boots
+//pearl
+item.pearlhelm.name=Pearl Helmet
+item.pearlplate.name=Pearl Chestplate
+item.pearllegs.name=Pearl Leggings
+item.pearlboots.name=Pearl Boots
+//sapphire
+item.sapphirehelm.name=Sapphire Helmet
+item.sapphireplate.name=Sapphire Chestplate
+item.sapphirelegs.name=Sapphire Leggings
+item.sapphireboots.name=Sapphire Boots
+//muscovite
+item.muscovitehelm.name=Muscovite Helmet
+item.muscoviteplate.name=Muscovite Chestplate
+item.muscovitelegs.name=Muscovite Leggings
+item.muscoviteboots.name=Muscovite Boots
+//ruby
+item.rubyhelm.name=Ruby Helmet
+item.rubyplate.name=Ruby Chestplate
+item.rubylegs.name=Ruby Leggings
+item.rubyboots.name=Ruby Boots
+//uriotyke
+item.uriotykehelm.name=Uriotyke Helmet
+item.uriotykeplate.name=Uriotyke Chestplate
+item.uriotykelegs.name=Uriotyke Leggings
+item.uriotykeboots.name=Uriotyke Boots
+//gilder
+item.gilderhelm.name=Gilder Helmet
+item.gilderplate.name=Gilder Chestplate
+item.gilderlegs.name=Gilder Leggings
+item.gilderboots.name=Gilder Boots
+//selovar
+item.selovarhelm.name=Selovar Helmet
+item.selovarplate.name=Selovar Chestplate
+item.selovarlegs.name=Selovar Leggings
+item.selovarboots.name=Selovar Boots
+//parfilian
+item.parfilianhelm.name=Parfilian Helmet
+item.parfilianplate.name=Parfilian Chestplate
+item.parfilianlegs.name=Parfilian Leggings
+item.parfilianboots.name=Parfilian Boots
+//barium
+item.bariumhelm.name=Barium Helmet
+item.bariumplate.name=Barium Chestplate
+item.bariumlegs.name=Barium Leggings
+item.bariumboots.name=Barium Boots
+//radium
+item.radiumhelm.name=Radium Helmet
+item.radiumplate.name=Radium Chestplate
+item.radiumlegs.name=Radium Leggings
+item.radiumboots.name=Radium Boots
+//gallum
+item.gallumhelm.name=Gallum Helmet
+item.gallumplate.name=Gallum Chestplate
+item.gallumlegs.name=Gallum Leggings
+item.gallumboots.name=Gallum Boots
+//vanadium
+item.vanadiumhelm.name=Vanadium Helmet
+item.vanadiumplate.name=Vanadium Chestplate
+item.vanadiumlegs.name=Vanadium Leggings
+item.vanadiumboots.name=Vanadium Boots
+//scandium
+item.scandiumhelm.name=Scandium Helmet
+item.scandiumplate.name=Scandium Chestplate
+item.scandiumlegs.name=Scandium Leggings
+item.scandiumboots.name=Scandium Boots
+//bismuth
+item.bismuthhelm.name=Bismuth Helmet
+item.bismuthplate.name=Bismuth Chestplate
+item.bismuthlegs.name=Bismuth Leggings
+item.bismuthboots.name=Bismuth Boots
+//indium
+item.indiumhelm.name=Indium Helmet
+item.indiumplate.name=Indium Chestplate
+item.indiumlegs.name=Indium Leggings
+item.indiumboots.name=Indium Boots
+//platinum
+item.platinumhelm.name=Platinum Helmet
+item.platinumplate.name=Platinum Chestplate
+item.platinumlegs.name=Platinum Leggings
+item.platinumboots.name=Platinum Boots
+//darkness
+item.darknesshelm.name=Darkness Helmet
+item.darknessplate.name=Darkness Chestplate
+item.darknesslegs.name=Darkness Leggings
+item.darknessboots.name=Darkness Boots
+//light
+item.lighthelm.name=Light Helmet
+item.lightplate.name=Light Chestplate
+item.lightlegs.name=Light Leggings
+item.lightboots.name=Light Boots
+//omega
+item.omegahelm.name=Omega Helmet
+item.omegaplate.name=Omega Chestplate
+item.omegalegs.name=Omega Leggings
+item.omegaboots.name=Omega Boots
+//berionvar
+item.berionvarhelm.name=Berionvar Helmet
+item.berionvarplate.name=Berionvar Chestplate
+item.berionvarlegs.name=Berionvar Leggings
+item.berionvarboots.name=Berionvar Boots
+//charviole
+item.charviolehelm.name=Charviole Helmet
+item.charvioleplate.name=Charviole Chestplate
+item.charviolelegs.name=Charviole Leggings
+item.charvioleboots.name=Charviole Boots
+//firlvear
+item.firlvearhelm.name=Firlvear Helmet
+item.firlvearplate.name=Firlvear Chestplate
+item.firlvearlegs.name=Firlvear Leggings
+item.firlvearboots.name=Firlvear Boots
+//selmenrer
+item.selmenrerhelm.name=Selmenrer Helmet
+item.selmenrerplate.name=Selmenrer Chestplate
+item.selmenrerlegs.name=Selmenrer Leggings
+item.selmenrerboots.name=Selmenrer Boots
+//verilion
+item.verilionhelm.name=Verilion Helmet
+item.verilionplate.name=Verilion Chestplate
+item.verilionlegs.name=Verilion Leggings
+item.verilionboots.name=Verilion Boots
+//vielvor
+item.vielvorhelm.name=Vielvor Helmet
+item.vielvorplate.name=Vielvor Chestplate
+item.vielvorlegs.name=Vielvor Leggings
+item.vielvorboots.name=Vielvor Boots
+//invisible
+item.invisiblehelm.name=Invisible Helmet
+item.invisibleplate.name=Invisible Chestplate
+item.invisiblelegs.name=Invisible Leggings
+item.invisibleboots.name=Invisible Boots
+
+//Tools
+//urotark
+item.urotarkpickaxe.name=Urotark Pickaxe
+item.urotarkaxe.name=Urotark Axe
+item.urotarkshovel.name=Urotark Shovel
+item.urotarksword.name=Urotark Sword
+item.urotarkhoe.name=Urotark Hoe
+//pearl
+item.pearlpickaxe.name=Pearl Pickaxe
+item.pearlaxe.name=Pearl Axe
+item.pearlshovel.name=Pearl Shovel
+item.pearlsword.name=Pearl Sword
+item.pearlhoe.name=Pearl Hoe
+//sapphire
+item.sapphirepickaxe.name=Sapphire Pickaxe
+item.sapphireaxe.name=Sapphire Axe
+item.sapphireshovel.name=Sapphire Shovel
+item.sapphiresword.name=Sapphire Sword
+item.sapphirehoe.name=Sapphire Hoe
+//muscovite
+item.muscovitepickaxe.name=Muscovite Pickaxe
+item.muscoviteaxe.name=Muscovite Axe
+item.muscoviteshovel.name=Muscovite Shovel
+item.muscovitesword.name=Muscovite Sword
+item.muscovitehoe.name=Muscovite Hoe
+//ruby
+item.rubypickaxe.name=Ruby Pickaxe
+item.rubyaxe.name=Ruby Axe
+item.rubyshovel.name=Ruby Shovel
+item.rubysword.name=Ruby Sword
+item.rubyhoe.name=Ruby Hoe
+//uriotyke
+item.uriotykepickaxe.name=Uriotyke Pickaxe
+item.uriotykeaxe.name=Uriotyke Axe
+item.uriotykeshovel.name=Uriotyke Shovel
+item.uriotykesword.name=Uriotyke Sword
+item.uriotykehoe.name=Uriotyke Hoe
+//gilder
+item.gilderpickaxe.name=Gilder Pickaxe
+item.gilderaxe.name=Gilder Axe
+item.gildershovel.name=Gilder Shovel
+item.gildersword.name=Gilder Sword
+item.gilderhoe.name=Gilder Hoe
+//selovar
+item.selovarpickaxe.name=Selovar Pickaxe
+item.selovaraxe.name=Selovar Axe
+item.selovarshovel.name=Selovar Shovel
+item.selovarsword.name=Selovar Sword
+item.selovarhoe.name=Selovar Hoe
+//parfilian
+item.parfilianpickaxe.name=Parfilian Pickaxe
+item.parfilianaxe.name=Parfilian Axe
+item.parfilianshovel.name=Parfilian Shovel
+item.parfiliansword.name=Parfilian Sword
+item.parfilianhoe.name=Parfilian Hoe
+//barium
+item.bariumpickaxe.name=Barium Pickaxe
+item.bariumaxe.name=Barium Axe
+item.bariumshovel.name=Barium Shovel
+item.bariumsword.name=Barium Sword
+item.bariumhoe.name=Barium Hoe
+//radium
+item.radiumpickaxe.name=Radium Pickaxe
+item.radiumaxe.name=Radium Axe
+item.radiumshovel.name=Radium Shovel
+item.radiumsword.name=Radium Sword
+item.radiumhoe.name=Radium Hoe
+//gallum
+item.gallumpickaxe.name=Gallum Pickaxe
+item.gallumaxe.name=Gallum Axe
+item.gallumshovel.name=Gallum Shovel
+item.gallumsword.name=Gallum Sword
+item.gallumhoe.name=Gallum Hoe
+//vanadium
+item.vanadiumpickaxe.name=Vanadium Pickaxe
+item.vanadiumaxe.name=Vanadium Axe
+item.vanadiumshovel.name=Vanadium Shovel
+item.vanadiumsword.name=Vanadium Sword
+item.vanadiumhoe.name=Vanadium Hoe
+//scandium
+item.scandiumpickaxe.name=Scandium Pickaxe
+item.scandiumaxe.name=Scandium Axe
+item.scandiumshovel.name=Scandium Shovel
+item.scandiumsword.name=Scandium Sword
+item.scandiumhoe.name=Scandium Hoe
+//bismuth
+item.bismuthpickaxe.name=Bismuth Pickaxe
+item.bismuthaxe.name=Bismuth Axe
+item.bismuthshovel.name=Bismuth Shovel
+item.bismuthsword.name=Bismuth Sword
+item.bismuthhoe.name=Bismuth Hoe
+//indium
+item.indiumpickaxe.name=Indium Pickaxe
+item.indiumaxe.name=Indium Axe
+item.indiumshovel.name=Indium Shovel
+item.indiumsword.name=Indium Sword
+item.indiumhoe.name=Indium Hoe
+//platinum
+item.platinumpickaxe.name=Platinum Pickaxe
+item.platinumaxe.name=Platinum Axe
+item.platinumshovel.name=Platinum Shovel
+item.platinumsword.name=Platinum Sword
+item.platinumhoe.name=Platinum Hoe
+//darkness
+item.darknesspickaxe.name=Darkness Pickaxe
+item.darknessaxe.name=Darkness Axe
+item.darknessshovel.name=Darkness Shovel
+item.darknesssword.name=Darkness Sword
+item.darknesshoe.name=Darkness Hoe
+//light
+item.lightpickaxe.name=Light Pickaxe
+item.lightaxe.name=Light Axe
+item.lightshovel.name=Light Shovel
+item.lightsword.name=Light Sword
+item.lighthoe.name=Light Hoe
+//omega
+item.omegapickaxe.name=Omega Pickaxe
+item.omegaaxe.name=Omega Axe
+item.omegashovel.name=Omega Shovel
+item.omegasword.name=Omega Sword
+item.omegahoe.name=Omega Hoe
+item.omegahand.name=Omega Hand
+//berionvar
+item.berionvarpickaxe.name=Berionvar Pickaxe
+item.berionvaraxe.name=Berionvar Axe
+item.berionvarshovel.name=Berionvar Shovel
+item.berionvarsword.name=Berionvar Sword
+item.berionvarhoe.name=Berionvar Hoe
+//charviole
+item.charviolepickaxe.name=Charviole Pickaxe
+item.charvioleaxe.name=Charviole Axe
+item.charvioleshovel.name=Charviole Shovel
+item.charviolesword.name=Charviole Sword
+item.charviolehoe.name=Charviole Hoe
+//firlvear
+item.firlvearpickaxe.name=Firlvear Pickaxe
+item.firlvearaxe.name=Firlvear Axe
+item.firlvearshovel.name=Firlvear Shovel
+item.firlvearsword.name=Firlvear Sword
+item.firlvearhoe.name=Firlvear Hoe
+//selmenrer
+item.selmenrerpickaxe.name=Selmenrer Pickaxe
+item.selmenreraxe.name=Selmenrer Axe
+item.selmenrershovel.name=Selmenrer Shovel
+item.selmenrersword.name=Selmenrer Sword
+item.selmenrerhoe.name=Selmenrer Hoe
+//verilion
+item.verilionpickaxe.name=Verilion Pickaxe
+item.verilionaxe.name=Verilion Axe
+item.verilionshovel.name=Verilion Shovel
+item.verilionsword.name=Verilion Sword
+item.verilionhoe.name=Verilion Hoe
+//vielvor
+item.vielvorpickaxe.name=Vielvor Pickaxe
+item.vielvoraxe.name=Vielvor Axe
+item.vielvorshovel.name=Vielvor Shovel
+item.vielvorsword.name=Vielvor Sword
+item.vielvorhoe.name=Vielvor Hoe
+//invisible
+item.invisibledagger.name=Invisible Dagger
