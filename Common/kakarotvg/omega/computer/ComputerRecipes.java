@@ -1,110 +1,87 @@
 package kakarotvg.omega.computer;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 
-import kakarotvg.omega.handlers.blocks.BlockHandler;
 import kakarotvg.omega.handlers.item.ItemHandler;
 import kakarotvg.omega.handlers.liquids.LiquidHandler;
-import kakarotvg.omega.handlers.tileentity.TileEntityHandler;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemFishFood;
 import net.minecraft.item.ItemStack;
 
 public class ComputerRecipes {
     private static final ComputerRecipes smeltingBase = new ComputerRecipes();
-
-    /** The list of smelting results. */
+    /**
+     * The list of smelting results.
+     */
     private Map smeltingList = new HashMap();
     private Map experienceList = new HashMap();
-    private HashMap<List<Integer>, ItemStack> metaSmeltingList = new HashMap<List<Integer>, ItemStack>();
-    private HashMap<List<Integer>, Float> metaExperience = new HashMap<List<Integer>, Float>();
-
+    private static final String __OBFID = "CL_00000085";
+    
     /**
      * Used to call methods addSmelting and getSmeltingResult.
      */
-    public static final ComputerRecipes smelting() {
+    public static ComputerRecipes smelting() {
         return smeltingBase;
     }
-
+    
     private ComputerRecipes() {
-        this.addSmelting(LiquidHandler.darknessbucket.itemID, new ItemStack(ItemHandler.soliddarkness), 0.5F);
+        this.addsmelting(new ItemStack(LiquidHandler.darknessbucket, 1), new ItemStack(ItemHandler.soliddarkness), 0.5F);
     }
-
+    
+    public void addsmelting(ItemStack p_151394_1_, ItemStack p_151394_2_, float p_151394_3_) {
+        this.smeltingList.put(p_151394_1_, p_151394_2_);
+        this.experienceList.put(p_151394_2_, Float.valueOf(p_151394_3_));
+    }
+    
     /**
-     * Adds a smelting recipe.
+     * Returns the smelting result of an item.
      */
-    public void addSmelting(int par1, ItemStack par2ItemStack, float par3) {
-        this.smeltingList.put(Integer.valueOf(par1), par2ItemStack);
-        this.experienceList.put(Integer.valueOf(par2ItemStack.itemID), Float.valueOf(par3));
+    public ItemStack getSmeltingResult(ItemStack p_151395_1_) {
+        Iterator iterator = this.smeltingList.entrySet().iterator();
+        Entry entry;
+        
+        do {
+            if (!iterator.hasNext()) {
+                return null;
+            }
+            
+            entry = (Entry) iterator.next();
+        }
+        while (!this.func_151397_a(p_151395_1_, (ItemStack) entry.getKey()));
+        
+        return (ItemStack) entry.getValue();
     }
-
-    /**
-     * Returns the smelting result of an item. Deprecated in favor of a metadata
-     * sensitive version
-     */
-    @Deprecated
-    public ItemStack getSmeltingResult(int par1) {
-        return (ItemStack) this.smeltingList.get(Integer.valueOf(par1));
+    
+    private boolean func_151397_a(ItemStack p_151397_1_, ItemStack p_151397_2_) {
+        return p_151397_2_.getItem() == p_151397_1_.getItem() && (p_151397_2_.getItemDamage() == 32767 || p_151397_2_.getItemDamage() == p_151397_1_.getItemDamage());
     }
-
+    
     public Map getSmeltingList() {
         return this.smeltingList;
     }
-
-    @Deprecated
-    //In favor of ItemStack sensitive version
-    public float getExperience(int par1) {
-        return this.experienceList.containsKey(Integer.valueOf(par1)) ? ((Float) this.experienceList.get(Integer.valueOf(par1))).floatValue() : 0.0F;
-    }
-
-    /**
-     * A metadata sensitive version of adding a furnace recipe.
-     */
-    public void addSmelting(int itemID, int metadata, ItemStack itemstack, float experience) {
-        metaSmeltingList.put(Arrays.asList(itemID, metadata), itemstack);
-        metaExperience.put(Arrays.asList(itemstack.itemID, itemstack.getItemDamage()), experience);
-    }
-
-    /**
-     * Used to get the resulting ItemStack form a source ItemStack
-     * 
-     * @param item
-     *            The Source ItemStack
-     * @return The result ItemStack
-     */
-    public ItemStack getSmeltingResult(ItemStack item) {
-        if (item == null) {
-            return null;
+    
+    public float func_151398_b(ItemStack p_151398_1_) {
+        float ret = p_151398_1_.getItem().getSmeltingExperience(p_151398_1_);
+        if (ret != -1) return ret;
+        
+        Iterator iterator = this.experienceList.entrySet().iterator();
+        Entry entry;
+        
+        do {
+            if (!iterator.hasNext()) {
+                return 0.0F;
+            }
+            
+            entry = (Entry) iterator.next();
         }
-        ItemStack ret = (ItemStack) metaSmeltingList.get(Arrays.asList(item.itemID, item.getItemDamage()));
-        if (ret != null) {
-            return ret;
-        }
-        return (ItemStack) smeltingList.get(Integer.valueOf(item.itemID));
-    }
-
-    /**
-     * Grabs the amount of base experience for this item to give when pulled
-     * from the furnace slot.
-     */
-    public float getExperience(ItemStack item) {
-        if (item == null || item.getItem() == null) {
-            return 0;
-        }
-        float ret = item.getItem().getSmeltingExperience(item);
-        if (ret < 0 && metaExperience.containsKey(Arrays.asList(item.itemID, item.getItemDamage()))) {
-            ret = metaExperience.get(Arrays.asList(item.itemID, item.getItemDamage()));
-        }
-        if (ret < 0 && experienceList.containsKey(item.itemID)) {
-            ret = ((Float) experienceList.get(item.itemID)).floatValue();
-        }
-        return (ret < 0 ? 0 : ret);
-    }
-
-    public Map<List<Integer>, ItemStack> getMetaSmeltingList() {
-        return metaSmeltingList;
+        while (!this.func_151397_a(p_151398_1_, (ItemStack) entry.getKey()));
+        
+        return ((Float) entry.getValue()).floatValue();
     }
 }

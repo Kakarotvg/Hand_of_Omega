@@ -1,23 +1,18 @@
 package kakarotvg.omega.handlers.tools;
 
-import kakarotvg.omega.handlers.IDs.ToolIDs;
 import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
 import kakarotvg.omega.tools.Vgaxe;
 import kakarotvg.omega.tools.Vghoe;
 import kakarotvg.omega.tools.Vgpickaxe;
 import kakarotvg.omega.tools.Vgshovel;
 import kakarotvg.omega.tools.Vgsword;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
-import net.minecraftforge.common.Configuration;
-import net.minecraftforge.common.EnumHelper;
-import net.minecraftforge.common.MinecraftForge;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class ToolHandler {
-
+    
     // urotark
     public static Item urotarkaxe;
     public static Item urotarkhoe;
@@ -179,254 +174,252 @@ public class ToolHandler {
     public static Item vielvorpickaxe;
     // invisible
     public static Item invisibledagger;
-
+    
     // urotark
-    public static EnumToolMaterial UROTARKTOOLS = EnumHelper.addToolMaterial("UROTARK TOOLS", 4, 2000, 12, 8, 10);
-    public static EnumToolMaterial UROTARKSWORD = EnumHelper.addToolMaterial("UROTARKSWORD", 4, 2000, 12, 10, 10);
+    public static ToolMaterial UROTARKTOOLS = EnumHelper.addToolMaterial("UROTARK TOOLS", 4, 2000, 12, 8, 10);
+    public static ToolMaterial UROTARKSWORD = EnumHelper.addToolMaterial("UROTARKSWORD", 4, 2000, 12, 10, 10);
     // pearl
-    public static EnumToolMaterial PEARLTOOLS = EnumHelper.addToolMaterial("PEARL TOOLS", 4, 2100, 13, 10, 10);
-    public static EnumToolMaterial PEARLSWORD = EnumHelper.addToolMaterial("PEARLSWORD", 4, 2100, 13, 12, 10);
+    public static ToolMaterial PEARLTOOLS = EnumHelper.addToolMaterial("PEARL TOOLS", 4, 2100, 13, 10, 10);
+    public static ToolMaterial PEARLSWORD = EnumHelper.addToolMaterial("PEARLSWORD", 4, 2100, 13, 12, 10);
     // sapphire
-    public static EnumToolMaterial SAPPHIRETOOLS = EnumHelper.addToolMaterial("SAPPHIRE TOOLS", 4, 2200, 14, 12, 10);
-    public static EnumToolMaterial SAPPHIRESWORD = EnumHelper.addToolMaterial("SAPPHIRESWORD", 4, 2200, 14, 14, 10);
+    public static ToolMaterial SAPPHIRETOOLS = EnumHelper.addToolMaterial("SAPPHIRE TOOLS", 4, 2200, 14, 12, 10);
+    public static ToolMaterial SAPPHIRESWORD = EnumHelper.addToolMaterial("SAPPHIRESWORD", 4, 2200, 14, 14, 10);
     // muscovite
-    public static EnumToolMaterial MUSCOVITETOOLS = EnumHelper.addToolMaterial("MUSCOVITE TOOLS", 5, 2300, 15, 14, 10);
-    public static EnumToolMaterial MUSCOVITESWORD = EnumHelper.addToolMaterial("MUSCOVITESWORD", 5, 2300, 15, 16, 10);
+    public static ToolMaterial MUSCOVITETOOLS = EnumHelper.addToolMaterial("MUSCOVITE TOOLS", 5, 2300, 15, 14, 10);
+    public static ToolMaterial MUSCOVITESWORD = EnumHelper.addToolMaterial("MUSCOVITESWORD", 5, 2300, 15, 16, 10);
     // ruby
-    public static EnumToolMaterial RUBYTOOLS = EnumHelper.addToolMaterial("RUBY TOOLS", 5, 2400, 16, 16, 10);
-    public static EnumToolMaterial RUBYSWORD = EnumHelper.addToolMaterial("RUBYSWORD", 5, 2400, 16, 18, 10);
+    public static ToolMaterial RUBYTOOLS = EnumHelper.addToolMaterial("RUBY TOOLS", 5, 2400, 16, 16, 10);
+    public static ToolMaterial RUBYSWORD = EnumHelper.addToolMaterial("RUBYSWORD", 5, 2400, 16, 18, 10);
     // uriotyke
-    public static EnumToolMaterial URIOTYKETOOLS = EnumHelper.addToolMaterial("URIOTYKE TOOLS", 5, 2500, 17, 18, 10);
-    public static EnumToolMaterial URIOTYKESWORD = EnumHelper.addToolMaterial("URIOTYKESWORD", 5, 2500, 17, 20, 10);
+    public static ToolMaterial URIOTYKETOOLS = EnumHelper.addToolMaterial("URIOTYKE TOOLS", 5, 2500, 17, 18, 10);
+    public static ToolMaterial URIOTYKESWORD = EnumHelper.addToolMaterial("URIOTYKESWORD", 5, 2500, 17, 20, 10);
     // gilder
-    public static EnumToolMaterial GILDERTOOLS = EnumHelper.addToolMaterial("GILDER TOOLS", 6, 2600, 18, 20, 10);
-    public static EnumToolMaterial GILDERSWORD = EnumHelper.addToolMaterial("GILDERSWORD", 6, 2600, 18, 22, 10);
+    public static ToolMaterial GILDERTOOLS = EnumHelper.addToolMaterial("GILDER TOOLS", 6, 2600, 18, 20, 10);
+    public static ToolMaterial GILDERSWORD = EnumHelper.addToolMaterial("GILDERSWORD", 6, 2600, 18, 22, 10);
     // selovar
-    public static EnumToolMaterial SELOVARTOOLS = EnumHelper.addToolMaterial("SELOVAR TOOLS", 6, 2700, 18, 22, 10);
-    public static EnumToolMaterial SELOVARSWORD = EnumHelper.addToolMaterial("SELOVARSWORD", 6, 2700, 18, 24, 10);
+    public static ToolMaterial SELOVARTOOLS = EnumHelper.addToolMaterial("SELOVAR TOOLS", 6, 2700, 18, 22, 10);
+    public static ToolMaterial SELOVARSWORD = EnumHelper.addToolMaterial("SELOVARSWORD", 6, 2700, 18, 24, 10);
     // parfilian
-    public static EnumToolMaterial PARFILIANTOOLS = EnumHelper.addToolMaterial("PARFILIAN TOOLS", 6, 2800, 18, 24, 10);
-    public static EnumToolMaterial PARFILIANSWORD = EnumHelper.addToolMaterial("PARFILIANSWORD", 6, 2800, 18, 26, 10);
+    public static ToolMaterial PARFILIANTOOLS = EnumHelper.addToolMaterial("PARFILIAN TOOLS", 6, 2800, 18, 24, 10);
+    public static ToolMaterial PARFILIANSWORD = EnumHelper.addToolMaterial("PARFILIANSWORD", 6, 2800, 18, 26, 10);
     // barium
-    public static EnumToolMaterial BARIUMTOOLS = EnumHelper.addToolMaterial("BARIUM TOOLS", 7, 2900, 19, 26, 10);
-    public static EnumToolMaterial BARIUMSWORD = EnumHelper.addToolMaterial("BARIUMSWORD", 7, 2900, 19, 28, 10);
+    public static ToolMaterial BARIUMTOOLS = EnumHelper.addToolMaterial("BARIUM TOOLS", 7, 2900, 19, 26, 10);
+    public static ToolMaterial BARIUMSWORD = EnumHelper.addToolMaterial("BARIUMSWORD", 7, 2900, 19, 28, 10);
     // radium
-    public static EnumToolMaterial RADIUMTOOLS = EnumHelper.addToolMaterial("RADIUM TOOLS", 7, 3000, 20, 28, 10);
-    public static EnumToolMaterial RADIUMSWORD = EnumHelper.addToolMaterial("RADIUMSWORD", 7, 3000, 20, 30, 10);
+    public static ToolMaterial RADIUMTOOLS = EnumHelper.addToolMaterial("RADIUM TOOLS", 7, 3000, 20, 28, 10);
+    public static ToolMaterial RADIUMSWORD = EnumHelper.addToolMaterial("RADIUMSWORD", 7, 3000, 20, 30, 10);
     // gallum
-    public static EnumToolMaterial GALLUMTOOLS = EnumHelper.addToolMaterial("GALLUM TOOLS", 7, 3100, 21, 30, 10);
-    public static EnumToolMaterial GALLUMSWORD = EnumHelper.addToolMaterial("GALLUMSWORD", 7, 3100, 21, 32, 10);
+    public static ToolMaterial GALLUMTOOLS = EnumHelper.addToolMaterial("GALLUM TOOLS", 7, 3100, 21, 30, 10);
+    public static ToolMaterial GALLUMSWORD = EnumHelper.addToolMaterial("GALLUMSWORD", 7, 3100, 21, 32, 10);
     // vanadium
-    public static EnumToolMaterial VANADIUMTOOLS = EnumHelper.addToolMaterial("VANADIUM TOOLS", 8, 3200, 22, 32, 10);
-    public static EnumToolMaterial VANADIUMSWORD = EnumHelper.addToolMaterial("VANADIUMSWORD", 8, 3200, 22, 34, 10);
+    public static ToolMaterial VANADIUMTOOLS = EnumHelper.addToolMaterial("VANADIUM TOOLS", 8, 3200, 22, 32, 10);
+    public static ToolMaterial VANADIUMSWORD = EnumHelper.addToolMaterial("VANADIUMSWORD", 8, 3200, 22, 34, 10);
     // scandium
-    public static EnumToolMaterial SCANDIUMTOOLS = EnumHelper.addToolMaterial("SCANDIUM TOOLS", 8, 3300, 23, 34, 10);
-    public static EnumToolMaterial SCANDIUMSWORD = EnumHelper.addToolMaterial("SCANDIUMSWORD", 8, 3300, 23, 36, 10);
+    public static ToolMaterial SCANDIUMTOOLS = EnumHelper.addToolMaterial("SCANDIUM TOOLS", 8, 3300, 23, 34, 10);
+    public static ToolMaterial SCANDIUMSWORD = EnumHelper.addToolMaterial("SCANDIUMSWORD", 8, 3300, 23, 36, 10);
     // bismuth
-    public static EnumToolMaterial BISMUTHTOOLS = EnumHelper.addToolMaterial("BISMUTH TOOLS", 9, 3400, 24, 36, 10);
-    public static EnumToolMaterial BISMUTHSWORD = EnumHelper.addToolMaterial("BISMUTHSWORD", 9, 3400, 24, 38, 10);
+    public static ToolMaterial BISMUTHTOOLS = EnumHelper.addToolMaterial("BISMUTH TOOLS", 9, 3400, 24, 36, 10);
+    public static ToolMaterial BISMUTHSWORD = EnumHelper.addToolMaterial("BISMUTHSWORD", 9, 3400, 24, 38, 10);
     // indium
-    public static EnumToolMaterial INDIUMTOOLS = EnumHelper.addToolMaterial("INDIUM TOOLS", 9, 3500, 25, 38, 10);
-    public static EnumToolMaterial INDIUMSWORD = EnumHelper.addToolMaterial("INDIUMSWORD", 9, 3500, 25, 40, 10);
+    public static ToolMaterial INDIUMTOOLS = EnumHelper.addToolMaterial("INDIUM TOOLS", 9, 3500, 25, 38, 10);
+    public static ToolMaterial INDIUMSWORD = EnumHelper.addToolMaterial("INDIUMSWORD", 9, 3500, 25, 40, 10);
     // platinum
-    public static EnumToolMaterial PLATINUMTOOLS = EnumHelper.addToolMaterial("PLATINUM TOOLS", 10, 3600, 26, 40, 10);
-    public static EnumToolMaterial PLATINUMSWORD = EnumHelper.addToolMaterial("PLATINUMSWORD", 10, 3600, 26, 42, 10);
+    public static ToolMaterial PLATINUMTOOLS = EnumHelper.addToolMaterial("PLATINUM TOOLS", 10, 3600, 26, 40, 10);
+    public static ToolMaterial PLATINUMSWORD = EnumHelper.addToolMaterial("PLATINUMSWORD", 10, 3600, 26, 42, 10);
     // darkness
-    public static EnumToolMaterial DARKNESSTOOLS = EnumHelper.addToolMaterial("DARKNESS TOOLS", 20, 5000, 40, 65, 10);
-    public static EnumToolMaterial DARKNESSSWORD = EnumHelper.addToolMaterial("DARKNESSSWORD", 20, 5000, 40, 65, 10);
+    public static ToolMaterial DARKNESSTOOLS = EnumHelper.addToolMaterial("DARKNESS TOOLS", 20, 5000, 40, 65, 10);
+    public static ToolMaterial DARKNESSSWORD = EnumHelper.addToolMaterial("DARKNESSSWORD", 20, 5000, 40, 65, 10);
     // light
-    public static EnumToolMaterial LIGHTTOOLS = EnumHelper.addToolMaterial("LIGHT TOOLS", 20, 5000, 40, 65, 10);
-    public static EnumToolMaterial LIGHTSWORD = EnumHelper.addToolMaterial("LIGHTSWORD", 20, 5000, 40, 65, 10);
+    public static ToolMaterial LIGHTTOOLS = EnumHelper.addToolMaterial("LIGHT TOOLS", 20, 5000, 40, 65, 10);
+    public static ToolMaterial LIGHTSWORD = EnumHelper.addToolMaterial("LIGHTSWORD", 20, 5000, 40, 65, 10);
     // omega
-    public static EnumToolMaterial OMEGATOOLS = EnumHelper.addToolMaterial("OMEGA TOOLS", 25, 6000, 50, 75, 10);
-    public static EnumToolMaterial OMEGASWORD = EnumHelper.addToolMaterial("OMEGASWORD", 25, 6000, 50, 75, 10);
+    public static ToolMaterial OMEGATOOLS = EnumHelper.addToolMaterial("OMEGA TOOLS", 25, 6000, 50, 75, 10);
+    public static ToolMaterial OMEGASWORD = EnumHelper.addToolMaterial("OMEGASWORD", 25, 6000, 50, 75, 10);
     // bubble
-    public static EnumToolMaterial BUBBLESWORD = EnumHelper.addToolMaterial("BUBBLESWORD", 3, 400, 3, 3, 10);
+    public static ToolMaterial BUBBLESWORD = EnumHelper.addToolMaterial("BUBBLESWORD", 3, 400, 3, 3, 10);
     // Berionvar
-    public static EnumToolMaterial BERIONVARTOOLS = EnumHelper.addToolMaterial("BERIONVAR TOOLS", 11, 3700, 27, 44, 10);
-    public static EnumToolMaterial BERIONVARSWORD = EnumHelper.addToolMaterial("BERIONVARSWORD", 11, 3700, 27, 46, 10);
+    public static ToolMaterial BERIONVARTOOLS = EnumHelper.addToolMaterial("BERIONVAR TOOLS", 11, 3700, 27, 44, 10);
+    public static ToolMaterial BERIONVARSWORD = EnumHelper.addToolMaterial("BERIONVARSWORD", 11, 3700, 27, 46, 10);
     // Charviole
-    public static EnumToolMaterial CHARVIOLETOOLS = EnumHelper.addToolMaterial("CHARVIOLE TOOLS", 12, 3800, 28, 46, 10);
-    public static EnumToolMaterial CHARVIOLESWORD = EnumHelper.addToolMaterial("CHARVIOLESWORD", 12, 3800, 28, 48, 10);
+    public static ToolMaterial CHARVIOLETOOLS = EnumHelper.addToolMaterial("CHARVIOLE TOOLS", 12, 3800, 28, 46, 10);
+    public static ToolMaterial CHARVIOLESWORD = EnumHelper.addToolMaterial("CHARVIOLESWORD", 12, 3800, 28, 48, 10);
     // Firlvear
-    public static EnumToolMaterial FIRLVEARTOOLS = EnumHelper.addToolMaterial("FIRLVEAR TOOLS", 13, 3900, 29, 48, 10);
-    public static EnumToolMaterial FIRLVEARSWORD = EnumHelper.addToolMaterial("FIRLVEARSWORD", 13, 3900, 29, 50, 10);
+    public static ToolMaterial FIRLVEARTOOLS = EnumHelper.addToolMaterial("FIRLVEAR TOOLS", 13, 3900, 29, 48, 10);
+    public static ToolMaterial FIRLVEARSWORD = EnumHelper.addToolMaterial("FIRLVEARSWORD", 13, 3900, 29, 50, 10);
     // selmenrer
-    public static EnumToolMaterial SELMENRERTOOLS = EnumHelper.addToolMaterial("SELMENRER TOOLS", 14, 4000, 30, 50, 10);
-    public static EnumToolMaterial SELMENRERSWORD = EnumHelper.addToolMaterial("SELMENRERSWORD", 14, 4000, 30, 52, 10);
+    public static ToolMaterial SELMENRERTOOLS = EnumHelper.addToolMaterial("SELMENRER TOOLS", 14, 4000, 30, 50, 10);
+    public static ToolMaterial SELMENRERSWORD = EnumHelper.addToolMaterial("SELMENRERSWORD", 14, 4000, 30, 52, 10);
     // verilion
-    public static EnumToolMaterial VERILIONTOOLS = EnumHelper.addToolMaterial("VERILION TOOLS", 15, 4100, 31, 52, 10);
-    public static EnumToolMaterial VERILIONSWORD = EnumHelper.addToolMaterial("VERILIONSWORD", 15, 4100, 31, 54, 10);
+    public static ToolMaterial VERILIONTOOLS = EnumHelper.addToolMaterial("VERILION TOOLS", 15, 4100, 31, 52, 10);
+    public static ToolMaterial VERILIONSWORD = EnumHelper.addToolMaterial("VERILIONSWORD", 15, 4100, 31, 54, 10);
     // vielvor
-    public static EnumToolMaterial VIELVORTOOLS = EnumHelper.addToolMaterial("VIELVOR TOOLS", 16, 4200, 32, 54, 10);
-    public static EnumToolMaterial VIELVORSWORD = EnumHelper.addToolMaterial("VIELVORSWORD", 16, 4200, 32, 56, 10);
+    public static ToolMaterial VIELVORTOOLS = EnumHelper.addToolMaterial("VIELVOR TOOLS", 16, 4200, 32, 54, 10);
+    public static ToolMaterial VIELVORSWORD = EnumHelper.addToolMaterial("VIELVORSWORD", 16, 4200, 32, 56, 10);
     // invisble
-    public static EnumToolMaterial INVISIBLESWORD = EnumHelper.addToolMaterial("INVISIBLESWORD", 20, 5000, 40, 65, 10);
-
-    public static void configureTools(Configuration config) {
+    public static ToolMaterial INVISIBLESWORD = EnumHelper.addToolMaterial("INVISIBLESWORD", 20, 5000, 40, 65, 10);
+    
+    public static void configureTools() {
         // urotark
-        urotarkaxe = new Vgaxe(ToolIDs.urotarkaxeID, UROTARKTOOLS).setUnlocalizedName("urotarkaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        urotarkhoe = new Vghoe(ToolIDs.urotarkhoeID, UROTARKTOOLS).setUnlocalizedName("urotarkhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        urotarkshovel = new Vgshovel(ToolIDs.urotarkshovelID, UROTARKTOOLS).setUnlocalizedName("urotarkshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        urotarksword = new Vgsword(ToolIDs.urotarkswordID, UROTARKSWORD).setUnlocalizedName("urotarksword").setCreativeTab(CreativetabHandler.vgtab4);
-        urotarkpickaxe = new Vgpickaxe(ToolIDs.urotarkpickaxeID, UROTARKTOOLS).setUnlocalizedName("urotarkpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        urotarkaxe = new Vgaxe(UROTARKTOOLS).setUnlocalizedName("urotarkaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        urotarkhoe = new Vghoe(UROTARKTOOLS).setUnlocalizedName("urotarkhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        urotarkshovel = new Vgshovel(UROTARKTOOLS).setUnlocalizedName("urotarkshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        urotarksword = new Vgsword(UROTARKSWORD).setUnlocalizedName("urotarksword").setCreativeTab(CreativetabHandler.vgtab4);
+        urotarkpickaxe = new Vgpickaxe(UROTARKTOOLS).setUnlocalizedName("urotarkpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // pearl
-        pearlaxe = new Vgaxe(ToolIDs.pearlaxeID, PEARLTOOLS).setUnlocalizedName("pearlaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        pearlhoe = new Vghoe(ToolIDs.pearlhoeID, PEARLTOOLS).setUnlocalizedName("pearlhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        pearlshovel = new Vgshovel(ToolIDs.pearlshovelID, PEARLTOOLS).setUnlocalizedName("pearlshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        pearlsword = new Vgsword(ToolIDs.pearlswordID, PEARLSWORD).setUnlocalizedName("pearlsword").setCreativeTab(CreativetabHandler.vgtab4);
-        pearlpickaxe = new Vgpickaxe(ToolIDs.pearlpickaxeID, PEARLTOOLS).setUnlocalizedName("pearlpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        pearlaxe = new Vgaxe(PEARLTOOLS).setUnlocalizedName("pearlaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        pearlhoe = new Vghoe(PEARLTOOLS).setUnlocalizedName("pearlhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        pearlshovel = new Vgshovel(PEARLTOOLS).setUnlocalizedName("pearlshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        pearlsword = new Vgsword(PEARLSWORD).setUnlocalizedName("pearlsword").setCreativeTab(CreativetabHandler.vgtab4);
+        pearlpickaxe = new Vgpickaxe(PEARLTOOLS).setUnlocalizedName("pearlpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // sapphire
-        sapphireaxe = new Vgaxe(ToolIDs.sapphireaxeID, SAPPHIRETOOLS).setUnlocalizedName("sapphireaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        sapphirehoe = new Vghoe(ToolIDs.sapphirehoeID, SAPPHIRETOOLS).setUnlocalizedName("sapphirehoe").setCreativeTab(CreativetabHandler.vgtab3);
-        sapphireshovel = new Vgshovel(ToolIDs.sapphireshovelID, SAPPHIRETOOLS).setUnlocalizedName("sapphireshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        sapphiresword = new Vgsword(ToolIDs.sapphireswordID, SAPPHIRESWORD).setUnlocalizedName("sapphiresword").setCreativeTab(CreativetabHandler.vgtab4);
-        sapphirepickaxe = new Vgpickaxe(ToolIDs.sapphirepickaxeID, SAPPHIRETOOLS).setUnlocalizedName("sapphirepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        sapphireaxe = new Vgaxe(SAPPHIRETOOLS).setUnlocalizedName("sapphireaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        sapphirehoe = new Vghoe(SAPPHIRETOOLS).setUnlocalizedName("sapphirehoe").setCreativeTab(CreativetabHandler.vgtab3);
+        sapphireshovel = new Vgshovel(SAPPHIRETOOLS).setUnlocalizedName("sapphireshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        sapphiresword = new Vgsword(SAPPHIRESWORD).setUnlocalizedName("sapphiresword").setCreativeTab(CreativetabHandler.vgtab4);
+        sapphirepickaxe = new Vgpickaxe(SAPPHIRETOOLS).setUnlocalizedName("sapphirepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // muscovite
-        muscoviteaxe = new Vgaxe(ToolIDs.muscoviteaxeID, MUSCOVITETOOLS).setUnlocalizedName("muscoviteaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        muscovitehoe = new Vghoe(ToolIDs.muscovitehoeID, MUSCOVITETOOLS).setUnlocalizedName("muscovitehoe").setCreativeTab(CreativetabHandler.vgtab3);
-        muscoviteshovel = new Vgshovel(ToolIDs.muscoviteshovelID, MUSCOVITETOOLS).setUnlocalizedName("muscoviteshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        muscovitesword = new Vgsword(ToolIDs.muscoviteswordID, MUSCOVITESWORD).setUnlocalizedName("muscovitesword").setCreativeTab(CreativetabHandler.vgtab4);
-        muscovitepickaxe = new Vgpickaxe(ToolIDs.muscovitepickaxeID, MUSCOVITETOOLS).setUnlocalizedName("muscovitepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        muscoviteaxe = new Vgaxe(MUSCOVITETOOLS).setUnlocalizedName("muscoviteaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        muscovitehoe = new Vghoe(MUSCOVITETOOLS).setUnlocalizedName("muscovitehoe").setCreativeTab(CreativetabHandler.vgtab3);
+        muscoviteshovel = new Vgshovel(MUSCOVITETOOLS).setUnlocalizedName("muscoviteshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        muscovitesword = new Vgsword(MUSCOVITESWORD).setUnlocalizedName("muscovitesword").setCreativeTab(CreativetabHandler.vgtab4);
+        muscovitepickaxe = new Vgpickaxe(MUSCOVITETOOLS).setUnlocalizedName("muscovitepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // ruby
-        rubyaxe = new Vgaxe(ToolIDs.rubyaxeID, RUBYTOOLS).setUnlocalizedName("rubyaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        rubyhoe = new Vghoe(ToolIDs.rubyhoeID, RUBYTOOLS).setUnlocalizedName("rubyhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        rubyshovel = new Vgshovel(ToolIDs.rubyshovelID, RUBYTOOLS).setUnlocalizedName("rubyshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        rubysword = new Vgsword(ToolIDs.rubyswordID, RUBYSWORD).setUnlocalizedName("rubysword").setCreativeTab(CreativetabHandler.vgtab4);
-        rubypickaxe = new Vgpickaxe(ToolIDs.rubypickaxeID, RUBYTOOLS).setUnlocalizedName("rubypickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        rubyaxe = new Vgaxe(RUBYTOOLS).setUnlocalizedName("rubyaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        rubyhoe = new Vghoe(RUBYTOOLS).setUnlocalizedName("rubyhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        rubyshovel = new Vgshovel(RUBYTOOLS).setUnlocalizedName("rubyshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        rubysword = new Vgsword(RUBYSWORD).setUnlocalizedName("rubysword").setCreativeTab(CreativetabHandler.vgtab4);
+        rubypickaxe = new Vgpickaxe(RUBYTOOLS).setUnlocalizedName("rubypickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // uriotyke
-        uriotykeaxe = new Vgaxe(ToolIDs.uriotykeaxeID, URIOTYKETOOLS).setUnlocalizedName("uriotykeaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        uriotykehoe = new Vghoe(ToolIDs.uriotykehoeID, URIOTYKETOOLS).setUnlocalizedName("uriotykehoe").setCreativeTab(CreativetabHandler.vgtab3);
-        uriotykeshovel = new Vgshovel(ToolIDs.uriotykeshovelID, URIOTYKETOOLS).setUnlocalizedName("uriotykeshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        uriotykesword = new Vgsword(ToolIDs.uriotykeswordID, URIOTYKESWORD).setUnlocalizedName("uriotykesword").setCreativeTab(CreativetabHandler.vgtab4);
-        uriotykepickaxe = new Vgpickaxe(ToolIDs.uriotykepickaxeID, URIOTYKETOOLS).setUnlocalizedName("uriotykepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        uriotykeaxe = new Vgaxe(URIOTYKETOOLS).setUnlocalizedName("uriotykeaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        uriotykehoe = new Vghoe(URIOTYKETOOLS).setUnlocalizedName("uriotykehoe").setCreativeTab(CreativetabHandler.vgtab3);
+        uriotykeshovel = new Vgshovel(URIOTYKETOOLS).setUnlocalizedName("uriotykeshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        uriotykesword = new Vgsword(URIOTYKESWORD).setUnlocalizedName("uriotykesword").setCreativeTab(CreativetabHandler.vgtab4);
+        uriotykepickaxe = new Vgpickaxe(URIOTYKETOOLS).setUnlocalizedName("uriotykepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // gilder
-        gilderaxe = new Vgaxe(ToolIDs.gilderaxeID, GILDERTOOLS).setUnlocalizedName("gilderaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        gilderhoe = new Vghoe(ToolIDs.gilderhoeID, GILDERTOOLS).setUnlocalizedName("gilderhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        gildershovel = new Vgshovel(ToolIDs.gildershovelID, GILDERTOOLS).setUnlocalizedName("gildershovel").setCreativeTab(CreativetabHandler.vgtab3);
-        gildersword = new Vgsword(ToolIDs.gilderswordID, GILDERSWORD).setUnlocalizedName("gildersword").setCreativeTab(CreativetabHandler.vgtab4);
-        gilderpickaxe = new Vgpickaxe(ToolIDs.gilderpickaxeID, GILDERTOOLS).setUnlocalizedName("gilderpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        gilderaxe = new Vgaxe(GILDERTOOLS).setUnlocalizedName("gilderaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        gilderhoe = new Vghoe(GILDERTOOLS).setUnlocalizedName("gilderhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        gildershovel = new Vgshovel(GILDERTOOLS).setUnlocalizedName("gildershovel").setCreativeTab(CreativetabHandler.vgtab3);
+        gildersword = new Vgsword(GILDERSWORD).setUnlocalizedName("gildersword").setCreativeTab(CreativetabHandler.vgtab4);
+        gilderpickaxe = new Vgpickaxe(GILDERTOOLS).setUnlocalizedName("gilderpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // selovar
-        selovaraxe = new Vgaxe(ToolIDs.selovaraxeID, SELOVARTOOLS).setUnlocalizedName("selovaraxe").setCreativeTab(CreativetabHandler.vgtab3);
-        selovarhoe = new Vghoe(ToolIDs.selovarhoeID, SELOVARTOOLS).setUnlocalizedName("selovarhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        selovarshovel = new Vgshovel(ToolIDs.selovarshovelID, SELOVARTOOLS).setUnlocalizedName("selovarshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        selovarsword = new Vgsword(ToolIDs.selovarswordID, SELOVARSWORD).setUnlocalizedName("selovarsword").setCreativeTab(CreativetabHandler.vgtab4);
-        selovarpickaxe = new Vgpickaxe(ToolIDs.selovarpickaxeID, SELOVARTOOLS).setUnlocalizedName("selovarpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        selovaraxe = new Vgaxe(SELOVARTOOLS).setUnlocalizedName("selovaraxe").setCreativeTab(CreativetabHandler.vgtab3);
+        selovarhoe = new Vghoe(SELOVARTOOLS).setUnlocalizedName("selovarhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        selovarshovel = new Vgshovel(SELOVARTOOLS).setUnlocalizedName("selovarshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        selovarsword = new Vgsword(SELOVARSWORD).setUnlocalizedName("selovarsword").setCreativeTab(CreativetabHandler.vgtab4);
+        selovarpickaxe = new Vgpickaxe(SELOVARTOOLS).setUnlocalizedName("selovarpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // parfilian
-        parfilianaxe = new Vgaxe(ToolIDs.parfilianaxeID, PARFILIANTOOLS).setUnlocalizedName("parfilianaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        parfilianhoe = new Vghoe(ToolIDs.parfilianhoeID, PARFILIANTOOLS).setUnlocalizedName("parfilianhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        parfilianshovel = new Vgshovel(ToolIDs.parfilianshovelID, PARFILIANTOOLS).setUnlocalizedName("parfilianshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        parfiliansword = new Vgsword(ToolIDs.parfilianswordID, PARFILIANSWORD).setUnlocalizedName("parfiliansword").setCreativeTab(CreativetabHandler.vgtab4);
-        parfilianpickaxe = new Vgpickaxe(ToolIDs.parfilianpickaxeID, PARFILIANTOOLS).setUnlocalizedName("parfilianpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        parfilianaxe = new Vgaxe(PARFILIANTOOLS).setUnlocalizedName("parfilianaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        parfilianhoe = new Vghoe(PARFILIANTOOLS).setUnlocalizedName("parfilianhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        parfilianshovel = new Vgshovel(PARFILIANTOOLS).setUnlocalizedName("parfilianshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        parfiliansword = new Vgsword(PARFILIANSWORD).setUnlocalizedName("parfiliansword").setCreativeTab(CreativetabHandler.vgtab4);
+        parfilianpickaxe = new Vgpickaxe(PARFILIANTOOLS).setUnlocalizedName("parfilianpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // barium
-        bariumaxe = new Vgaxe(ToolIDs.bariumaxeID, BARIUMTOOLS).setUnlocalizedName("bariumaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        bariumhoe = new Vghoe(ToolIDs.bariumhoeID, BARIUMTOOLS).setUnlocalizedName("bariumhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        bariumshovel = new Vgshovel(ToolIDs.bariumshovelID, BARIUMTOOLS).setUnlocalizedName("bariumshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        bariumsword = new Vgsword(ToolIDs.bariumswordID, BARIUMSWORD).setUnlocalizedName("bariumsword").setCreativeTab(CreativetabHandler.vgtab4);
-        bariumpickaxe = new Vgpickaxe(ToolIDs.bariumpickaxeID, BARIUMTOOLS).setUnlocalizedName("bariumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        bariumaxe = new Vgaxe(BARIUMTOOLS).setUnlocalizedName("bariumaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        bariumhoe = new Vghoe(BARIUMTOOLS).setUnlocalizedName("bariumhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        bariumshovel = new Vgshovel(BARIUMTOOLS).setUnlocalizedName("bariumshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        bariumsword = new Vgsword(BARIUMSWORD).setUnlocalizedName("bariumsword").setCreativeTab(CreativetabHandler.vgtab4);
+        bariumpickaxe = new Vgpickaxe(BARIUMTOOLS).setUnlocalizedName("bariumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // radium
-        radiumaxe = new Vgaxe(ToolIDs.radiumaxeID, RADIUMTOOLS).setUnlocalizedName("radiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        radiumhoe = new Vghoe(ToolIDs.radiumhoeID, RADIUMTOOLS).setUnlocalizedName("radiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        radiumshovel = new Vgshovel(ToolIDs.radiumshovelID, RADIUMTOOLS).setUnlocalizedName("radiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        radiumsword = new Vgsword(ToolIDs.radiumswordID, RADIUMSWORD).setUnlocalizedName("radiumsword").setCreativeTab(CreativetabHandler.vgtab4);
-        radiumpickaxe = new Vgpickaxe(ToolIDs.radiumpickaxeID, RADIUMTOOLS).setUnlocalizedName("radiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        radiumaxe = new Vgaxe(RADIUMTOOLS).setUnlocalizedName("radiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        radiumhoe = new Vghoe(RADIUMTOOLS).setUnlocalizedName("radiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        radiumshovel = new Vgshovel(RADIUMTOOLS).setUnlocalizedName("radiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        radiumsword = new Vgsword(RADIUMSWORD).setUnlocalizedName("radiumsword").setCreativeTab(CreativetabHandler.vgtab4);
+        radiumpickaxe = new Vgpickaxe(RADIUMTOOLS).setUnlocalizedName("radiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // gallum
-        gallumaxe = new Vgaxe(ToolIDs.gallumaxeID, GALLUMTOOLS).setUnlocalizedName("gallumaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        gallumhoe = new Vghoe(ToolIDs.gallumhoeID, GALLUMTOOLS).setUnlocalizedName("gallumhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        gallumshovel = new Vgshovel(ToolIDs.gallumshovelID, GALLUMTOOLS).setUnlocalizedName("gallumshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        gallumsword = new Vgsword(ToolIDs.gallumswordID, GALLUMSWORD).setUnlocalizedName("gallumsword").setCreativeTab(CreativetabHandler.vgtab4);
-        gallumpickaxe = new Vgpickaxe(ToolIDs.gallumpickaxeID, GALLUMTOOLS).setUnlocalizedName("gallumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        gallumaxe = new Vgaxe(GALLUMTOOLS).setUnlocalizedName("gallumaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        gallumhoe = new Vghoe(GALLUMTOOLS).setUnlocalizedName("gallumhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        gallumshovel = new Vgshovel(GALLUMTOOLS).setUnlocalizedName("gallumshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        gallumsword = new Vgsword(GALLUMSWORD).setUnlocalizedName("gallumsword").setCreativeTab(CreativetabHandler.vgtab4);
+        gallumpickaxe = new Vgpickaxe(GALLUMTOOLS).setUnlocalizedName("gallumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // vanadium
-        vanadiumaxe = new Vgaxe(ToolIDs.vanadiumaxeID, VANADIUMTOOLS).setUnlocalizedName("vanadiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        vanadiumhoe = new Vghoe(ToolIDs.vanadiumhoeID, VANADIUMTOOLS).setUnlocalizedName("vanadiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        vanadiumshovel = new Vgshovel(ToolIDs.vanadiumshovelID, VANADIUMTOOLS).setUnlocalizedName("vanadiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        vanadiumsword = new Vgsword(ToolIDs.vanadiumswordID, VANADIUMSWORD).setUnlocalizedName("vanadiumsword").setCreativeTab(CreativetabHandler.vgtab4);
-        vanadiumpickaxe = new Vgpickaxe(ToolIDs.vanadiumpickaxeID, VANADIUMTOOLS).setUnlocalizedName("vanadiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        vanadiumaxe = new Vgaxe(VANADIUMTOOLS).setUnlocalizedName("vanadiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        vanadiumhoe = new Vghoe(VANADIUMTOOLS).setUnlocalizedName("vanadiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        vanadiumshovel = new Vgshovel(VANADIUMTOOLS).setUnlocalizedName("vanadiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        vanadiumsword = new Vgsword(VANADIUMSWORD).setUnlocalizedName("vanadiumsword").setCreativeTab(CreativetabHandler.vgtab4);
+        vanadiumpickaxe = new Vgpickaxe(VANADIUMTOOLS).setUnlocalizedName("vanadiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // scandium
-        scandiumaxe = new Vgaxe(ToolIDs.scandiumaxeID, SCANDIUMTOOLS).setUnlocalizedName("scandiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        scandiumhoe = new Vghoe(ToolIDs.scandiumhoeID, SCANDIUMTOOLS).setUnlocalizedName("scandiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        scandiumshovel = new Vgshovel(ToolIDs.scandiumshovelID, SCANDIUMTOOLS).setUnlocalizedName("scandiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        scandiumsword = new Vgsword(ToolIDs.scandiumswordID, SCANDIUMSWORD).setUnlocalizedName("scandiumsword").setCreativeTab(CreativetabHandler.vgtab4);
-        scandiumpickaxe = new Vgpickaxe(ToolIDs.scandiumpickaxeID, SCANDIUMTOOLS).setUnlocalizedName("scandiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        scandiumaxe = new Vgaxe(SCANDIUMTOOLS).setUnlocalizedName("scandiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        scandiumhoe = new Vghoe(SCANDIUMTOOLS).setUnlocalizedName("scandiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        scandiumshovel = new Vgshovel(SCANDIUMTOOLS).setUnlocalizedName("scandiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        scandiumsword = new Vgsword(SCANDIUMSWORD).setUnlocalizedName("scandiumsword").setCreativeTab(CreativetabHandler.vgtab4);
+        scandiumpickaxe = new Vgpickaxe(SCANDIUMTOOLS).setUnlocalizedName("scandiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // bismuth
-        bismuthaxe = new Vgaxe(ToolIDs.bismuthaxeID, BISMUTHTOOLS).setUnlocalizedName("bismuthaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        bismuthhoe = new Vghoe(ToolIDs.bismuthhoeID, BISMUTHTOOLS).setUnlocalizedName("bismuthhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        bismuthshovel = new Vgshovel(ToolIDs.bismuthshovelID, BISMUTHTOOLS).setUnlocalizedName("bismuthshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        bismuthsword = new Vgsword(ToolIDs.bismuthswordID, BISMUTHSWORD).setUnlocalizedName("bismuthsword").setCreativeTab(CreativetabHandler.vgtab4);
-        bismuthpickaxe = new Vgpickaxe(ToolIDs.bismuthpickaxeID, BISMUTHTOOLS).setUnlocalizedName("bismuthpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        bismuthaxe = new Vgaxe(BISMUTHTOOLS).setUnlocalizedName("bismuthaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        bismuthhoe = new Vghoe(BISMUTHTOOLS).setUnlocalizedName("bismuthhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        bismuthshovel = new Vgshovel(BISMUTHTOOLS).setUnlocalizedName("bismuthshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        bismuthsword = new Vgsword(BISMUTHSWORD).setUnlocalizedName("bismuthsword").setCreativeTab(CreativetabHandler.vgtab4);
+        bismuthpickaxe = new Vgpickaxe(BISMUTHTOOLS).setUnlocalizedName("bismuthpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // indium
-        indiumaxe = new Vgaxe(ToolIDs.indiumaxeID, INDIUMTOOLS).setUnlocalizedName("indiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        indiumhoe = new Vghoe(ToolIDs.indiumhoeID, INDIUMTOOLS).setUnlocalizedName("indiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        indiumshovel = new Vgshovel(ToolIDs.indiumshovelID, INDIUMTOOLS).setUnlocalizedName("indiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        indiumsword = new Vgsword(ToolIDs.indiumswordID, INDIUMSWORD).setUnlocalizedName("indiumsword").setCreativeTab(CreativetabHandler.vgtab4);
-        indiumpickaxe = new Vgpickaxe(ToolIDs.indiumpickaxeID, INDIUMTOOLS).setUnlocalizedName("indiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        indiumaxe = new Vgaxe(INDIUMTOOLS).setUnlocalizedName("indiumaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        indiumhoe = new Vghoe(INDIUMTOOLS).setUnlocalizedName("indiumhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        indiumshovel = new Vgshovel(INDIUMTOOLS).setUnlocalizedName("indiumshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        indiumsword = new Vgsword(INDIUMSWORD).setUnlocalizedName("indiumsword").setCreativeTab(CreativetabHandler.vgtab4);
+        indiumpickaxe = new Vgpickaxe(INDIUMTOOLS).setUnlocalizedName("indiumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // platinum
-        platinumaxe = new Vgaxe(ToolIDs.platinumaxeID, PLATINUMTOOLS).setUnlocalizedName("platinumaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        platinumhoe = new Vghoe(ToolIDs.platinumhoeID, PLATINUMTOOLS).setUnlocalizedName("platinumhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        platinumshovel = new Vgshovel(ToolIDs.platinumshovelID, PLATINUMTOOLS).setUnlocalizedName("platinumshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        platinumsword = new Vgsword(ToolIDs.platinumswordID, PLATINUMSWORD).setUnlocalizedName("platinumsword").setCreativeTab(CreativetabHandler.vgtab4);
-        platinumpickaxe = new Vgpickaxe(ToolIDs.platinumpickaxeID, PLATINUMTOOLS).setUnlocalizedName("platinumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        platinumaxe = new Vgaxe(PLATINUMTOOLS).setUnlocalizedName("platinumaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        platinumhoe = new Vghoe(PLATINUMTOOLS).setUnlocalizedName("platinumhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        platinumshovel = new Vgshovel(PLATINUMTOOLS).setUnlocalizedName("platinumshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        platinumsword = new Vgsword(PLATINUMSWORD).setUnlocalizedName("platinumsword").setCreativeTab(CreativetabHandler.vgtab4);
+        platinumpickaxe = new Vgpickaxe(PLATINUMTOOLS).setUnlocalizedName("platinumpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // darkness
-        darknessaxe = new Vgaxe(ToolIDs.darknessaxeID, DARKNESSTOOLS).setUnlocalizedName("darknessaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        darknesshoe = new Vghoe(ToolIDs.darknesshoeID, DARKNESSTOOLS).setUnlocalizedName("darknesshoe").setCreativeTab(CreativetabHandler.vgtab3);
-        darknessshovel = new Vgshovel(ToolIDs.darknessshovelID, DARKNESSTOOLS).setUnlocalizedName("darknessshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        darknesssword = new Vgsword(ToolIDs.darknessswordID, DARKNESSSWORD).setUnlocalizedName("darknesssword").setCreativeTab(CreativetabHandler.vgtab4);
-        darknesspickaxe = new Vgpickaxe(ToolIDs.darknesspickaxeID, DARKNESSTOOLS).setUnlocalizedName("darknesspickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        darknessaxe = new Vgaxe(DARKNESSTOOLS).setUnlocalizedName("darknessaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        darknesshoe = new Vghoe(DARKNESSTOOLS).setUnlocalizedName("darknesshoe").setCreativeTab(CreativetabHandler.vgtab3);
+        darknessshovel = new Vgshovel(DARKNESSTOOLS).setUnlocalizedName("darknessshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        darknesssword = new Vgsword(DARKNESSSWORD).setUnlocalizedName("darknesssword").setCreativeTab(CreativetabHandler.vgtab4);
+        darknesspickaxe = new Vgpickaxe(DARKNESSTOOLS).setUnlocalizedName("darknesspickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // light
-        lightaxe = new Vgaxe(ToolIDs.lightaxeID, LIGHTTOOLS).setUnlocalizedName("lightaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        lighthoe = new Vghoe(ToolIDs.lighthoeID, LIGHTTOOLS).setUnlocalizedName("lighthoe").setCreativeTab(CreativetabHandler.vgtab3);
-        lightshovel = new Vgshovel(ToolIDs.lightshovelID, LIGHTTOOLS).setUnlocalizedName("lightshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        lightsword = new Vgsword(ToolIDs.lightswordID, LIGHTSWORD).setUnlocalizedName("lightsword").setCreativeTab(CreativetabHandler.vgtab4);
-        lightpickaxe = new Vgpickaxe(ToolIDs.lightpickaxeID, LIGHTTOOLS).setUnlocalizedName("lightpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        lightaxe = new Vgaxe(LIGHTTOOLS).setUnlocalizedName("lightaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        lighthoe = new Vghoe(LIGHTTOOLS).setUnlocalizedName("lighthoe").setCreativeTab(CreativetabHandler.vgtab3);
+        lightshovel = new Vgshovel(LIGHTTOOLS).setUnlocalizedName("lightshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        lightsword = new Vgsword(LIGHTSWORD).setUnlocalizedName("lightsword").setCreativeTab(CreativetabHandler.vgtab4);
+        lightpickaxe = new Vgpickaxe(LIGHTTOOLS).setUnlocalizedName("lightpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // omega
-        omegaaxe = new Vgaxe(ToolIDs.omegaaxeID, OMEGATOOLS).setUnlocalizedName("omegaaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        omegahoe = new Vghoe(ToolIDs.omegahoeID, OMEGATOOLS).setUnlocalizedName("omegahoe").setCreativeTab(CreativetabHandler.vgtab3);
-        omegashovel = new Vgshovel(ToolIDs.omegashovelID, OMEGATOOLS).setUnlocalizedName("omegashovel").setCreativeTab(CreativetabHandler.vgtab3);
-        omegasword = new Vgsword(ToolIDs.omegaswordID, OMEGASWORD).setUnlocalizedName("omegasword").setCreativeTab(CreativetabHandler.vgtab4);
-        omegahand = new Vgsword(ToolIDs.omegahandID, OMEGASWORD).setUnlocalizedName("omegahand").setCreativeTab(CreativetabHandler.vgtab4);
-        omegapickaxe = new Vgpickaxe(ToolIDs.omegapickaxeID, OMEGATOOLS).setUnlocalizedName("omegapickaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        // bubble
-        bubblesword = new Vgsword(ToolIDs.bubbleswordID, BUBBLESWORD).setUnlocalizedName("bubblesword").setCreativeTab(CreativetabHandler.vgtab4);
+        omegaaxe = new Vgaxe(OMEGATOOLS).setUnlocalizedName("omegaaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        omegahoe = new Vghoe(OMEGATOOLS).setUnlocalizedName("omegahoe").setCreativeTab(CreativetabHandler.vgtab3);
+        omegashovel = new Vgshovel(OMEGATOOLS).setUnlocalizedName("omegashovel").setCreativeTab(CreativetabHandler.vgtab3);
+        omegasword = new Vgsword(OMEGASWORD).setUnlocalizedName("omegasword").setCreativeTab(CreativetabHandler.vgtab4);
+        omegahand = new Vgsword(OMEGASWORD).setUnlocalizedName("omegahand").setCreativeTab(CreativetabHandler.vgtab4);
+        omegapickaxe = new Vgpickaxe(OMEGATOOLS).setUnlocalizedName("omegapickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // Berionvar
-        berionvaraxe = new Vgaxe(ToolIDs.berionvaraxeID, BERIONVARTOOLS).setUnlocalizedName("berionvaraxe").setCreativeTab(CreativetabHandler.vgtab3);
-        berionvarhoe = new Vghoe(ToolIDs.berionvarhoeID, BERIONVARTOOLS).setUnlocalizedName("berionvarhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        berionvarshovel = new Vgshovel(ToolIDs.berionvarshovelID, BERIONVARTOOLS).setUnlocalizedName("berionvarshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        berionvarsword = new Vgsword(ToolIDs.berionvarswordID, BERIONVARSWORD).setUnlocalizedName("berionvarsword").setCreativeTab(CreativetabHandler.vgtab4);
-        berionvarpickaxe = new Vgpickaxe(ToolIDs.berionvarpickaxeID, BERIONVARTOOLS).setUnlocalizedName("berionvarpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        berionvaraxe = new Vgaxe(BERIONVARTOOLS).setUnlocalizedName("berionvaraxe").setCreativeTab(CreativetabHandler.vgtab3);
+        berionvarhoe = new Vghoe(BERIONVARTOOLS).setUnlocalizedName("berionvarhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        berionvarshovel = new Vgshovel(BERIONVARTOOLS).setUnlocalizedName("berionvarshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        berionvarsword = new Vgsword(BERIONVARSWORD).setUnlocalizedName("berionvarsword").setCreativeTab(CreativetabHandler.vgtab4);
+        berionvarpickaxe = new Vgpickaxe(BERIONVARTOOLS).setUnlocalizedName("berionvarpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // Charviole
-        charvioleaxe = new Vgaxe(ToolIDs.charvioleaxeID, CHARVIOLETOOLS).setUnlocalizedName("charvioleaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        charviolehoe = new Vghoe(ToolIDs.charviolehoeID, CHARVIOLETOOLS).setUnlocalizedName("charviolehoe").setCreativeTab(CreativetabHandler.vgtab3);
-        charvioleshovel = new Vgshovel(ToolIDs.charvioleshovelID, CHARVIOLETOOLS).setUnlocalizedName("charvioleshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        charviolesword = new Vgsword(ToolIDs.charvioleswordID, CHARVIOLESWORD).setUnlocalizedName("charviolesword").setCreativeTab(CreativetabHandler.vgtab4);
-        charviolepickaxe = new Vgpickaxe(ToolIDs.charviolepickaxeID, CHARVIOLETOOLS).setUnlocalizedName("charviolepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        charvioleaxe = new Vgaxe(CHARVIOLETOOLS).setUnlocalizedName("charvioleaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        charviolehoe = new Vghoe(CHARVIOLETOOLS).setUnlocalizedName("charviolehoe").setCreativeTab(CreativetabHandler.vgtab3);
+        charvioleshovel = new Vgshovel(CHARVIOLETOOLS).setUnlocalizedName("charvioleshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        charviolesword = new Vgsword(CHARVIOLESWORD).setUnlocalizedName("charviolesword").setCreativeTab(CreativetabHandler.vgtab4);
+        charviolepickaxe = new Vgpickaxe(CHARVIOLETOOLS).setUnlocalizedName("charviolepickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // Firlvear
-        firlvearaxe = new Vgaxe(ToolIDs.firlvearaxeID, FIRLVEARTOOLS).setUnlocalizedName("firlvearaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        firlvearhoe = new Vghoe(ToolIDs.firlvearhoeID, FIRLVEARTOOLS).setUnlocalizedName("firlvearhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        firlvearshovel = new Vgshovel(ToolIDs.firlvearshovelID, FIRLVEARTOOLS).setUnlocalizedName("firlvearshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        firlvearsword = new Vgsword(ToolIDs.firlvearswordID, FIRLVEARSWORD).setUnlocalizedName("firlvearsword").setCreativeTab(CreativetabHandler.vgtab4);
-        firlvearpickaxe = new Vgpickaxe(ToolIDs.firlvearpickaxeID, FIRLVEARTOOLS).setUnlocalizedName("firlvearpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        firlvearaxe = new Vgaxe(FIRLVEARTOOLS).setUnlocalizedName("firlvearaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        firlvearhoe = new Vghoe(FIRLVEARTOOLS).setUnlocalizedName("firlvearhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        firlvearshovel = new Vgshovel(FIRLVEARTOOLS).setUnlocalizedName("firlvearshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        firlvearsword = new Vgsword(FIRLVEARSWORD).setUnlocalizedName("firlvearsword").setCreativeTab(CreativetabHandler.vgtab4);
+        firlvearpickaxe = new Vgpickaxe(FIRLVEARTOOLS).setUnlocalizedName("firlvearpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // selmenrer
-        selmenreraxe = new Vgaxe(ToolIDs.selmenreraxeID, SELMENRERTOOLS).setUnlocalizedName("selmenreraxe").setCreativeTab(CreativetabHandler.vgtab3);
-        selmenrerhoe = new Vghoe(ToolIDs.selmenrerhoeID, SELMENRERTOOLS).setUnlocalizedName("selmenrerhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        selmenrershovel = new Vgshovel(ToolIDs.selmenrershovelID, SELMENRERTOOLS).setUnlocalizedName("selmenrershovel").setCreativeTab(CreativetabHandler.vgtab3);
-        selmenrersword = new Vgsword(ToolIDs.selmenrerswordID, SELMENRERSWORD).setUnlocalizedName("selmenrersword").setCreativeTab(CreativetabHandler.vgtab4);
-        selmenrerpickaxe = new Vgpickaxe(ToolIDs.selmenrerpickaxeID, SELMENRERTOOLS).setUnlocalizedName("selmenrerpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        selmenreraxe = new Vgaxe(SELMENRERTOOLS).setUnlocalizedName("selmenreraxe").setCreativeTab(CreativetabHandler.vgtab3);
+        selmenrerhoe = new Vghoe(SELMENRERTOOLS).setUnlocalizedName("selmenrerhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        selmenrershovel = new Vgshovel(SELMENRERTOOLS).setUnlocalizedName("selmenrershovel").setCreativeTab(CreativetabHandler.vgtab3);
+        selmenrersword = new Vgsword(SELMENRERSWORD).setUnlocalizedName("selmenrersword").setCreativeTab(CreativetabHandler.vgtab4);
+        selmenrerpickaxe = new Vgpickaxe(SELMENRERTOOLS).setUnlocalizedName("selmenrerpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // verilion
-        verilionaxe = new Vgaxe(ToolIDs.verilionaxeID, VERILIONTOOLS).setUnlocalizedName("verilionaxe").setCreativeTab(CreativetabHandler.vgtab3);
-        verilionhoe = new Vghoe(ToolIDs.verilionhoeID, VERILIONTOOLS).setUnlocalizedName("verilionhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        verilionshovel = new Vgshovel(ToolIDs.verilionshovelID, VERILIONTOOLS).setUnlocalizedName("verilionshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        verilionsword = new Vgsword(ToolIDs.verilionswordID, VERILIONSWORD).setUnlocalizedName("verilionsword").setCreativeTab(CreativetabHandler.vgtab4);
-        verilionpickaxe = new Vgpickaxe(ToolIDs.verilionpickaxeID, VERILIONTOOLS).setUnlocalizedName("verilionpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        verilionaxe = new Vgaxe(VERILIONTOOLS).setUnlocalizedName("verilionaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        verilionhoe = new Vghoe(VERILIONTOOLS).setUnlocalizedName("verilionhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        verilionshovel = new Vgshovel(VERILIONTOOLS).setUnlocalizedName("verilionshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        verilionsword = new Vgsword(VERILIONSWORD).setUnlocalizedName("verilionsword").setCreativeTab(CreativetabHandler.vgtab4);
+        verilionpickaxe = new Vgpickaxe(VERILIONTOOLS).setUnlocalizedName("verilionpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // vielvor
-        vielvoraxe = new Vgaxe(ToolIDs.vielvoraxeID, VIELVORTOOLS).setUnlocalizedName("vielvoraxe").setCreativeTab(CreativetabHandler.vgtab3);
-        vielvorhoe = new Vghoe(ToolIDs.vielvorhoeID, VIELVORTOOLS).setUnlocalizedName("vielvorhoe").setCreativeTab(CreativetabHandler.vgtab3);
-        vielvorshovel = new Vgshovel(ToolIDs.vielvorshovelID, VIELVORTOOLS).setUnlocalizedName("vielvorshovel").setCreativeTab(CreativetabHandler.vgtab3);
-        vielvorsword = new Vgsword(ToolIDs.vielvorswordID, VIELVORSWORD).setUnlocalizedName("vielvorsword").setCreativeTab(CreativetabHandler.vgtab4);
-        vielvorpickaxe = new Vgpickaxe(ToolIDs.vielvorpickaxeID, VIELVORTOOLS).setUnlocalizedName("vielvorpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
+        vielvoraxe = new Vgaxe(VIELVORTOOLS).setUnlocalizedName("vielvoraxe").setCreativeTab(CreativetabHandler.vgtab3);
+        vielvorhoe = new Vghoe(VIELVORTOOLS).setUnlocalizedName("vielvorhoe").setCreativeTab(CreativetabHandler.vgtab3);
+        vielvorshovel = new Vgshovel(VIELVORTOOLS).setUnlocalizedName("vielvorshovel").setCreativeTab(CreativetabHandler.vgtab3);
+        vielvorsword = new Vgsword(VIELVORSWORD).setUnlocalizedName("vielvorsword").setCreativeTab(CreativetabHandler.vgtab4);
+        vielvorpickaxe = new Vgpickaxe(VIELVORTOOLS).setUnlocalizedName("vielvorpickaxe").setCreativeTab(CreativetabHandler.vgtab3);
         // invisible
-        invisibledagger = new Vgsword(ToolIDs.invisibledaggerID, INVISIBLESWORD).setUnlocalizedName("invisibledagger").setCreativeTab(CreativetabHandler.vgtab4);
+        invisibledagger = new Vgsword(INVISIBLESWORD).setUnlocalizedName("invisibledagger").setCreativeTab(CreativetabHandler.vgtab4);
     }
-
+    
     public static void registerItem(GameRegistry registry) {
         // urotark
         registry.registerItem(urotarkaxe, "urotarkaxe");
@@ -590,333 +583,127 @@ public class ToolHandler {
         // invisible
         registry.registerItem(invisibledagger, "invisibledagger");
     }
-
-    public static void setNames(LanguageRegistry registry) {
-        // urotark
-        registry.addName(urotarkaxe, "Urotark Axe");
-        registry.addName(urotarkhoe, "Urotark Hoe");
-        registry.addName(urotarkshovel, "Urotark Shovel");
-        registry.addName(urotarksword, "Urotark Sword");
-        registry.addName(urotarkpickaxe, "Urotark Pickaxe");
-        // pearl
-        registry.addName(pearlaxe, "Pearl Axe");
-        registry.addName(pearlhoe, "Pearl Hoe");
-        registry.addName(pearlshovel, "Pearl Shovel");
-        registry.addName(pearlsword, "Pearl Sword");
-        registry.addName(pearlpickaxe, "Pearl Pickaxe");
-        // sapphire
-        registry.addName(sapphireaxe, "Sapphire Axe");
-        registry.addName(sapphirehoe, "Sapphire Hoe");
-        registry.addName(sapphireshovel, "Sapphire Shovel");
-        registry.addName(sapphiresword, "Sapphire Sword");
-        registry.addName(sapphirepickaxe, "Sapphire Pickaxe");
-        // muscovite
-        registry.addName(muscoviteaxe, "Muscovite Axe");
-        registry.addName(muscovitehoe, "Muscovite Hoe");
-        registry.addName(muscoviteshovel, "Muscovite Shovel");
-        registry.addName(muscovitesword, "Muscovite Sword");
-        registry.addName(muscovitepickaxe, "Muscovite Pickaxe");
-        // ruby
-        registry.addName(rubyaxe, "Ruby Axe");
-        registry.addName(rubyhoe, "Ruby Hoe");
-        registry.addName(rubyshovel, "Ruby Shovel");
-        registry.addName(rubysword, "Ruby Sword");
-        registry.addName(rubypickaxe, "Ruby Pickaxe");
-        // uriotyke
-        registry.addName(uriotykeaxe, "Uriotyke Axe");
-        registry.addName(uriotykehoe, "Uriotyke Hoe");
-        registry.addName(uriotykeshovel, "Uriotyke Shovel");
-        registry.addName(uriotykesword, "Uriotyke Sword");
-        registry.addName(uriotykepickaxe, "Uriotyke Pickaxe");
-        // gilder
-        registry.addName(gilderaxe, "Gilder Axe");
-        registry.addName(gilderhoe, "Gilder Hoe");
-        registry.addName(gildershovel, "Gilder Shovel");
-        registry.addName(gildersword, "Gilder Sword");
-        registry.addName(gilderpickaxe, "Gilder Pickaxe");
-        // selovar
-        registry.addName(selovaraxe, "Selovar Axe");
-        registry.addName(selovarhoe, "Selovar Hoe");
-        registry.addName(selovarshovel, "Selovar Shovel");
-        registry.addName(selovarsword, "Selovar Sword");
-        registry.addName(selovarpickaxe, "Selovar Pickaxe");
-        // parfilian
-        registry.addName(parfilianaxe, "Parfilian Axe");
-        registry.addName(parfilianhoe, "Parfilian Hoe");
-        registry.addName(parfilianshovel, "Parfilian Shovel");
-        registry.addName(parfiliansword, "Parfilian Sword");
-        registry.addName(parfilianpickaxe, "Parfilian Pickaxe");
-        // barium
-        registry.addName(bariumaxe, "Barium Axe");
-        registry.addName(bariumhoe, "Barium Hoe");
-        registry.addName(bariumshovel, "Barium Shovel");
-        registry.addName(bariumsword, "Barium Sword");
-        registry.addName(bariumpickaxe, "Barium Pickaxe");
-        // radium
-        registry.addName(radiumaxe, "Radium Axe");
-        registry.addName(radiumhoe, "Radium Hoe");
-        registry.addName(radiumshovel, "Radium Shovel");
-        registry.addName(radiumsword, "Radium Sword");
-        registry.addName(radiumpickaxe, "Radium Pickaxe");
-        // gallum
-        registry.addName(gallumaxe, "Gallum Axe");
-        registry.addName(gallumhoe, "Gallum Hoe");
-        registry.addName(gallumshovel, "Gallum Shovel");
-        registry.addName(gallumsword, "Gallum Sword");
-        registry.addName(gallumpickaxe, "Gallum Pickaxe");
-        // vanadium
-        registry.addName(vanadiumaxe, "Vanadium Axe");
-        registry.addName(vanadiumhoe, "Vanadium Hoe");
-        registry.addName(vanadiumshovel, "Vanadium Shovel");
-        registry.addName(vanadiumsword, "Vanadium Sword");
-        registry.addName(vanadiumpickaxe, "Vanadium Pickaxe");
-        // scandium
-        registry.addName(scandiumaxe, "Scandium Axe");
-        registry.addName(scandiumhoe, "Scandium Hoe");
-        registry.addName(scandiumshovel, "Scandium Shovel");
-        registry.addName(scandiumsword, "Scandium Sword");
-        registry.addName(scandiumpickaxe, "Scandium Pickaxe");
-        // bismuth
-        registry.addName(bismuthaxe, "Bismuth Axe");
-        registry.addName(bismuthhoe, "Bismuth Hoe");
-        registry.addName(bismuthshovel, "Bismuth Shovel");
-        registry.addName(bismuthsword, "Bismuth Sword");
-        registry.addName(bismuthpickaxe, "Bismuth Pickaxe");
-        // indium
-        registry.addName(indiumaxe, "Indium Axe");
-        registry.addName(indiumhoe, "Indium Hoe");
-        registry.addName(indiumshovel, "Indium Shovel");
-        registry.addName(indiumsword, "Indium Sword");
-        registry.addName(indiumpickaxe, "Indium Pickaxe");
-        // platinum
-        registry.addName(platinumaxe, "Platinum Axe");
-        registry.addName(platinumhoe, "Platinum Hoe");
-        registry.addName(platinumshovel, "Platinum Shovel");
-        registry.addName(platinumsword, "Platinum Sword");
-        registry.addName(platinumpickaxe, "Platinum Pickaxe");
-        // darkness
-        registry.addName(darknessaxe, "Darkness Axe");
-        registry.addName(darknesshoe, "Darkness Hoe");
-        registry.addName(darknessshovel, "Darkness Shovel");
-        registry.addName(darknesssword, "Darkness Sword");
-        registry.addName(darknesspickaxe, "Darkness Pickaxe");
-        // light
-        registry.addName(lightaxe, "Light Axe");
-        registry.addName(lighthoe, "Light Hoe");
-        registry.addName(lightshovel, "Light Shovel");
-        registry.addName(lightsword, "Light Sword");
-        registry.addName(lightpickaxe, "Light Pickaxe");
-        // omega
-        registry.addName(omegaaxe, "Omega Axe");
-        registry.addName(omegahoe, "Omega Hoe");
-        registry.addName(omegashovel, "Omega Shovel");
-        registry.addName(omegasword, "Omega Sword");
-        registry.addName(omegahand, "Omega Hand");
-        registry.addName(omegapickaxe, "Omega Pickaxe");
-        // bubble
-        registry.addName(bubblesword, "Bubble Sword");
-        // Berionvar
-        registry.addName(berionvaraxe, "Berionvar Axe");
-        registry.addName(berionvarhoe, "Berionvar Hoe");
-        registry.addName(berionvarshovel, "Berionvar Shovel");
-        registry.addName(berionvarsword, "Berionvar Sword");
-        registry.addName(berionvarpickaxe, "Berionvar Pickaxe");
-        // Charviole
-        registry.addName(charvioleaxe, "Charviole Axe");
-        registry.addName(charviolehoe, "Charviole Hoe");
-        registry.addName(charvioleshovel, "Charviole Shovel");
-        registry.addName(charviolesword, "Charviole Sword");
-        registry.addName(charviolepickaxe, "Charviole Pickaxe");
-        // Firlvear
-        registry.addName(firlvearaxe, "Firlvear Axe");
-        registry.addName(firlvearhoe, "Firlvear Hoe");
-        registry.addName(firlvearshovel, "Firlvear Shovel");
-        registry.addName(firlvearsword, "Firlvear Sword");
-        registry.addName(firlvearpickaxe, "Firlvear Pickaxe");
-        // selmenrer
-        registry.addName(selmenreraxe, "Selmenrer Axe");
-        registry.addName(selmenrerhoe, "Selmenrer Hoe");
-        registry.addName(selmenrershovel, "Selmenrer Shovel");
-        registry.addName(selmenrersword, "Selmenrer Sword");
-        registry.addName(selmenrerpickaxe, "Selmenrer Pickaxe");
-        // verilion
-        registry.addName(verilionaxe, "Verilion Axe");
-        registry.addName(verilionhoe, "Verilion Hoe");
-        registry.addName(verilionshovel, "Verilion Shovel");
-        registry.addName(verilionsword, "Verilion Sword");
-        registry.addName(verilionpickaxe, "Verilion Pickaxe");
-        // vielvor
-        registry.addName(vielvoraxe, "Vielvor Axe");
-        registry.addName(vielvorhoe, "Vielvor Hoe");
-        registry.addName(vielvorshovel, "Vielvor Shovel");
-        registry.addName(vielvorsword, "Vielvor Sword");
-        registry.addName(vielvorpickaxe, "Vielvor Pickaxe");
-        // invisible
-        registry.addName(invisibledagger, "Invisible Dagger");
-    }
-
-    public static void setToolClass(MinecraftForge registry) {
-        // urotark
-        registry.setToolClass(urotarkaxe, "axe", 4);
-        registry.setToolClass(urotarkhoe, "hoe", 4);
-        registry.setToolClass(urotarkshovel, "shovel", 4);
-        registry.setToolClass(urotarksword, "sword", 4);
-        registry.setToolClass(urotarkpickaxe, "pickaxe", 4);
-        // pearl
-        registry.setToolClass(pearlaxe, "axe", 4);
-        registry.setToolClass(pearlhoe, "hoe", 4);
-        registry.setToolClass(pearlshovel, "shovel", 4);
-        registry.setToolClass(pearlsword, "sword", 4);
-        registry.setToolClass(pearlpickaxe, "pickaxe", 4);
-        // sapphire
-        registry.setToolClass(sapphireaxe, "axe", 4);
-        registry.setToolClass(sapphirehoe, "hoe", 4);
-        registry.setToolClass(sapphireshovel, "shovel", 4);
-        registry.setToolClass(sapphiresword, "sword", 4);
-        registry.setToolClass(sapphirepickaxe, "pickaxe", 4);
-        // muscovite
-        registry.setToolClass(muscoviteaxe, "axe", 5);
-        registry.setToolClass(muscovitehoe, "hoe", 5);
-        registry.setToolClass(muscoviteshovel, "shovel", 5);
-        registry.setToolClass(muscovitesword, "sword", 5);
-        registry.setToolClass(muscovitepickaxe, "pickaxe", 5);
-        // ruby
-        registry.setToolClass(rubyaxe, "axe", 5);
-        registry.setToolClass(rubyhoe, "hoe", 5);
-        registry.setToolClass(rubyshovel, "shovel", 5);
-        registry.setToolClass(rubysword, "sword", 5);
-        registry.setToolClass(rubypickaxe, "pickaxe", 5);
-        // uriotyke
-        registry.setToolClass(uriotykeaxe, "axe", 5);
-        registry.setToolClass(uriotykehoe, "hoe", 5);
-        registry.setToolClass(uriotykeshovel, "shovel", 5);
-        registry.setToolClass(uriotykesword, "sword", 5);
-        registry.setToolClass(uriotykepickaxe, "pickaxe", 5);
-        // gilder
-        registry.setToolClass(gilderaxe, "axe", 6);
-        registry.setToolClass(gilderhoe, "hoe", 6);
-        registry.setToolClass(gildershovel, "shovel", 6);
-        registry.setToolClass(gildersword, "sword", 6);
-        registry.setToolClass(gilderpickaxe, "pickaxe", 6);
-        // selovar
-        registry.setToolClass(selovaraxe, "axe", 6);
-        registry.setToolClass(selovarhoe, "hoe", 6);
-        registry.setToolClass(selovarshovel, "shovel", 6);
-        registry.setToolClass(selovarsword, "sword", 6);
-        registry.setToolClass(selovarpickaxe, "pickaxe", 6);
-        // parfilian
-        registry.setToolClass(parfilianaxe, "axe", 6);
-        registry.setToolClass(parfilianhoe, "hoe", 6);
-        registry.setToolClass(parfilianshovel, "shovel", 6);
-        registry.setToolClass(parfiliansword, "sword", 6);
-        registry.setToolClass(parfilianpickaxe, "pickaxe", 6);
-        // barium
-        registry.setToolClass(bariumaxe, "axe", 7);
-        registry.setToolClass(bariumhoe, "hoe", 7);
-        registry.setToolClass(bariumshovel, "shovel", 7);
-        registry.setToolClass(bariumsword, "sword", 7);
-        registry.setToolClass(bariumpickaxe, "pickaxe", 7);
-        // radium
-        registry.setToolClass(radiumaxe, "axe", 7);
-        registry.setToolClass(radiumhoe, "hoe", 7);
-        registry.setToolClass(radiumshovel, "shovel", 7);
-        registry.setToolClass(radiumsword, "sword", 7);
-        registry.setToolClass(radiumpickaxe, "pickaxe", 7);
-        // gallum
-        registry.setToolClass(gallumaxe, "axe", 7);
-        registry.setToolClass(gallumhoe, "hoe", 7);
-        registry.setToolClass(gallumshovel, "shovel", 7);
-        registry.setToolClass(gallumsword, "sword", 7);
-        registry.setToolClass(gallumpickaxe, "pickaxe", 7);
-        // vanadium
-        registry.setToolClass(vanadiumaxe, "axe", 8);
-        registry.setToolClass(vanadiumhoe, "hoe", 8);
-        registry.setToolClass(vanadiumshovel, "shovel", 8);
-        registry.setToolClass(vanadiumsword, "sword", 8);
-        registry.setToolClass(vanadiumpickaxe, "pickaxe", 8);
-        // scandium
-        registry.setToolClass(scandiumaxe, "axe", 8);
-        registry.setToolClass(scandiumhoe, "hoe", 8);
-        registry.setToolClass(scandiumshovel, "shovel", 8);
-        registry.setToolClass(scandiumsword, "sword", 8);
-        registry.setToolClass(scandiumpickaxe, "pickaxe", 8);
-        // bismuth
-        registry.setToolClass(bismuthaxe, "axe", 9);
-        registry.setToolClass(bismuthhoe, "hoe", 9);
-        registry.setToolClass(bismuthshovel, "shovel", 9);
-        registry.setToolClass(bismuthsword, "sword", 9);
-        registry.setToolClass(bismuthpickaxe, "pickaxe", 9);
-        // indium
-        registry.setToolClass(indiumaxe, "axe", 9);
-        registry.setToolClass(indiumhoe, "hoe", 9);
-        registry.setToolClass(indiumshovel, "shovel", 9);
-        registry.setToolClass(indiumsword, "sword", 9);
-        registry.setToolClass(indiumpickaxe, "pickaxe", 9);
-        // platinum
-        registry.setToolClass(platinumaxe, "axe", 10);
-        registry.setToolClass(platinumhoe, "hoe", 10);
-        registry.setToolClass(platinumshovel, "shovel", 10);
-        registry.setToolClass(platinumsword, "sword", 10);
-        registry.setToolClass(platinumpickaxe, "pickaxe", 10);
-        // darkness
-        registry.setToolClass(darknessaxe, "axe", 20);
-        registry.setToolClass(darknesshoe, "hoe", 20);
-        registry.setToolClass(darknessshovel, "shovel", 20);
-        registry.setToolClass(darknesssword, "sword", 20);
-        registry.setToolClass(darknesspickaxe, "pickaxe", 20);
-        // light
-        registry.setToolClass(lightaxe, "axe", 20);
-        registry.setToolClass(lighthoe, "hoe", 20);
-        registry.setToolClass(lightshovel, "shovel", 20);
-        registry.setToolClass(lightsword, "sword", 20);
-        registry.setToolClass(lightpickaxe, "pickaxe", 20);
-        // omega
-        registry.setToolClass(omegaaxe, "axe", 25);
-        registry.setToolClass(omegahoe, "hoe", 20);
-        registry.setToolClass(omegashovel, "shovel", 25);
-        registry.setToolClass(omegasword, "sword", 25);
-        registry.setToolClass(omegahand, "sword", 25);
-        registry.setToolClass(omegapickaxe, "pickaxe", 25);
-        // bubble
-        registry.setToolClass(bubblesword, "sword", 3);
-        // Berionvar
-        registry.setToolClass(berionvaraxe, "axe", 11);
-        registry.setToolClass(berionvarhoe, "hoe", 11);
-        registry.setToolClass(berionvarshovel, "shovel", 11);
-        registry.setToolClass(berionvarsword, "sword", 11);
-        registry.setToolClass(berionvarpickaxe, "pickaxe", 11);
-        // Charviole
-        registry.setToolClass(charvioleaxe, "axe", 12);
-        registry.setToolClass(charviolehoe, "hoe", 12);
-        registry.setToolClass(charvioleshovel, "shovel", 12);
-        registry.setToolClass(charviolesword, "sword", 12);
-        registry.setToolClass(charviolepickaxe, "pickaxe", 12);
-        // Firlvear
-        registry.setToolClass(firlvearaxe, "axe", 13);
-        registry.setToolClass(firlvearhoe, "hoe", 13);
-        registry.setToolClass(firlvearshovel, "shovel", 13);
-        registry.setToolClass(firlvearsword, "sword", 13);
-        registry.setToolClass(firlvearpickaxe, "pickaxe", 14);
-        // selmenrer
-        registry.setToolClass(selmenreraxe, "axe", 15);
-        registry.setToolClass(selmenrerhoe, "hoe", 15);
-        registry.setToolClass(selmenrershovel, "shovel", 15);
-        registry.setToolClass(selmenrersword, "sword", 15);
-        registry.setToolClass(selmenrerpickaxe, "pickaxe", 15);
-        // verilion
-        registry.setToolClass(verilionaxe, "axe", 16);
-        registry.setToolClass(verilionhoe, "hoe", 16);
-        registry.setToolClass(verilionshovel, "shovel", 16);
-        registry.setToolClass(verilionsword, "sword", 16);
-        registry.setToolClass(verilionpickaxe, "pickaxe", 16);
-        // vielvor
-        registry.setToolClass(vielvoraxe, "axe", 17);
-        registry.setToolClass(vielvorhoe, "hoe", 17);
-        registry.setToolClass(vielvorshovel, "shovel", 17);
-        registry.setToolClass(vielvorsword, "sword", 17);
-        registry.setToolClass(vielvorpickaxe, "pickaxe", 17);
-        // invisible
-        registry.setToolClass(invisibledagger, "sword", 20);
-    }
-
+    
+    /*
+     * public static void setNames(LanguageRegistry registry) { // urotark
+     * registry.addName(urotarkaxe, "Urotark Axe"); registry.addName(urotarkhoe,
+     * "Urotark Hoe"); registry.addName(urotarkshovel, "Urotark Shovel");
+     * registry.addName(urotarksword, "Urotark Sword");
+     * registry.addName(urotarkpickaxe, "Urotark Pickaxe"); // pearl
+     * registry.addName(pearlaxe, "Pearl Axe"); registry.addName(pearlhoe,
+     * "Pearl Hoe"); registry.addName(pearlshovel, "Pearl Shovel");
+     * registry.addName(pearlsword, "Pearl Sword");
+     * registry.addName(pearlpickaxe, "Pearl Pickaxe"); // sapphire
+     * registry.addName(sapphireaxe, "Sapphire Axe");
+     * registry.addName(sapphirehoe, "Sapphire Hoe");
+     * registry.addName(sapphireshovel, "Sapphire Shovel");
+     * registry.addName(sapphiresword, "Sapphire Sword");
+     * registry.addName(sapphirepickaxe, "Sapphire Pickaxe"); // muscovite
+     * registry.addName(muscoviteaxe, "Muscovite Axe");
+     * registry.addName(muscovitehoe, "Muscovite Hoe");
+     * registry.addName(muscoviteshovel, "Muscovite Shovel");
+     * registry.addName(muscovitesword, "Muscovite Sword");
+     * registry.addName(muscovitepickaxe, "Muscovite Pickaxe"); // ruby
+     * registry.addName(rubyaxe, "Ruby Axe"); registry.addName(rubyhoe,
+     * "Ruby Hoe"); registry.addName(rubyshovel, "Ruby Shovel");
+     * registry.addName(rubysword, "Ruby Sword"); registry.addName(rubypickaxe,
+     * "Ruby Pickaxe"); // uriotyke registry.addName(uriotykeaxe,
+     * "Uriotyke Axe"); registry.addName(uriotykehoe, "Uriotyke Hoe");
+     * registry.addName(uriotykeshovel, "Uriotyke Shovel");
+     * registry.addName(uriotykesword, "Uriotyke Sword");
+     * registry.addName(uriotykepickaxe, "Uriotyke Pickaxe"); // gilder
+     * registry.addName(gilderaxe, "Gilder Axe"); registry.addName(gilderhoe,
+     * "Gilder Hoe"); registry.addName(gildershovel, "Gilder Shovel");
+     * registry.addName(gildersword, "Gilder Sword");
+     * registry.addName(gilderpickaxe, "Gilder Pickaxe"); // selovar
+     * registry.addName(selovaraxe, "Selovar Axe"); registry.addName(selovarhoe,
+     * "Selovar Hoe"); registry.addName(selovarshovel, "Selovar Shovel");
+     * registry.addName(selovarsword, "Selovar Sword");
+     * registry.addName(selovarpickaxe, "Selovar Pickaxe"); // parfilian
+     * registry.addName(parfilianaxe, "Parfilian Axe");
+     * registry.addName(parfilianhoe, "Parfilian Hoe");
+     * registry.addName(parfilianshovel, "Parfilian Shovel");
+     * registry.addName(parfiliansword, "Parfilian Sword");
+     * registry.addName(parfilianpickaxe, "Parfilian Pickaxe"); // barium
+     * registry.addName(bariumaxe, "Barium Axe"); registry.addName(bariumhoe,
+     * "Barium Hoe"); registry.addName(bariumshovel, "Barium Shovel");
+     * registry.addName(bariumsword, "Barium Sword");
+     * registry.addName(bariumpickaxe, "Barium Pickaxe"); // radium
+     * registry.addName(radiumaxe, "Radium Axe"); registry.addName(radiumhoe,
+     * "Radium Hoe"); registry.addName(radiumshovel, "Radium Shovel");
+     * registry.addName(radiumsword, "Radium Sword");
+     * registry.addName(radiumpickaxe, "Radium Pickaxe"); // gallum
+     * registry.addName(gallumaxe, "Gallum Axe"); registry.addName(gallumhoe,
+     * "Gallum Hoe"); registry.addName(gallumshovel, "Gallum Shovel");
+     * registry.addName(gallumsword, "Gallum Sword");
+     * registry.addName(gallumpickaxe, "Gallum Pickaxe"); // vanadium
+     * registry.addName(vanadiumaxe, "Vanadium Axe");
+     * registry.addName(vanadiumhoe, "Vanadium Hoe");
+     * registry.addName(vanadiumshovel, "Vanadium Shovel");
+     * registry.addName(vanadiumsword, "Vanadium Sword");
+     * registry.addName(vanadiumpickaxe, "Vanadium Pickaxe"); // scandium
+     * registry.addName(scandiumaxe, "Scandium Axe");
+     * registry.addName(scandiumhoe, "Scandium Hoe");
+     * registry.addName(scandiumshovel, "Scandium Shovel");
+     * registry.addName(scandiumsword, "Scandium Sword");
+     * registry.addName(scandiumpickaxe, "Scandium Pickaxe"); // bismuth
+     * registry.addName(bismuthaxe, "Bismuth Axe"); registry.addName(bismuthhoe,
+     * "Bismuth Hoe"); registry.addName(bismuthshovel, "Bismuth Shovel");
+     * registry.addName(bismuthsword, "Bismuth Sword");
+     * registry.addName(bismuthpickaxe, "Bismuth Pickaxe"); // indium
+     * registry.addName(indiumaxe, "Indium Axe"); registry.addName(indiumhoe,
+     * "Indium Hoe"); registry.addName(indiumshovel, "Indium Shovel");
+     * registry.addName(indiumsword, "Indium Sword");
+     * registry.addName(indiumpickaxe, "Indium Pickaxe"); // platinum
+     * registry.addName(platinumaxe, "Platinum Axe");
+     * registry.addName(platinumhoe, "Platinum Hoe");
+     * registry.addName(platinumshovel, "Platinum Shovel");
+     * registry.addName(platinumsword, "Platinum Sword");
+     * registry.addName(platinumpickaxe, "Platinum Pickaxe"); // darkness
+     * registry.addName(darknessaxe, "Darkness Axe");
+     * registry.addName(darknesshoe, "Darkness Hoe");
+     * registry.addName(darknessshovel, "Darkness Shovel");
+     * registry.addName(darknesssword, "Darkness Sword");
+     * registry.addName(darknesspickaxe, "Darkness Pickaxe"); // light
+     * registry.addName(lightaxe, "Light Axe"); registry.addName(lighthoe,
+     * "Light Hoe"); registry.addName(lightshovel, "Light Shovel");
+     * registry.addName(lightsword, "Light Sword");
+     * registry.addName(lightpickaxe, "Light Pickaxe"); // omega
+     * registry.addName(omegaaxe, "Omega Axe"); registry.addName(omegahoe,
+     * "Omega Hoe"); registry.addName(omegashovel, "Omega Shovel");
+     * registry.addName(omegasword, "Omega Sword"); registry.addName(omegahand,
+     * "Omega Hand"); registry.addName(omegapickaxe, "Omega Pickaxe"); // bubble
+     * registry.addName(bubblesword, "Bubble Sword"); // Berionvar
+     * registry.addName(berionvaraxe, "Berionvar Axe");
+     * registry.addName(berionvarhoe, "Berionvar Hoe");
+     * registry.addName(berionvarshovel, "Berionvar Shovel");
+     * registry.addName(berionvarsword, "Berionvar Sword");
+     * registry.addName(berionvarpickaxe, "Berionvar Pickaxe"); // Charviole
+     * registry.addName(charvioleaxe, "Charviole Axe");
+     * registry.addName(charviolehoe, "Charviole Hoe");
+     * registry.addName(charvioleshovel, "Charviole Shovel");
+     * registry.addName(charviolesword, "Charviole Sword");
+     * registry.addName(charviolepickaxe, "Charviole Pickaxe"); // Firlvear
+     * registry.addName(firlvearaxe, "Firlvear Axe");
+     * registry.addName(firlvearhoe, "Firlvear Hoe");
+     * registry.addName(firlvearshovel, "Firlvear Shovel");
+     * registry.addName(firlvearsword, "Firlvear Sword");
+     * registry.addName(firlvearpickaxe, "Firlvear Pickaxe"); // selmenrer
+     * registry.addName(selmenreraxe, "Selmenrer Axe");
+     * registry.addName(selmenrerhoe, "Selmenrer Hoe");
+     * registry.addName(selmenrershovel, "Selmenrer Shovel");
+     * registry.addName(selmenrersword, "Selmenrer Sword");
+     * registry.addName(selmenrerpickaxe, "Selmenrer Pickaxe"); // verilion
+     * registry.addName(verilionaxe, "Verilion Axe");
+     * registry.addName(verilionhoe, "Verilion Hoe");
+     * registry.addName(verilionshovel, "Verilion Shovel");
+     * registry.addName(verilionsword, "Verilion Sword");
+     * registry.addName(verilionpickaxe, "Verilion Pickaxe"); // vielvor
+     * registry.addName(vielvoraxe, "Vielvor Axe"); registry.addName(vielvorhoe,
+     * "Vielvor Hoe"); registry.addName(vielvorshovel, "Vielvor Shovel");
+     * registry.addName(vielvorsword, "Vielvor Sword");
+     * registry.addName(vielvorpickaxe, "Vielvor Pickaxe"); // invisible
+     * registry.addName(invisibledagger, "Invisible Dagger"); }
+     */
+    
 }

@@ -1,0 +1,22 @@
+{
+// Annihilator
+“death”: {“category”: “master”,”sounds”,”mob”,”annihilator”: [{“name”: “death”,”stream”: false}]}
+“hurt”: {“category”: “master”,”sounds”,”mob”,”annihilator”: [{“name”: “hurt”,”stream”: false}]}
+“say”: {“category”: “master”,”sounds”,”mob”,”annihilator”: [{“name”: “say”,”stream”: false}]}
+// Eliminator
+“death”: {“category”: “master”,”sounds”,”mob”,”eliminator”: [{“name”: “death”,”stream”: false}]}
+“hurt”: {“category”: “master”,”sounds”,”mob”,”eliminator”: [{“name”: “hurt”,”stream”: false}]}
+“say”: {“category”: “master”,”sounds”,”mob”,”eliminator”: [{“name”: “say”,”stream”: false}]}
+// JungleAssasin
+“death”: {“category”: “master”,”sounds”,”mob”,”jungleassasin”: [{“name”: “death”,”stream”: false}]}
+“hurt”: {“category”: “master”,”sounds”,”mob”,”jungleassasin”: [{“name”: “hurt”,”stream”: false}]}
+“say”: {“category”: “master”,”sounds”,”mob”,”jungleassasin”: [{“name”: “say”,”stream”: false}]}
+// Omegakiller
+“death”: {“category”: “master”,”sounds”,”mob”,”omegakiller”: [{“name”: “death”,”stream”: false}]}
+“hurt”: {“category”: “master”,”sounds”,”mob”,”omegakiller”: [{“name”: “hurt”,”stream”: false}]}
+“say”: {“category”: “master”,”sounds”,”mob”,”omegakiller”: [{“name”: “say”,”stream”: false}]}
+// slayer
+“death”: {“category”: “master”,”sounds”,”mob”,”slayer”: [{“name”: “death”,”stream”: false}]}
+“hurt”: {“category”: “master”,”sounds”,”mob”,”slayer”: [{“name”: “hurt”,”stream”: false}]}
+“say”: {“category”: “master”,”sounds”,”mob”,”slayer”: [{“name”: “say”,”stream”: false}]}
+}

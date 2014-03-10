@@ -17,7 +17,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class EntityAnnihilator extends EntityMob {
-
+    
     public EntityAnnihilator(World par1World) {
         super(par1World);
         this.setSize(0.9F, 0.9F);
@@ -34,41 +34,41 @@ public class EntityAnnihilator extends EntityMob {
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityVillager.class, 0, false));
     }
-
+    
     protected void applyEntityAttributes() {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(30.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.25D);
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(30.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.25D);
     }
-
+    
     public int getAttackStrength() {
         return 4;
     }
-
+    
     public static int getArmorValue() {
         return 4;
     }
-
+    
     public boolean isAIEnabled() {
         return true;
     }
-
+    
     protected String getLivingSound() {
         return Reference.MOD_ID + ":" + "mob.annihilator.say";
     }
-
+    
     /**
      * Returns the sound this mob makes when it is hurt.
      */
     protected String getHurtSound() {
         return Reference.MOD_ID + ":" + "mob.annihilator.hurt";
     }
-
+    
     /**
      * Returns the sound this mob makes on death.
      */
     protected String getDeathSound() {
         return Reference.MOD_ID + ":" + "mob.annihilator.death";
     }
-
+    
 }

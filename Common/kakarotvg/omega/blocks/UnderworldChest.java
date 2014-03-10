@@ -1,18 +1,17 @@
 package kakarotvg.omega.blocks;
 
-import static net.minecraftforge.common.ForgeDirection.DOWN;
+import static net.minecraftforge.common.util.ForgeDirection.DOWN;
 
 import java.util.Iterator;
 import java.util.Random;
 
 import kakarotvg.omega.Omega;
 import kakarotvg.omega.Reference;
-import kakarotvg.omega.gui.UChestGui;
-import kakarotvg.omega.tileentity.TileEntityUnderworldChest;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.passive.EntityOcelot;
@@ -23,6 +22,7 @@ import net.minecraft.inventory.InventoryLargeChest;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
@@ -31,17 +31,16 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class UnderworldChest extends BlockContainer {
-    private final Random random = new Random();
-
-    /** Determines whether of not the chest is trapped. */
-    public final int isTrapped;
-
-    public UnderworldChest(int par1, int par2) {
-        super(par1, Material.wood);
-        this.isTrapped = par2;
+    private final Random field_149955_b = new Random();
+    public final int field_149956_a;
+    private static final String __OBFID = "CL_00000214";
+    
+    public UnderworldChest(int p_i45397_1_) {
+        super(Material.wood);
+        this.field_149956_a = p_i45397_1_;
         this.setBlockBounds(0.0625F, 0.0F, 0.0625F, 0.9375F, 0.875F, 0.9375F);
     }
-
+    
     /**
      * Is this block (a) opaque and (b) a full 1m cube? This determines whether
      * or not to render the shared face of two adjacent blocks and also whether
@@ -50,7 +49,7 @@ public class UnderworldChest extends BlockContainer {
     public boolean isOpaqueCube() {
         return false;
     }
-
+    
     /**
      * If this block doesn't render as an ordinary block it will return False
      * (examples: signs, buttons, stairs, etc)
@@ -58,394 +57,368 @@ public class UnderworldChest extends BlockContainer {
     public boolean renderAsNormalBlock() {
         return false;
     }
-
+    
     /**
      * The type of render function that is called for this block
      */
     public int getRenderType() {
         return 22;
     }
-
+    
     /**
      * Updates the blocks bounds based on its current state. Args: world, x, y,
      * z
      */
-    public void setBlockBoundsBasedOnState(IBlockAccess par1IBlockAccess, int par2, int par3, int par4) {
-        if (par1IBlockAccess.getBlockId(par2, par3, par4 - 1) == this.blockID) {
+    public void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_) {
+        if (p_149719_1_.getBlock(p_149719_2_, p_149719_3_, p_149719_4_ - 1) == this) {
             this.setBlockBounds(0.0625F, 0.0F, 0.0F, 0.9375F, 0.875F, 0.9375F);
         }
-        else if (par1IBlockAccess.getBlockId(par2, par3, par4 + 1) == this.blockID) {
+        else if (p_149719_1_.getBlock(p_149719_2_, p_149719_3_, p_149719_4_ + 1) == this) {
             this.setBlockBounds(0.0625F, 0.0F, 0.0625F, 0.9375F, 0.875F, 1.0F);
         }
-        else if (par1IBlockAccess.getBlockId(par2 - 1, par3, par4) == this.blockID) {
+        else if (p_149719_1_.getBlock(p_149719_2_ - 1, p_149719_3_, p_149719_4_) == this) {
             this.setBlockBounds(0.0F, 0.0F, 0.0625F, 0.9375F, 0.875F, 0.9375F);
         }
-        else if (par1IBlockAccess.getBlockId(par2 + 1, par3, par4) == this.blockID) {
+        else if (p_149719_1_.getBlock(p_149719_2_ + 1, p_149719_3_, p_149719_4_) == this) {
             this.setBlockBounds(0.0625F, 0.0F, 0.0625F, 1.0F, 0.875F, 0.9375F);
         }
         else {
             this.setBlockBounds(0.0625F, 0.0F, 0.0625F, 0.9375F, 0.875F, 0.9375F);
         }
     }
-
+    
     /**
      * Called whenever the block is added into the world. Args: world, x, y, z
      */
-    public void onBlockAdded(World par1World, int par2, int par3, int par4) {
-        super.onBlockAdded(par1World, par2, par3, par4);
-        this.unifyAdjacentChests(par1World, par2, par3, par4);
-        int l = par1World.getBlockId(par2, par3, par4 - 1);
-        int i1 = par1World.getBlockId(par2, par3, par4 + 1);
-        int j1 = par1World.getBlockId(par2 - 1, par3, par4);
-        int k1 = par1World.getBlockId(par2 + 1, par3, par4);
-
-        if (l == this.blockID) {
-            this.unifyAdjacentChests(par1World, par2, par3, par4 - 1);
+    public void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_) {
+        super.onBlockAdded(p_149726_1_, p_149726_2_, p_149726_3_, p_149726_4_);
+        this.func_149954_e(p_149726_1_, p_149726_2_, p_149726_3_, p_149726_4_);
+        Block block = p_149726_1_.getBlock(p_149726_2_, p_149726_3_, p_149726_4_ - 1);
+        Block block1 = p_149726_1_.getBlock(p_149726_2_, p_149726_3_, p_149726_4_ + 1);
+        Block block2 = p_149726_1_.getBlock(p_149726_2_ - 1, p_149726_3_, p_149726_4_);
+        Block block3 = p_149726_1_.getBlock(p_149726_2_ + 1, p_149726_3_, p_149726_4_);
+        
+        if (block == this) {
+            this.func_149954_e(p_149726_1_, p_149726_2_, p_149726_3_, p_149726_4_ - 1);
         }
-
-        if (i1 == this.blockID) {
-            this.unifyAdjacentChests(par1World, par2, par3, par4 + 1);
+        
+        if (block1 == this) {
+            this.func_149954_e(p_149726_1_, p_149726_2_, p_149726_3_, p_149726_4_ + 1);
         }
-
-        if (j1 == this.blockID) {
-            this.unifyAdjacentChests(par1World, par2 - 1, par3, par4);
+        
+        if (block2 == this) {
+            this.func_149954_e(p_149726_1_, p_149726_2_ - 1, p_149726_3_, p_149726_4_);
         }
-
-        if (k1 == this.blockID) {
-            this.unifyAdjacentChests(par1World, par2 + 1, par3, par4);
+        
+        if (block3 == this) {
+            this.func_149954_e(p_149726_1_, p_149726_2_ + 1, p_149726_3_, p_149726_4_);
         }
     }
-
+    
     /**
      * Called when the block is placed in the world.
      */
-    public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLivingBase par5EntityLivingBase, ItemStack par6ItemStack) {
-        int l = par1World.getBlockId(par2, par3, par4 - 1);
-        int i1 = par1World.getBlockId(par2, par3, par4 + 1);
-        int j1 = par1World.getBlockId(par2 - 1, par3, par4);
-        int k1 = par1World.getBlockId(par2 + 1, par3, par4);
+    public void onBlockPlacedBy(World p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_) {
+        Block block = p_149689_1_.getBlock(p_149689_2_, p_149689_3_, p_149689_4_ - 1);
+        Block block1 = p_149689_1_.getBlock(p_149689_2_, p_149689_3_, p_149689_4_ + 1);
+        Block block2 = p_149689_1_.getBlock(p_149689_2_ - 1, p_149689_3_, p_149689_4_);
+        Block block3 = p_149689_1_.getBlock(p_149689_2_ + 1, p_149689_3_, p_149689_4_);
         byte b0 = 0;
-        int l1 = MathHelper.floor_double((double) (par5EntityLivingBase.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
-
-        if (l1 == 0) {
+        int l = MathHelper.floor_double((double) (p_149689_5_.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+        
+        if (l == 0) {
             b0 = 2;
         }
-
-        if (l1 == 1) {
+        
+        if (l == 1) {
             b0 = 5;
         }
-
-        if (l1 == 2) {
+        
+        if (l == 2) {
             b0 = 3;
         }
-
-        if (l1 == 3) {
+        
+        if (l == 3) {
             b0 = 4;
         }
-
-        if (l != this.blockID && i1 != this.blockID && j1 != this.blockID && k1 != this.blockID) {
-            par1World.setBlockMetadataWithNotify(par2, par3, par4, b0, 3);
+        
+        if (block != this && block1 != this && block2 != this && block3 != this) {
+            p_149689_1_.setBlockMetadataWithNotify(p_149689_2_, p_149689_3_, p_149689_4_, b0, 3);
         }
         else {
-            if ((l == this.blockID || i1 == this.blockID) && (b0 == 4 || b0 == 5)) {
-                if (l == this.blockID) {
-                    par1World.setBlockMetadataWithNotify(par2, par3, par4 - 1, b0, 3);
+            if ((block == this || block1 == this) && (b0 == 4 || b0 == 5)) {
+                if (block == this) {
+                    p_149689_1_.setBlockMetadataWithNotify(p_149689_2_, p_149689_3_, p_149689_4_ - 1, b0, 3);
                 }
                 else {
-                    par1World.setBlockMetadataWithNotify(par2, par3, par4 + 1, b0, 3);
+                    p_149689_1_.setBlockMetadataWithNotify(p_149689_2_, p_149689_3_, p_149689_4_ + 1, b0, 3);
                 }
-
-                par1World.setBlockMetadataWithNotify(par2, par3, par4, b0, 3);
+                
+                p_149689_1_.setBlockMetadataWithNotify(p_149689_2_, p_149689_3_, p_149689_4_, b0, 3);
             }
-
-            if ((j1 == this.blockID || k1 == this.blockID) && (b0 == 2 || b0 == 3)) {
-                if (j1 == this.blockID) {
-                    par1World.setBlockMetadataWithNotify(par2 - 1, par3, par4, b0, 3);
+            
+            if ((block2 == this || block3 == this) && (b0 == 2 || b0 == 3)) {
+                if (block2 == this) {
+                    p_149689_1_.setBlockMetadataWithNotify(p_149689_2_ - 1, p_149689_3_, p_149689_4_, b0, 3);
                 }
                 else {
-                    par1World.setBlockMetadataWithNotify(par2 + 1, par3, par4, b0, 3);
+                    p_149689_1_.setBlockMetadataWithNotify(p_149689_2_ + 1, p_149689_3_, p_149689_4_, b0, 3);
                 }
-
-                par1World.setBlockMetadataWithNotify(par2, par3, par4, b0, 3);
+                
+                p_149689_1_.setBlockMetadataWithNotify(p_149689_2_, p_149689_3_, p_149689_4_, b0, 3);
             }
         }
-
-        if (par6ItemStack.hasDisplayName()) {
-            ((TileEntityUnderworldChest) par1World.getBlockTileEntity(par2, par3, par4)).setChestGuiName(par6ItemStack.getDisplayName());
+        
+        if (p_149689_6_.hasDisplayName()) {
+            ((TileEntityChest) p_149689_1_.getTileEntity(p_149689_2_, p_149689_3_, p_149689_4_)).func_145976_a(p_149689_6_.getDisplayName());
         }
     }
-
-    /**
-     * Turns the adjacent chests to a double chest.
-     */
-    public void unifyAdjacentChests(World par1World, int par2, int par3, int par4) {
-        if (!par1World.isRemote) {
-            int l = par1World.getBlockId(par2, par3, par4 - 1);
-            int i1 = par1World.getBlockId(par2, par3, par4 + 1);
-            int j1 = par1World.getBlockId(par2 - 1, par3, par4);
-            int k1 = par1World.getBlockId(par2 + 1, par3, par4);
+    
+    public void func_149954_e(World p_149954_1_, int p_149954_2_, int p_149954_3_, int p_149954_4_) {
+        if (!p_149954_1_.isRemote) {
+            Block block = p_149954_1_.getBlock(p_149954_2_, p_149954_3_, p_149954_4_ - 1);
+            Block block1 = p_149954_1_.getBlock(p_149954_2_, p_149954_3_, p_149954_4_ + 1);
+            Block block2 = p_149954_1_.getBlock(p_149954_2_ - 1, p_149954_3_, p_149954_4_);
+            Block block3 = p_149954_1_.getBlock(p_149954_2_ + 1, p_149954_3_, p_149954_4_);
             boolean flag = true;
-            int l1;
-            int i2;
+            int l;
+            Block block4;
+            int i1;
+            Block block5;
             boolean flag1;
             byte b0;
-            int j2;
-
-            if (l != this.blockID && i1 != this.blockID) {
-                if (j1 != this.blockID && k1 != this.blockID) {
+            int j1;
+            
+            if (block != this && block1 != this) {
+                if (block2 != this && block3 != this) {
                     b0 = 3;
-
-                    if (Block.opaqueCubeLookup[l] && !Block.opaqueCubeLookup[i1]) {
+                    
+                    if (block.func_149730_j() && !block1.func_149730_j()) {
                         b0 = 3;
                     }
-
-                    if (Block.opaqueCubeLookup[i1] && !Block.opaqueCubeLookup[l]) {
+                    
+                    if (block1.func_149730_j() && !block.func_149730_j()) {
                         b0 = 2;
                     }
-
-                    if (Block.opaqueCubeLookup[j1] && !Block.opaqueCubeLookup[k1]) {
+                    
+                    if (block2.func_149730_j() && !block3.func_149730_j()) {
                         b0 = 5;
                     }
-
-                    if (Block.opaqueCubeLookup[k1] && !Block.opaqueCubeLookup[j1]) {
+                    
+                    if (block3.func_149730_j() && !block2.func_149730_j()) {
                         b0 = 4;
                     }
                 }
                 else {
-                    l1 = par1World.getBlockId(j1 == this.blockID ? par2 - 1 : par2 + 1, par3, par4 - 1);
-                    i2 = par1World.getBlockId(j1 == this.blockID ? par2 - 1 : par2 + 1, par3, par4 + 1);
+                    l = block2 == this ? p_149954_2_ - 1 : p_149954_2_ + 1;
+                    block4 = p_149954_1_.getBlock(l, p_149954_3_, p_149954_4_ - 1);
+                    i1 = block2 == this ? p_149954_2_ - 1 : p_149954_2_ + 1;
+                    block5 = p_149954_1_.getBlock(i1, p_149954_3_, p_149954_4_ + 1);
                     b0 = 3;
                     flag1 = true;
-
-                    if (j1 == this.blockID) {
-                        j2 = par1World.getBlockMetadata(par2 - 1, par3, par4);
+                    
+                    if (block2 == this) {
+                        j1 = p_149954_1_.getBlockMetadata(p_149954_2_ - 1, p_149954_3_, p_149954_4_);
                     }
                     else {
-                        j2 = par1World.getBlockMetadata(par2 + 1, par3, par4);
+                        j1 = p_149954_1_.getBlockMetadata(p_149954_2_ + 1, p_149954_3_, p_149954_4_);
                     }
-
-                    if (j2 == 2) {
+                    
+                    if (j1 == 2) {
                         b0 = 2;
                     }
-
-                    if ((Block.opaqueCubeLookup[l] || Block.opaqueCubeLookup[l1]) && !Block.opaqueCubeLookup[i1] && !Block.opaqueCubeLookup[i2]) {
+                    
+                    if ((block.func_149730_j() || block4.func_149730_j()) && !block1.func_149730_j() && !block5.func_149730_j()) {
                         b0 = 3;
                     }
-
-                    if ((Block.opaqueCubeLookup[i1] || Block.opaqueCubeLookup[i2]) && !Block.opaqueCubeLookup[l] && !Block.opaqueCubeLookup[l1]) {
+                    
+                    if ((block1.func_149730_j() || block5.func_149730_j()) && !block.func_149730_j() && !block4.func_149730_j()) {
                         b0 = 2;
                     }
                 }
             }
             else {
-                l1 = par1World.getBlockId(par2 - 1, par3, l == this.blockID ? par4 - 1 : par4 + 1);
-                i2 = par1World.getBlockId(par2 + 1, par3, l == this.blockID ? par4 - 1 : par4 + 1);
+                l = block == this ? p_149954_4_ - 1 : p_149954_4_ + 1;
+                block4 = p_149954_1_.getBlock(p_149954_2_ - 1, p_149954_3_, l);
+                i1 = block == this ? p_149954_4_ - 1 : p_149954_4_ + 1;
+                block5 = p_149954_1_.getBlock(p_149954_2_ + 1, p_149954_3_, i1);
                 b0 = 5;
                 flag1 = true;
-
-                if (l == this.blockID) {
-                    j2 = par1World.getBlockMetadata(par2, par3, par4 - 1);
+                
+                if (block == this) {
+                    j1 = p_149954_1_.getBlockMetadata(p_149954_2_, p_149954_3_, p_149954_4_ - 1);
                 }
                 else {
-                    j2 = par1World.getBlockMetadata(par2, par3, par4 + 1);
+                    j1 = p_149954_1_.getBlockMetadata(p_149954_2_, p_149954_3_, p_149954_4_ + 1);
                 }
-
-                if (j2 == 4) {
+                
+                if (j1 == 4) {
                     b0 = 4;
                 }
-
-                if ((Block.opaqueCubeLookup[j1] || Block.opaqueCubeLookup[l1]) && !Block.opaqueCubeLookup[k1] && !Block.opaqueCubeLookup[i2]) {
+                
+                if ((block2.func_149730_j() || block4.func_149730_j()) && !block3.func_149730_j() && !block5.func_149730_j()) {
                     b0 = 5;
                 }
-
-                if ((Block.opaqueCubeLookup[k1] || Block.opaqueCubeLookup[i2]) && !Block.opaqueCubeLookup[j1] && !Block.opaqueCubeLookup[l1]) {
+                
+                if ((block3.func_149730_j() || block5.func_149730_j()) && !block2.func_149730_j() && !block4.func_149730_j()) {
                     b0 = 4;
                 }
             }
-
-            par1World.setBlockMetadataWithNotify(par2, par3, par4, b0, 3);
+            
+            p_149954_1_.setBlockMetadataWithNotify(p_149954_2_, p_149954_3_, p_149954_4_, b0, 3);
         }
     }
-
+    
     /**
      * Checks to see if its valid to put this block at the specified
      * coordinates. Args: world, x, y, z
      */
-    public boolean canPlaceBlockAt(World par1World, int par2, int par3, int par4) {
+    public boolean canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_) {
         int l = 0;
-
-        if (par1World.getBlockId(par2 - 1, par3, par4) == this.blockID) {
+        
+        if (p_149742_1_.getBlock(p_149742_2_ - 1, p_149742_3_, p_149742_4_) == this) {
             ++l;
         }
-
-        if (par1World.getBlockId(par2 + 1, par3, par4) == this.blockID) {
+        
+        if (p_149742_1_.getBlock(p_149742_2_ + 1, p_149742_3_, p_149742_4_) == this) {
             ++l;
         }
-
-        if (par1World.getBlockId(par2, par3, par4 - 1) == this.blockID) {
+        
+        if (p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_ - 1) == this) {
             ++l;
         }
-
-        if (par1World.getBlockId(par2, par3, par4 + 1) == this.blockID) {
+        
+        if (p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_ + 1) == this) {
             ++l;
         }
-
-        return l > 1 ? false : (this.isThereANeighborChest(par1World, par2 - 1, par3, par4) ? false : (this.isThereANeighborChest(par1World, par2 + 1, par3, par4) ? false : (this.isThereANeighborChest(par1World, par2, par3, par4 - 1) ? false : !this.isThereANeighborChest(par1World, par2, par3, par4 + 1))));
+        
+        return l > 1 ? false : (this.func_149952_n(p_149742_1_, p_149742_2_ - 1, p_149742_3_, p_149742_4_) ? false : (this.func_149952_n(p_149742_1_, p_149742_2_ + 1, p_149742_3_, p_149742_4_) ? false : (this.func_149952_n(p_149742_1_, p_149742_2_, p_149742_3_, p_149742_4_ - 1) ? false : !this.func_149952_n(p_149742_1_, p_149742_2_, p_149742_3_, p_149742_4_ + 1))));
     }
-
-    /**
-     * Checks the neighbor blocks to see if there is a chest there. Args: world,
-     * x, y, z
-     */
-    private boolean isThereANeighborChest(World par1World, int par2, int par3, int par4) {
-        return par1World.getBlockId(par2, par3, par4) != this.blockID ? false : (par1World.getBlockId(par2 - 1, par3, par4) == this.blockID ? true : (par1World.getBlockId(par2 + 1, par3, par4) == this.blockID ? true : (par1World.getBlockId(par2, par3, par4 - 1) == this.blockID ? true : par1World.getBlockId(par2, par3, par4 + 1) == this.blockID)));
+    
+    private boolean func_149952_n(World p_149952_1_, int p_149952_2_, int p_149952_3_, int p_149952_4_) {
+        return p_149952_1_.getBlock(p_149952_2_, p_149952_3_, p_149952_4_) != this ? false : (p_149952_1_.getBlock(p_149952_2_ - 1, p_149952_3_, p_149952_4_) == this ? true : (p_149952_1_.getBlock(p_149952_2_ + 1, p_149952_3_, p_149952_4_) == this ? true : (p_149952_1_.getBlock(p_149952_2_, p_149952_3_, p_149952_4_ - 1) == this ? true : p_149952_1_.getBlock(p_149952_2_, p_149952_3_, p_149952_4_ + 1) == this)));
     }
-
+    
     /**
      * Lets the block know when one of its neighbor changes. Doesn't know which
      * neighbor changed (coordinates passed are their own) Args: x, y, z,
-     * neighbor blockID
+     * neighbor Block
      */
-    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5) {
-        super.onNeighborBlockChange(par1World, par2, par3, par4, par5);
-        TileEntityUnderworldChest tileentitychest = (TileEntityUnderworldChest) par1World.getBlockTileEntity(par2, par3, par4);
-
+    public void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_) {
+        super.onNeighborBlockChange(p_149695_1_, p_149695_2_, p_149695_3_, p_149695_4_, p_149695_5_);
+        TileEntityChest tileentitychest = (TileEntityChest) p_149695_1_.getTileEntity(p_149695_2_, p_149695_3_, p_149695_4_);
+        
         if (tileentitychest != null) {
             tileentitychest.updateContainingBlockInfo();
         }
     }
-
-    /**
-     * ejects contained items into the world, and notifies neighbours of an
-     * update, as appropriate
-     */
-    public void breakBlock(World par1World, int par2, int par3, int par4, int par5, int par6) {
-        TileEntityUnderworldChest tileentitychest = (TileEntityUnderworldChest) par1World.getBlockTileEntity(par2, par3, par4);
-
+    
+    public void breakBlock(World p_149749_1_, int p_149749_2_, int p_149749_3_, int p_149749_4_, Block p_149749_5_, int p_149749_6_) {
+        TileEntityChest tileentitychest = (TileEntityChest) p_149749_1_.getTileEntity(p_149749_2_, p_149749_3_, p_149749_4_);
+        
         if (tileentitychest != null) {
-            for (int j1 = 0; j1 < tileentitychest.getSizeInventory(); ++j1) {
-                ItemStack itemstack = tileentitychest.getStackInSlot(j1);
-
+            for (int i1 = 0; i1 < tileentitychest.getSizeInventory(); ++i1) {
+                ItemStack itemstack = tileentitychest.getStackInSlot(i1);
+                
                 if (itemstack != null) {
-                    float f = this.random.nextFloat() * 0.8F + 0.1F;
-                    float f1 = this.random.nextFloat() * 0.8F + 0.1F;
+                    float f = this.field_149955_b.nextFloat() * 0.8F + 0.1F;
+                    float f1 = this.field_149955_b.nextFloat() * 0.8F + 0.1F;
                     EntityItem entityitem;
-
-                    for (float f2 = this.random.nextFloat() * 0.8F + 0.1F; itemstack.stackSize > 0; par1World.spawnEntityInWorld(entityitem)) {
-                        int k1 = this.random.nextInt(21) + 10;
-
-                        if (k1 > itemstack.stackSize) {
-                            k1 = itemstack.stackSize;
+                    
+                    for (float f2 = this.field_149955_b.nextFloat() * 0.8F + 0.1F; itemstack.stackSize > 0; p_149749_1_.spawnEntityInWorld(entityitem)) {
+                        int j1 = this.field_149955_b.nextInt(21) + 10;
+                        
+                        if (j1 > itemstack.stackSize) {
+                            j1 = itemstack.stackSize;
                         }
-
-                        itemstack.stackSize -= k1;
-                        entityitem = new EntityItem(par1World, (double) ((float) par2 + f), (double) ((float) par3 + f1), (double) ((float) par4 + f2), new ItemStack(itemstack.itemID, k1, itemstack.getItemDamage()));
+                        
+                        itemstack.stackSize -= j1;
+                        entityitem = new EntityItem(p_149749_1_, (double) ((float) p_149749_2_ + f), (double) ((float) p_149749_3_ + f1), (double) ((float) p_149749_4_ + f2), new ItemStack(itemstack.getItem(), j1, itemstack.getItemDamage()));
                         float f3 = 0.05F;
-                        entityitem.motionX = (double) ((float) this.random.nextGaussian() * f3);
-                        entityitem.motionY = (double) ((float) this.random.nextGaussian() * f3 + 0.2F);
-                        entityitem.motionZ = (double) ((float) this.random.nextGaussian() * f3);
-
+                        entityitem.motionX = (double) ((float) this.field_149955_b.nextGaussian() * f3);
+                        entityitem.motionY = (double) ((float) this.field_149955_b.nextGaussian() * f3 + 0.2F);
+                        entityitem.motionZ = (double) ((float) this.field_149955_b.nextGaussian() * f3);
+                        
                         if (itemstack.hasTagCompound()) {
                             entityitem.getEntityItem().setTagCompound((NBTTagCompound) itemstack.getTagCompound().copy());
                         }
                     }
                 }
             }
-
-            par1World.func_96440_m(par2, par3, par4, par5);
+            
+            p_149749_1_.func_147453_f(p_149749_2_, p_149749_3_, p_149749_4_, p_149749_5_);
         }
-
-        super.breakBlock(par1World, par2, par3, par4, par5, par6);
+        
+        super.breakBlock(p_149749_1_, p_149749_2_, p_149749_3_, p_149749_4_, p_149749_5_, p_149749_6_);
     }
-
+    
     /**
      * Called upon block activation (right click on the block.)
      */
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
         player.addExperienceLevel(2);
-        TileEntity tile_entity = world.getBlockTileEntity(x, y, z);
-
+        TileEntity tile_entity = world.getTileEntity(x, y, z);
+        
         if (tile_entity == null || player.isSneaking()) {
-
+            
             return false;
         }
-
+        
         player.openGui(Omega.instance, 0, world, x, y, z);
-
+        
         return true;
     }
-
+    
     /**
      * Returns a new instance of a block's tile entity class. Called on placing
      * the block.
      */
-    public TileEntity createNewTileEntity(World par1World) {
-        TileEntityUnderworldChest tileentitychest = new TileEntityUnderworldChest();
+    public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
+        TileEntityChest tileentitychest = new TileEntityChest();
         return tileentitychest;
     }
-
+    
     /**
      * Can this block provide power. Only wire currently seems to have this
      * change based on its state.
      */
     public boolean canProvidePower() {
-        return this.isTrapped == 1;
+        return this.field_149956_a == 1;
     }
-
-    /**
-     * Returns true if the block is emitting indirect/weak redstone power on the
-     * specified side. If isBlockNormalCube returns true, standard redstone
-     * propagation rules will apply instead and this will not be called. Args:
-     * World, X, Y, Z, side. Note that the side is reversed - eg it is 1 (up)
-     * when checking the bottom of the block.
-     */
-    public int isProvidingWeakPower(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5) {
+    
+    public int isProvidingWeakPower(IBlockAccess p_149709_1_, int p_149709_2_, int p_149709_3_, int p_149709_4_, int p_149709_5_) {
         if (!this.canProvidePower()) {
             return 0;
         }
         else {
-            int i1 = ((TileEntityUnderworldChest) par1IBlockAccess.getBlockTileEntity(par2, par3, par4)).numUsingPlayers;
+            int i1 = ((TileEntityChest) p_149709_1_.getTileEntity(p_149709_2_, p_149709_3_, p_149709_4_)).numPlayersUsing;
             return MathHelper.clamp_int(i1, 0, 15);
         }
     }
-
-    /**
-     * Returns true if the block is emitting direct/strong redstone power on the
-     * specified side. Args: World, X, Y, Z, side. Note that the side is
-     * reversed - eg it is 1 (up) when checking the bottom of the block.
-     */
-    public int isProvidingStrongPower(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5) {
-        return par5 == 1 ? this.isProvidingWeakPower(par1IBlockAccess, par2, par3, par4, par5) : 0;
+    
+    public int isProvidingStrongPower(IBlockAccess p_149748_1_, int p_149748_2_, int p_149748_3_, int p_149748_4_, int p_149748_5_) {
+        return p_149748_5_ == 1 ? this.isProvidingWeakPower(p_149748_1_, p_149748_2_, p_149748_3_, p_149748_4_, p_149748_5_) : 0;
     }
-
-    /**
-     * Looks for a sitting ocelot within certain bounds. Such an ocelot is
-     * considered to be blocking access to the chest.
-     */
-    public static boolean isOcelotBlockingChest(World par0World, int par1, int par2, int par3) {
-        Iterator iterator = par0World.getEntitiesWithinAABB(EntityOcelot.class, AxisAlignedBB.getAABBPool().getAABB((double) par1, (double) (par2 + 1), (double) par3, (double) (par1 + 1), (double) (par2 + 2), (double) (par3 + 1))).iterator();
-        EntityOcelot entityocelot;
-
+    
+    public static boolean isOcelotBlockingChest(World p_149953_0_, int p_149953_1_, int p_149953_2_, int p_149953_3_) {
+        Iterator iterator = p_149953_0_.getEntitiesWithinAABB(EntityOcelot.class, AxisAlignedBB.getAABBPool().getAABB((double) p_149953_1_, (double) (p_149953_2_ + 1), (double) p_149953_3_, (double) (p_149953_1_ + 1), (double) (p_149953_2_ + 2), (double) (p_149953_3_ + 1))).iterator();
+        EntityOcelot entityocelot1;
+        
         do {
             if (!iterator.hasNext()) {
                 return false;
             }
-
-            EntityOcelot entityocelot1 = (EntityOcelot) iterator.next();
-            entityocelot = (EntityOcelot) entityocelot1;
+            
+            EntityOcelot entityocelot = (EntityOcelot) iterator.next();
+            entityocelot1 = (EntityOcelot) entityocelot;
         }
-        while (!entityocelot.isSitting());
-
+        while (!entityocelot1.isSitting());
+        
         return true;
     }
-
-    @SideOnly(Side.CLIENT)
-    /**
-     * When this method is called, your block should register all the icons it needs with the given IconRegister. This
-     * is the only chance you get to register icons.
-     */
+    
     @Override
-    public void registerIcons(IconRegister par1IconRegister) {
+    public void registerBlockIcons(IIconRegister par1IconRegister) {
         this.blockIcon = par1IconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5));
     }
 }

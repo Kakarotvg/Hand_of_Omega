@@ -1,21 +1,21 @@
 package kakarotvg.omega.items;
 
 import kakarotvg.omega.Reference;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class VgItem extends Item {
-
-    public VgItem(int id) {
-        super(id);
+    
+    public VgItem() {
+        super();
     }
-
+    
     @SideOnly(Side.CLIENT)
     @Override
-    public void registerIcons(IconRegister register) {
+    public void registerIcons(IIconRegister register) {
         this.itemIcon = register.registerIcon(Reference.MOD_ID + ":" + (this.getUnlocalizedName().substring(5)));
     }
-
+    
 }

@@ -9,12 +9,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class Vgegg extends Item {
-    public Vgegg(int par1) {
-        super(par1);
+    public Vgegg() {
+        super();
         this.maxStackSize = 16;
         this.setCreativeTab(CreativetabHandler.vgtab2);
     }
-
+    
     /**
      * Called whenever this item is equipped and the right mouse button is
      * pressed. Args: itemStack, world, entityPlayer
@@ -23,13 +23,13 @@ public class Vgegg extends Item {
         if (!par3EntityPlayer.capabilities.isCreativeMode) {
             --par1ItemStack.stackSize;
         }
-
+        
         par2World.playSoundAtEntity(par3EntityPlayer, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
-
+        
         if (!par2World.isRemote) {
             par2World.spawnEntityInWorld(new EntityEgg(par2World, par3EntityPlayer));
         }
-
+        
         return par1ItemStack;
     }
 }

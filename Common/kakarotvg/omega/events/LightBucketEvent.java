@@ -1,36 +1,46 @@
 package kakarotvg.omega.events;
 
-import kakarotvg.omega.handlers.IDs.ArmorIDs;
-import kakarotvg.omega.handlers.liquids.LiquidHandler;
+import java.util.HashMap;
+import java.util.Map;
+
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import net.minecraftforge.event.ForgeSubscribe;
-import net.minecraftforge.event.Event.Result;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class LightBucketEvent {
-
-    @ForgeSubscribe
-    public void onBucketFill(FillBucketEvent event) {
-
-        ItemStack result = fillCustomBucket(event.world, event.target);
-
-        if (result == null) return;
-
-        event.result = result;
-        event.setResult(Result.ALLOW);
+    
+    public static LightBucketEvent INSTANCE = new LightBucketEvent();
+    public Map<Block, Item> buckets = new HashMap<Block, Item>();
+    
+    public LightBucketEvent() {
     }
-
-    public ItemStack fillCustomBucket(World world, MovingObjectPosition pos) {
-        int blockID = world.getBlockId(pos.blockX, pos.blockY, pos.blockZ);
-
-        if ((blockID == LiquidHandler.LightLiquid.blockID) && world.getBlockMetadata(pos.blockX, pos.blockY, pos.blockZ) == 0) {
-            world.setBlock(pos.blockX, pos.blockY, pos.blockZ, 0);
-            return new ItemStack(LiquidHandler.lightbucket);
+    
+    @SubscribeEvent
+    public void onBucketFill(FillBucketEvent event) {
+        
+        ItemStack result = fillCustomBucket(event.world, event.target);
+        
+        if (result == null) return;
+        
+        event.result = result;
+        event.setResult(cpw.mods.fml.common.eventhandler.Event.Result.ALLOW);
+    }
+    
+    private ItemStack fillCustomBucket(World world, MovingObjectPosition pos) {
+        
+        Block block = world.getBlock(pos.blockX, pos.blockY, pos.blockZ);
+        
+        Item bucket = buckets.get(block);
+        if (bucket != null && world.getBlockMetadata(pos.blockX, pos.blockY, pos.blockZ) == 0) {
+            world.setBlockToAir(pos.blockX, pos.blockY, pos.blockZ);
+            return new ItemStack(bucket);
         }
         else
             return null;
+        
     }
-
 }

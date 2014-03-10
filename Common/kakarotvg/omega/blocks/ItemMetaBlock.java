@@ -1,11 +1,12 @@
 package kakarotvg.omega.blocks;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
 public class ItemMetaBlock extends ItemBlock {
 
-    public ItemMetaBlock(int par1) {
+    public ItemMetaBlock(Block par1) {
         super(par1);
         setHasSubtypes(true);
     }
@@ -32,6 +33,7 @@ public class ItemMetaBlock extends ItemBlock {
         return getUnlocalizedName() + "." + name;
     }
 
+    @Override
     public int getMetadata(int par1) {
         return par1;
     }

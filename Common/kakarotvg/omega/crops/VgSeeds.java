@@ -1,33 +1,31 @@
 package kakarotvg.omega.crops;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import kakarotvg.omega.Reference;
-import kakarotvg.omega.handlers.creativetab.CreativetabHandler;
 import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemFood;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
-import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.IPlantable;
+import net.minecraftforge.common.util.ForgeDirection;
 
-public class VgSeeds extends ItemFood implements IPlantable {
-    /** Block ID of the crop this seed food should place. */
-    private int cropId;
-
-    /** Block ID of the soil this seed food should be planted on. */
-    private int soilId;
-
-    public VgSeeds(int par1, int par2, float par3, int par4, int par5) {
-        super(par1, par2, par3, false);
-        this.cropId = par4;
-        this.soilId = par5;
-        this.setCreativeTab(CreativetabHandler.vgtab2);
+public class VgSeeds extends Item implements IPlantable {
+    private Block field_150925_a;
+    /**
+     * BlockID of the block the seeds can be planted on.
+     */
+    private Block soilBlockID;
+    private static final String __OBFID = "CL_00000061";
+    
+    public VgSeeds(Block p_i45352_1_, Block p_i45352_2_) {
+        this.field_150925_a = p_i45352_1_;
+        this.soilBlockID = p_i45352_2_;
+        this.setCreativeTab(CreativeTabs.tabMaterials);
     }
-
+    
     /**
      * Callback for item usage. If the item does something special on right
      * clicking, he will have one of those. Return True if something happen and
@@ -36,40 +34,34 @@ public class VgSeeds extends ItemFood implements IPlantable {
     public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10) {
         if (par7 != 1) {
             return false;
-        } else if (par2EntityPlayer.canPlayerEdit(par4, par5, par6, par7, par1ItemStack) && par2EntityPlayer.canPlayerEdit(par4, par5 + 1, par6, par7, par1ItemStack)) {
-            int i1 = par3World.getBlockId(par4, par5, par6);
-            Block soil = Block.blocksList[i1];
-
-            if (soil != null && soil.canSustainPlant(par3World, par4, par5, par6, ForgeDirection.UP, this) && par3World.isAirBlock(par4, par5 + 1, par6)) {
-                par3World.setBlock(par4, par5 + 1, par6, this.cropId);
+        }
+        else if (par2EntityPlayer.canPlayerEdit(par4, par5, par6, par7, par1ItemStack) && par2EntityPlayer.canPlayerEdit(par4, par5 + 1, par6, par7, par1ItemStack)) {
+            if (par3World.getBlock(par4, par5, par6).canSustainPlant(par3World, par4, par5, par6, ForgeDirection.UP, this) && par3World.isAirBlock(par4, par5 + 1, par6)) {
+                par3World.setBlock(par4, par5 + 1, par6, this.field_150925_a);
                 --par1ItemStack.stackSize;
                 return true;
-            } else {
+            }
+            else {
                 return false;
             }
-        } else {
+        }
+        else {
             return false;
         }
     }
-
+    
     @Override
-    public EnumPlantType getPlantType(World world, int x, int y, int z) {
-        return EnumPlantType.Crop;
+    public EnumPlantType getPlantType(IBlockAccess world, int x, int y, int z) {
+        return field_150925_a == Blocks.nether_wart ? EnumPlantType.Nether : EnumPlantType.Crop;
     }
-
+    
     @Override
-    public int getPlantID(World world, int x, int y, int z) {
-        return cropId;
+    public Block getPlant(IBlockAccess world, int x, int y, int z) {
+        return field_150925_a;
     }
-
+    
     @Override
-    public int getPlantMetadata(World world, int x, int y, int z) {
+    public int getPlantMetadata(IBlockAccess world, int x, int y, int z) {
         return 0;
-    }
-
-    @SideOnly(Side.CLIENT)
-    @Override
-    public void registerIcons(IconRegister register) {
-        this.itemIcon = register.registerIcon(Reference.MOD_ID + ":" + (this.getUnlocalizedName().substring(5)));
     }
 }

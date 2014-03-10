@@ -18,7 +18,7 @@ import net.minecraft.item.Item;
 import net.minecraft.world.World;
 
 public class EntityOmegaHound extends EntityAnimal {
-
+    
     public EntityOmegaHound(World par1World) {
         super(par1World);
         this.setSize(0.9F, 0.9F);
@@ -30,42 +30,47 @@ public class EntityOmegaHound extends EntityAnimal {
         this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
         this.tasks.addTask(8, new EntityAILookIdle(this));
     }
-
+    
     protected void applyEntityAttributes() {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(30.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.25D);
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(30.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.25D);
     }
-
+    
+    @Override
     public boolean isAIEnabled() {
         return true;
     }
-
+    
+    @Override
     protected String getLivingSound() {
         return "mob.wolf.growl";
     }
-
+    
     /**
      * Returns the sound this mob makes when it is hurt.
      */
+    @Override
     protected String getHurtSound() {
         return "mob.wolf.hurt";
     }
-
+    
     /**
      * Returns the sound this mob makes on death.
      */
+    @Override
     protected String getDeathSound() {
         return "mob.wolf.death";
     }
-
-    protected int getDropItemId() {
-        return ItemHandler.urotark.itemID;
+    
+    @Override
+    protected Item getDropItem() {
+        return ItemHandler.urotark;
     }
-
+    
     @Override
     public EntityAgeable createChild(EntityAgeable entityageable) {
         return null;
     }
-
+    
 }
