@@ -26,7 +26,7 @@ public class Omega {
     public static Omega instance;
     // private GuiHandler guihandler = new GuiHandler();
     
-    @SidedProxy(clientSide = "kakarotvg.omega.proxys.ClientProxy", serverSide = "kakarotvg.omega.proxys.CommonProxy")
+    @SidedProxy(clientSide = "com.kakarotvg.omega.proxys.ClientProxy", serverSide = "com.kakarotvg.omega.proxys.CommonProxy")
     public static CommonProxy proxy;
     
     public static final VgPacketHandler packethandler = new VgPacketHandler();

@@ -135,8 +135,6 @@ public class ToolHandler {
     public static Item omegasword;
     public static Item omegahand;
     public static Item omegapickaxe;
-    // bubble
-    public static Item bubblesword;
     // Berionvar
     public static Item berionvaraxe;
     public static Item berionvarhoe;
@@ -236,8 +234,6 @@ public class ToolHandler {
     // omega
     public static ToolMaterial OMEGATOOLS = EnumHelper.addToolMaterial("OMEGA TOOLS", 25, 6000, 50, 75, 10);
     public static ToolMaterial OMEGASWORD = EnumHelper.addToolMaterial("OMEGASWORD", 25, 6000, 50, 75, 10);
-    // bubble
-    public static ToolMaterial BUBBLESWORD = EnumHelper.addToolMaterial("BUBBLESWORD", 3, 400, 3, 3, 10);
     // Berionvar
     public static ToolMaterial BERIONVARTOOLS = EnumHelper.addToolMaterial("BERIONVAR TOOLS", 11, 3700, 27, 44, 10);
     public static ToolMaterial BERIONVARSWORD = EnumHelper.addToolMaterial("BERIONVARSWORD", 11, 3700, 27, 46, 10);
@@ -543,8 +539,6 @@ public class ToolHandler {
         registry.registerItem(omegasword, "omegasword");
         registry.registerItem(omegahand, "omegahand");
         registry.registerItem(omegapickaxe, "omegapickaxe");
-        // bubble
-        registry.registerItem(bubblesword, "bubblesword");
         // Berionvar
         registry.registerItem(berionvaraxe, "berionvaraxe");
         registry.registerItem(berionvarhoe, "berionvarhoe");
