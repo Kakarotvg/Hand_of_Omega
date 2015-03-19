@@ -9,6 +9,7 @@ import net.minecraft.block.BlockCrops;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
 public class BlockLightCrop extends BlockCrops {
@@ -34,11 +35,12 @@ public class BlockLightCrop extends BlockCrops {
     }
     
     protected Item func_149866_i() {
-        return CropHandler.darknessseeds;
+        return CropHandler.lightseeds;
     }
     
     protected Item func_149865_P() {
-        return CropHandler.darknessseeds;
+        return CropHandler.lightseeds
+        		;
     }
     
     @SideOnly(Side.CLIENT)
