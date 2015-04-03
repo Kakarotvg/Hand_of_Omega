@@ -330,11 +330,11 @@ public class CraftingHandler {
 		register.addRecipe(new ItemStack(ArmorHandler.vielvorlegs, 1), "UUU", "U U", "U U", 'U', ItemHandler.vielvoringot);
 		register.addRecipe(new ItemStack(ArmorHandler.vielvorboots, 1), "   ", "U U", "U U", 'U', ItemHandler.vielvoringot);
 		// invisible
-		register.addRecipe(new ItemStack(ArmorHandler.invisibleboots, 1), "   ", "d l", "d l", 'l', new ItemStack(ItemHandler.platinum, 1, 2), 'd', new ItemStack(ItemHandler.platinum, 1, 1));
-		register.addRecipe(new ItemStack(ArmorHandler.invisiblehelm, 1), "dld", "d l", "   ", 'l', new ItemStack(ItemHandler.platinum, 1, 2), 'd', new ItemStack(ItemHandler.platinum, 1, 1));
-		register.addRecipe(new ItemStack(ArmorHandler.invisibleplate, 1), "d l", "dll", "ddl", 'l', new ItemStack(ItemHandler.platinum, 1, 2), 'd', new ItemStack(ItemHandler.platinum, 1, 1));
-		register.addRecipe(new ItemStack(ArmorHandler.invisiblelegs, 1), "dld", "d l", "l l", 'l', new ItemStack(ItemHandler.platinum, 1, 2), 'd', new ItemStack(ItemHandler.platinum, 1, 1));
-		register.addRecipe(new ItemStack(ToolHandler.invisibledagger, 1), " l ", " d ", " s ", 'l', new ItemStack(ItemHandler.platinum, 1, 2), 'd', new ItemStack(ItemHandler.platinum, 1, 1), 's', Items.stick);
+		register.addRecipe(new ItemStack(ArmorHandler.invisibleboots, 1), "   ", "d l", "d l", 'l', new ItemStack(ItemHandler.lightingot, 1, 2), 'd', new ItemStack(ItemHandler.darknessingot, 1, 1));
+		register.addRecipe(new ItemStack(ArmorHandler.invisiblehelm, 1), "dld", "d l", "   ", 'l', new ItemStack(ItemHandler.lightingot, 1, 2), 'd', new ItemStack(ItemHandler.darknessingot, 1, 1));
+		register.addRecipe(new ItemStack(ArmorHandler.invisibleplate, 1), "d l", "dll", "ddl", 'l', new ItemStack(ItemHandler.lightingot, 1, 2), 'd', new ItemStack(ItemHandler.darknessingot, 1, 1));
+		register.addRecipe(new ItemStack(ArmorHandler.invisiblelegs, 1), "dld", "d l", "l l", 'l', new ItemStack(ItemHandler.lightingot, 1, 2), 'd', new ItemStack(ItemHandler.darknessingot, 1, 1));
+		register.addRecipe(new ItemStack(ToolHandler.invisibledagger, 1), " l ", " d ", " s ", 'l', new ItemStack(ItemHandler.lightingot, 1, 2), 'd', new ItemStack(ItemHandler.darknessingot, 1, 1), 's', Items.stick);
 
 	}
 
