@@ -232,8 +232,8 @@ public class ToolHandler {
 	public static ToolMaterial LIGHTTOOLS = EnumHelper.addToolMaterial("LIGHT TOOLS", 20, 5000, 40, 65, 10);
 	public static ToolMaterial LIGHTSWORD = EnumHelper.addToolMaterial("LIGHTSWORD", 20, 5000, 40, 65, 10);
 	// omega
-	public static ToolMaterial OMEGATOOLS = EnumHelper.addToolMaterial("OMEGA TOOLS", 25, 6000, 50, 75, 10);
-	public static ToolMaterial OMEGASWORD = EnumHelper.addToolMaterial("OMEGASWORD", 25, 6000, 50, 75, 10);
+	public static ToolMaterial OMEGATOOLS = EnumHelper.addToolMaterial("OMEGA TOOLS", 30, 6000, 50, 100, 10);
+	public static ToolMaterial OMEGASWORD = EnumHelper.addToolMaterial("OMEGASWORD", 30, 6000, 50, 100, 10);
 	// Berionvar
 	public static ToolMaterial BERIONVARTOOLS = EnumHelper.addToolMaterial("BERIONVAR TOOLS", 11, 3700, 27, 44, 10);
 	public static ToolMaterial BERIONVARSWORD = EnumHelper.addToolMaterial("BERIONVARSWORD", 11, 3700, 27, 46, 10);
@@ -253,7 +253,7 @@ public class ToolHandler {
 	public static ToolMaterial VIELVORTOOLS = EnumHelper.addToolMaterial("VIELVOR TOOLS", 16, 4200, 32, 54, 10);
 	public static ToolMaterial VIELVORSWORD = EnumHelper.addToolMaterial("VIELVORSWORD", 16, 4200, 32, 56, 10);
 	// invisble
-	public static ToolMaterial INVISIBLESWORD = EnumHelper.addToolMaterial("INVISIBLESWORD", 20, 5000, 40, 65, 10);
+	public static ToolMaterial INVISIBLESWORD = EnumHelper.addToolMaterial("INVISIBLESWORD", 20, 5000, 40, 70, 10);
 
 	public static void configureTools() {
 		// urotark
